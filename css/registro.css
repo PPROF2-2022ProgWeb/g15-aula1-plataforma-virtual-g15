@@ -1,0 +1,207 @@
+body{
+    background: url("../img/libro.jpg") center top;
+    margin: 0;
+    padding: 0;
+    background-size: 100vw 100vh;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contain{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+
+}
+
+.header{
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.log{
+    letter-spacing: 10px;
+    font-size: 1.2em;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: beige;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.register-box{
+    width: 450px;
+    height: 550px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 5%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 50px);
+}
+
+.register-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.register-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.register-box input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.register-box input[type="text"],
+.register-box input[type="password"],
+.register-box input[type="email"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.register-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #300202;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.register-box a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+form p{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: gray;
+}
+.register-box a:hover{
+    color: white;
+}
+
+.main{
+    padding-top: 12rem;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    color: beige;
+    line-height: 1;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.derechos{
+    text-align: left;
+}
+
+.foto{
+    text-align: right;
+}
+
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul li{
+        display: block;
+    }
+    
+    .navigation ul li a{
+        display: block;
+        padding: 0.5rem 0;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    
+    .navigation ul li a:hover{
+        background: beige;
+    }
+}
