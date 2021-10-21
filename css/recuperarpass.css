@@ -1,6 +1,6 @@
 *{
-	margin: 0;
-	padding: 0;
+	margin: 10;
+	padding: 10;
 	font-family: 'Poppings',sans-serif;
 
 }
@@ -21,6 +21,7 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    
 }
 
 .header a{
@@ -66,8 +67,8 @@ body{
 .box .square:nth-child(1){
 	top: -50px;
 	right: -95px;
-	width: 100px;
-	height: 100px;
+	width: 5px;
+	height: 5px;
 }
 section{
     display: flex;
@@ -107,8 +108,8 @@ section .color:nth-child(3){
 }
 .container {
     position: relative;
-    width: 460px;
-    min-height: 400px;
+    width: 4600px;
+    min-height: 4000px;
     background: rgba(73, 65, 65, 0.1);
     border-radius: 10px;
     display: flex;
