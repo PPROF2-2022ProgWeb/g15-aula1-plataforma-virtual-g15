@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="css/registro.css">
     <link rel="shortcut icon" href="img/Saber conectar.jpg">
 </head>
+
 <body class="container">
     <header class="header">
         <div class="contain logo-nav-container">
@@ -24,15 +25,75 @@
     </header>
 
     <main class="main">
-
+    
     <div class="register-box">
         <a class="logo" href="index.html"><img src="img/Saber conectar.jpg" alt="logo de Saber Conectar"></a>
         <h1>Cree su cuenta aquí</h1>
         <form method="POST" action="registro.php">
 
-            <!--Nombre de usuario-->
-            <label for="username">Nombre de usuario</label> <br>
-            <input type="text" placeholder="Ingrese su nombre de usuario"> <br>
+            <!--Nombre Personal-->
+            <label for="nombre">Nombre: </label> 
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"> 
+
+            <!--Apellido Personal-->
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+
+            <!--Nacionalidad-->
+            <label for="pais">País: </label>
+            <input type="text" name="pais" id="pais" placeholder="Pais de Nacimiento">
+
+            <!--Fecha de Nacimiento-->
+            <label for="fechaDeNacimiento">Fecha de Nacimiento</label> 
+            <input type="date" name="fechaDeNacimiento" id="fechaDeNacimiento"> 
+            
+            <!--Provincia de Residencia-->
+            <label for="provincia de nacimiento" >Provincia de Residencia: </label>
+            <select id="provincia" >
+                
+                <option value="cordoba">Jujuy</option>
+                <option value="cordoba">Salta</option>
+                <option value="cordoba">Formosa</option>
+                <option value="cordoba">Chaco</option>
+                <option value="cordoba">Misiones</option>
+                <option value="cordoba">Corrientes</option>
+                <option value="cordoba">Entre Ríos</option>
+                <option value="cordoba">Santa Fé</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="cordoba">Santiago del Estero</option>
+                <option value="cordoba">San Luis</option>
+                <option value="cordoba">Catamarca</option>
+                <option value="cordoba">La Rioja</option>
+                <option value="cordoba">Mendoza</option>
+                <option value="cordoba">Buenos Aires</option>
+                <option value="cordoba">La Pampa</option>
+                <option value="cordoba">Neuquén</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="cordoba">Santa Cruz</option>
+                <option value="cordoba">Chubut</option>
+                <option value="cordoba">Tierra del Fuego</option>
+                <option value="cordoba">Tucumán</option>
+            </select><br><br><br>
+            
+
+            <!--Nivel Educativo Maximo Alcanzado-->
+            <label for="maximonivelalcanzado">Máximo Nivel Educativo Alcanzado</label>
+            
+            <input type="radio" id="primario" value="primario" name="NivelEducativo"> 
+            <label for="primario">Primario</label>    
+
+            <input type="radio" id="secundario" value="secundario" name="NivelEducativo">
+            <label for="secundario">Secundario</label> 
+
+            <input type="radio" id="terciario" value="terciario" name="NivelEducativo">
+            <label for="terciario">Terciario</label>
+
+            <input type="radio" id="universitario" value="universitario" name="NivelEducativo">
+            <label for="universitario">Universitario</label><br>  <br>          
+            
+            
+
+
 
             <!--Email-->
             <label for="email">Correo electrónico</label> <br>
@@ -52,7 +113,7 @@
         </form>
     </div>
 
-    <footer>
+   <footer>
         <div class="derechos">
             <p>&copy 2021 Todos los derechos reservados</p>
         </div>
