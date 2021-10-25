@@ -1,0 +1,134 @@
+body{
+    background: url("../img/libro.jpg") center top;
+    margin: 0;
+    padding: 0;
+    background-size: 100vw 100vh;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contain{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+
+}
+#LinkDeInteres1 {
+    position:absolute;
+    top:35%;
+    left:10%;
+    width:15%;
+    margin-top:2%;
+    background-color: maroon;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    }
+    
+            #LinkDeInteres5 {
+                position:absolute;
+                top:37%;
+                left:80%;
+                width:15%;
+                margin-top:10px;
+                background-color: maroon;
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                
+                                        
+                            }
+            #LinkDeInteres1 a,
+            
+            #LinkDeInteres5 a{
+                color: white;
+                text-decoration: none;
+                padding: 2rem 0;
+            }
+
+            
+
+
+
+.header{
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    padding: 2rem 0;
+}
+
+.log{
+    letter-spacing: 10px;
+    font-size: 1.2em;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: beige;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+h1{
+    text-align: center;
+    padding: 10px;
+    color: rgb(107, 201, 63);
+    margin-top: 10%;
+}
+
+h2{
+    text-align: center;
+    text-decoration: salmon;
+    padding: 10px;
+    color: rgb(234, 243, 112);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    color: beige;
+    line-height: 1;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.derechos{
+    text-align: left;
+}
+
+.foto{
+    text-align: right;
+}
