@@ -219,4 +219,10 @@ section .color:nth-child(3){
         .navigation ul li a:hover{
             background: beige;
         }
+        
+       .breadcrumb {
+        left:50px;
+
+        } 
+        
     }

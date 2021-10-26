@@ -97,3 +97,15 @@ footer{
 .foto{
     text-align: right;
 }
+
+.icon {
+    font-size: 2rem;
+    color: azure;
+    position:absolute;
+    left: 50px;
+}
+
+.breadcrumb {
+    left:50px;
+
+}
