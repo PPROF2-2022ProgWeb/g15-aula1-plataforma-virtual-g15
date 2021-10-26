@@ -97,3 +97,8 @@ footer{
 .foto{
     text-align: right;
 }
+
+.icon {
+    font-size: 2rem;
+    color: azure  ;
+}
