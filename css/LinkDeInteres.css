@@ -132,3 +132,9 @@ footer{
 .foto{
     text-align: right;
 }
+
+.breadcrumb {
+    left:50px;
+    background-color: cornflowerblue;
+
+}

@@ -100,5 +100,12 @@ footer{
 
 .icon {
     font-size: 2rem;
-    color: azure  ;
+    color: azure;
+    position:absolute;
+    left: 50px;
+}
+
+.breadcrumb {
+    left:50px;
+
 }
