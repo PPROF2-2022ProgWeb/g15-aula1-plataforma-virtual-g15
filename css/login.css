@@ -153,12 +153,6 @@ form p{
     padding-top: 12rem;
 }
 
-.bcol-md-3{
-    background-color: brown;
-    text-decoration: cornsilk;
-    color: white;
-}
-
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;

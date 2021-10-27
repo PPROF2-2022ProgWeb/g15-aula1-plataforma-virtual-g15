@@ -1,11 +1,14 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .icon-iglesia {
     font-size: 2rem;
     color: azure;
-    position:absolute;
-    right: 50%;
+    position: absolute;
+    right: 60%;
     top: 52%;
     position: fixed;
-    
 }
 
 .icon {
@@ -17,8 +20,3 @@
     position: fixed;
 }
 
-.bcol-md-3{
-    background-color: brown;
-    text-decoration: cornsilk;
-    color: white;
-}
