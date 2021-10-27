@@ -79,6 +79,32 @@ h2{
     margin-top: 10%;
 }
 
+.derechos{
+    text-align: left;
+}
+
+.foto{
+    text-align: right;
+}
+
+.icon-libro {
+    font-size: 2rem;
+    color: azure;
+    position:absolute;
+    right: 56%;
+    top: 52%;
+    position: fixed;
+}
+
+.icon {
+    font-size: 2rem;
+    color: azure;
+    position:absolute;
+    right: 50%;
+    top: 52%;
+    position: fixed;
+}
+
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -88,24 +114,4 @@ footer{
     width: 100%;
     justify-content: space-between;
     display: flex;
-}
-
-.derechos{
-    text-align: left;
-}
-
-.foto{
-    text-align: right;
-}
-
-.icon {
-    font-size: 2rem;
-    color: azure;
-    position:absolute;
-    left: 50px;
-}
-
-.breadcrumb {
-    left:50px;
-
 }
