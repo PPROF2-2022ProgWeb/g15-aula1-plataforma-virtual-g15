@@ -1,7 +1,7 @@
 *{
-	margin: 10;
-	padding: 10;
-	font-family: 'Poppings',sans-serif;
+	margin: 0;
+	padding: 0;
+    font-family: 'Montserrat', sans-serif;
 
 }
 body{
@@ -21,7 +21,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-    
 }
 
 .header a{
@@ -67,8 +66,8 @@ body{
 .box .square:nth-child(1){
 	top: -50px;
 	right: -95px;
-	width: 5px;
-	height: 5px;
+	width: 100px;
+	height: 100px;
 }
 section{
     display: flex;
@@ -108,8 +107,8 @@ section .color:nth-child(3){
 }
 .container {
     position: relative;
-    width: 4600px;
-    min-height: 4000px;
+    width: 460px;
+    min-height: 400px;
     background: rgba(73, 65, 65, 0.1);
     border-radius: 10px;
     display: flex;
@@ -220,4 +219,10 @@ section .color:nth-child(3){
         .navigation ul li a:hover{
             background: beige;
         }
+        
+       .breadcrumb {
+        left:50px;
+
+        } 
+        
     }

@@ -14,6 +14,40 @@ body{
     margin: 0 auto;
 
 }
+#LinkDeInteres1 {
+    position:absolute;
+    top:35%;
+    left:10%;
+    width:15%;
+    margin-top:2%;
+    background-color: maroon;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    }
+    
+            #LinkDeInteres5 {
+                position:absolute;
+                top:37%;
+                left:80%;
+                width:15%;
+                margin-top:10px;
+                background-color: maroon;
+                font-family: 'Montserrat', sans-serif;
+                text-align: center;
+                
+                                        
+                            }
+            #LinkDeInteres1 a,
+            
+            #LinkDeInteres5 a{
+                color: white;
+                text-decoration: none;
+                padding: 2rem 0;
+            }
+
+            
+
+
 
 .header{
     background: rgba(0, 0, 0, 0.4);
@@ -63,6 +97,7 @@ body{
     flex-wrap: wrap;
 }
 
+
 h1{
     text-align: center;
     padding: 10px;
@@ -98,20 +133,7 @@ footer{
     text-align: right;
 }
 
-.icon-libro {
-    font-size: 2rem;
-    color: azure;
-    position:absolute;
-    right: 56%;
-    top: 52%;
-    position: fixed;
-}
+.breadcrumb {
+    left:50px;
 
-.icon {
-    font-size: 2rem;
-    color: azure;
-    position:absolute;
-    right: 50%;
-    top: 52%;
-    position: fixed;
 }

@@ -5,7 +5,7 @@ body{
     background-size: 100vw 100vh;
     flex-wrap: wrap;
     background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contain{
@@ -21,6 +21,7 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -200,5 +201,11 @@ footer{
     
     .navigation ul li a:hover{
         background: beige;
+    }
+
+    .breadcrumb {
+        left:50px;
+        
+    
     }
 }
