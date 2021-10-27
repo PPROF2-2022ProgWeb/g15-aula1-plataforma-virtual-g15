@@ -1,0 +1,24 @@
+.icon-iglesia {
+    font-size: 2rem;
+    color: azure;
+    position:absolute;
+    right: 50%;
+    top: 52%;
+    position: fixed;
+    
+}
+
+.icon {
+    font-size: 2rem;
+    color: azure;
+    position:absolute;
+    right: 56%;
+    top: 52%;
+    position: fixed;
+}
+
+.bcol-md-3{
+    background-color: brown;
+    text-decoration: cornsilk;
+    color: white;
+}
