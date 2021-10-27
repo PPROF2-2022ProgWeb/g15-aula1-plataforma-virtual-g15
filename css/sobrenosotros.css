@@ -1,8 +1,13 @@
-*{
+body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.icon-iglesia {
+nav{
+    background-color: burlywood;
+    color: crimson;
+}
+
+.icon-school {
     font-size: 2rem;
     color: azure;
     position: absolute;
