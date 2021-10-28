@@ -1,3 +1,5 @@
+
+
 body{
     background: url("../img/libro.jpg") center top;
     margin: 0;
@@ -21,6 +23,7 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -28,6 +31,7 @@ body{
     text-decoration: none;
     padding: 2rem 0;
 }
+    
 
 .log{
     letter-spacing: 10px;
@@ -66,7 +70,7 @@ body{
 h1{
     text-align: center;
     padding: 10px;
-    color: rgb(107, 201, 63);
+    color: rgb(214, 219, 211);
     margin-top: 10%;
 }
 
@@ -74,7 +78,7 @@ h2{
     text-align: center;
     text-decoration: salmon;
     padding: 10px;
-    color: rgb(234, 243, 112);
+    color: rgb(7, 7, 4);
     background-color: rgba(0, 0, 0, 0.1);
     margin-top: 10%;
 }
@@ -89,6 +93,7 @@ h2{
 
 .icon-libro {
     font-size: 2rem;
+<<<<<<< HEAD
     color: azure;
     position:absolute;
     right: 56%;
@@ -105,6 +110,40 @@ h2{
     position: fixed;
 }
 
+=======
+    color: rgb(4, 8, 8);
+    right: 56%;
+    top: 65%;
+    position: fixed;
+}
+
+#icon1 {
+    font-size: 2rem;
+    color: rgb(4, 12, 12);
+    position:fixed;
+    right: 50%;
+    top: 65%;
+}
+
+.icon-school{
+    font-size: 2rem;
+    color:rgb(3, 3, 136) ;
+    right: 25%;
+    top: 38%;
+    position:fixed;
+}
+
+.icon-school{
+    font-size: 2rem;
+    color:rgb(240, 240, 243) ;
+    right: 15%;
+    top: 38%;
+    position:fixed;
+    z-index: 2;
+}
+
+
+>>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -114,4 +153,16 @@ footer{
     width: 100%;
     justify-content: space-between;
     display: flex;
+<<<<<<< HEAD
 }
+=======
+}
+
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+
+>>>>>>> 7f23d5212116b1678a082c3421671918d7898b53

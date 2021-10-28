@@ -21,6 +21,7 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -220,9 +221,12 @@ section .color:nth-child(3){
             background: beige;
         }
         
+<<<<<<< HEAD
        .breadcrumb {
         left:50px;
 
         } 
+=======
+>>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
         
     }

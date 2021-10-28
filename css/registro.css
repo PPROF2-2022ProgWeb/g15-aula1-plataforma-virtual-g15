@@ -20,17 +20,24 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
     color: white;
     text-decoration: none;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .log{
     letter-spacing: 10px;
     font-size: 1.2em;
+}
+
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
 }
 
 .navigation ul{
@@ -215,5 +222,9 @@ footer{
     .navigation ul li a:hover{
         background: beige;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
     
 }

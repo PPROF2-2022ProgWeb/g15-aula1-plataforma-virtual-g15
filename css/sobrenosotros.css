@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -17,4 +18,12 @@ h3{
 .div button {
     padding-right: 0%;
 
+=======
+
+
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+>>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
 }
