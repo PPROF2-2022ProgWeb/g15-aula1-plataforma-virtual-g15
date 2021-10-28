@@ -55,6 +55,7 @@ body{
     left: 0;
     top: 0;
     right: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -101,8 +102,9 @@ body{
 h1{
     text-align: center;
     padding: 10px;
-    color: rgb(107, 201, 63);
+    color: rgb(8, 12, 7);
     margin-top: 10%;
+    text-shadow: rgb(228, 224, 224) 2px 2px;
 }
 
 h2{
@@ -134,6 +136,7 @@ footer{
 }
 
 .breadcrumb {
-    left:50px;
-
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
 }
