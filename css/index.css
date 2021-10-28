@@ -93,24 +93,6 @@ h2{
 
 .icon-libro {
     font-size: 2rem;
-<<<<<<< HEAD
-    color: azure;
-    position:absolute;
-    right: 56%;
-    top: 52%;
-    position: fixed;
-}
-
-.icon {
-    font-size: 2rem;
-    color: azure;
-    position:absolute;
-    right: 50%;
-    top: 52%;
-    position: fixed;
-}
-
-=======
     color: rgb(4, 8, 8);
     right: 56%;
     top: 65%;
@@ -143,7 +125,6 @@ h2{
 }
 
 
->>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -153,9 +134,6 @@ footer{
     width: 100%;
     justify-content: space-between;
     display: flex;
-<<<<<<< HEAD
-}
-=======
 }
 
 .breadcrumb {
@@ -165,4 +143,3 @@ footer{
 }
 
 
->>>>>>> 7f23d5212116b1678a082c3421671918d7898b53

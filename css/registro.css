@@ -10,7 +10,7 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 100%;
+    max-width: 850px;
     margin: 0 auto;
 }
 
@@ -222,9 +222,6 @@ footer{
     .navigation ul li a:hover{
         background: beige;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 7f23d5212116b1678a082c3421671918d7898b53
     
 }
