@@ -78,6 +78,15 @@ body{
     border-radius: 5%;
 }
 
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+  
+
+
+
 .logo {
     width: 100px;
     height: 100px;
@@ -202,4 +211,6 @@ footer{
     .navigation ul li a:hover{
         background: beige;
     }
+    
+    
 }

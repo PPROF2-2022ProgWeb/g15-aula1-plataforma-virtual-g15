@@ -1,0 +1,7 @@
+
+
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
