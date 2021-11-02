@@ -3,7 +3,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$db = "Saber_Conectar_DB";
+$db = "SaberConectarBD.sql";
  
 $conexion = new mysqli($server, $user, $pass, $db);
 
