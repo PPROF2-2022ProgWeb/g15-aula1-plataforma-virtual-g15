@@ -24,26 +24,6 @@
     background: beige;
 }
 
-.navigation ul li ul{
-    display: flex;
-    flex-direction: row;
-}
-
-.navigation ul li ul{
-    position: absolute;
-    display: none;
-}
-.navigation ul li ul li{
-    width: 100%;
-    top: 0;
-    left: 180px;
-}
-
-.navigation ul li:hover > ul{
-    display: block;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 .breadcrumb {
     position: relative;
     filter: alpha(opacity=50);
