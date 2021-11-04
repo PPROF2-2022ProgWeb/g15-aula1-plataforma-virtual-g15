@@ -60,26 +60,6 @@ body{
     background: beige;
 }
 
-.navigation ul li ul{
-    display: flex;
-    flex-direction: row;
-}
-
-.navigation ul li ul{
-    position: absolute;
-    display: none;
-}
-.navigation ul li ul li{
-    width: auto;
-    top: 0;
-    left: 180px;
-}
-
-.navigation ul li:hover > ul{
-    display: block;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 .logo-nav-container{
     display: flex;
     justify-content: space-between;
