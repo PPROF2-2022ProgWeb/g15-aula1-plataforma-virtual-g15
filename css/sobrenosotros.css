@@ -1,7 +1,64 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: beige;
+}
+
+.navigation ul li ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li ul{
+    position: absolute;
+    display: none;
+}
+.navigation ul li ul li{
+    width: 100%;
+    top: 0;
+    left: 180px;
+}
+
+.navigation ul li:hover > ul{
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
+}
 
 .breadcrumb {
     position: relative;
     filter: alpha(opacity=50);
     opacity: 0.5;
+}
+
+.icon-school{
+    left: 60%;
+}
+@media only screen and (max-width: 767px){
+
+    .breadcrumb {
+    position: absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    }
+
 }
