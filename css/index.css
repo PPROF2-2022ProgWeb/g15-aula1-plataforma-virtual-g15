@@ -42,7 +42,7 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    justify-content: space-between;
 }
 
 .navigation ul li{
@@ -58,6 +58,26 @@ body{
 
 .navigation ul li a:hover{
     background: beige;
+}
+
+.navigation ul li ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation ul li ul{
+    position: absolute;
+    display: none;
+}
+.navigation ul li ul li{
+    width: auto;
+    top: 0;
+    left: 180px;
+}
+
+.navigation ul li:hover > ul{
+    display: block;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .logo-nav-container{
@@ -131,11 +151,19 @@ footer{
     bottom: 0;
     color: beige;
     line-height: 1;
+    left: 0%;
+    right: 0%;
     width: 100%;
     justify-content: space-between;
     display: flex;
 }
+.derechos{
+    float: left;
+}
 
+.foto{
+    float: right;
+}
 .breadcrumb {
     position: relative;
     filter: alpha(opacity=50);
