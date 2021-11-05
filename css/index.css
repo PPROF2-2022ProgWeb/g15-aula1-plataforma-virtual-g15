@@ -12,8 +12,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
 }
 
@@ -77,8 +79,8 @@ h1{
 h2{
     text-align: center;
     text-decoration: salmon;
-    padding: 10px;
-    color: rgb(7, 7, 4);
+    padding: 50px;
+    color: rgb(226, 226, 216);
     background-color: rgba(0, 0, 0, 0.1);
     margin-top: 10%;
 }

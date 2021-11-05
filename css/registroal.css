@@ -10,8 +10,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .header{
@@ -74,7 +76,7 @@ body{
     height: 195%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    top: 130%;
+    top: 110%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -106,6 +108,10 @@ img {
     padding: 0;
     font-weight: bold;
     display: block;
+}
+
+.register-box select{
+    width: 100%;
 }
 
 .register-box input{
