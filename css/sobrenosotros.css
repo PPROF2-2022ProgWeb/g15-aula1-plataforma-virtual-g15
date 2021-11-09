@@ -1,7 +1,44 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: beige;
+}
 
 .breadcrumb {
     position: relative;
     filter: alpha(opacity=50);
     opacity: 0.5;
+}
+
+.icon-school{
+    left: 60%;
+}
+@media only screen and (max-width: 767px){
+
+    .breadcrumb {
+    position: absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    }
+
 }

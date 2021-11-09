@@ -10,8 +10,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
 }
 #LinkDeInteres1 {
@@ -64,6 +66,12 @@ body{
     padding: 2rem 0;
 }
 
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
 .log{
     letter-spacing: 10px;
     font-size: 1.2em;
@@ -73,7 +81,7 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    justify-content: space-between;
 }
 
 .navigation ul li{
@@ -122,21 +130,33 @@ footer{
     bottom: 0;
     color: beige;
     line-height: 1;
+    left: 0%;
+    right: 0%;
     width: 100%;
     justify-content: space-between;
     display: flex;
 }
-
 .derechos{
-    text-align: left;
+    float: left;
 }
 
 .foto{
-    text-align: right;
+    float: right;
 }
 
-.breadcrumb {
-    position: relative;
+
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .breadcrumb {
+    position: absolute;
     filter: alpha(opacity=50);
     opacity: 0.5;
+    }
+
 }

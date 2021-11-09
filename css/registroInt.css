@@ -10,8 +10,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .header{
@@ -20,7 +22,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -38,13 +39,14 @@ body{
     position: relative;
     filter: alpha(opacity=50);
     opacity: 0.5;
+    float: center;
 }
 
 .navigation ul{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    justify-content: space-between;
 }
 
 .navigation ul li{
@@ -71,10 +73,10 @@ body{
 
 .register-box{
     width: 80%;
-    height: 170%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    top: 90%;
+    top: 63%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -82,7 +84,7 @@ body{
     padding: 70px 30px;
     border-radius: 5%;
     display: inline-block;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 img {
@@ -108,6 +110,10 @@ img {
     display: block;
 }
 
+.register-box select{
+    width: 100%;
+}
+
 .register-box input{
     width: 100%;
     margin-bottom: 20px;
@@ -119,7 +125,8 @@ img {
 
 .register-box input[type="text"],
 .register-box input[type="password"],
-.register-box input[type="email"]{
+.register-box input[type="email"],
+.register-box input[type="number"]{
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -166,16 +173,17 @@ form p{
 }
 
 footer{
-    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     bottom: 0;
     color: beige;
     line-height: 1;
-    top: 170%;
-    width: 100%;
+    left: 0%;
+    right: 0%;
     justify-content: space-between;
     display: flex;
+    top: 130%;
 }
+
 .contenedor {
     width: 1000px;
     max-width: 1000px;
@@ -185,11 +193,11 @@ footer{
 
 
 .derechos{
-    text-align: left;
+    float: left;
 }
 
 .foto{
-    text-align: right;
+    float: right;
 }
 
 @media (max-width:480px){
@@ -199,29 +207,26 @@ footer{
 }
 
 @media only screen and (max-width: 767px){
-    
-    .navigation{
-        width: 100%;
-        margin-top: 1rem;
-    }
-    .navigation ul{
-        display: none;
+    .register-box{
+        top: 90%;
     }
 
-    .navigation ul li{
-        display: block;
-    }
-    
-    .navigation ul li a{
-        display: block;
-        padding: 0.5rem 0;
-        transition: all 0.4s linear;
-        border-radius: 5px;
-    }
-    
-    .navigation ul li a:hover{
-        background: beige;
+    .breadcrumb {
+    position: absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
     }
 
-    
+    footer{
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        bottom: 0;
+        color: beige;
+        line-height: 1;
+        left: 0%;
+        right: 0%;
+        justify-content: space-between;
+        display: flex;
+        top: 147%;
+    }
 }

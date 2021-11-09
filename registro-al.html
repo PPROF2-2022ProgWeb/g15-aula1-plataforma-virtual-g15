@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/registroal.css">
     <link rel="shortcut icon" href="img/SaberConectar.jpg">
 
 <!--Bootstrap-->
@@ -33,8 +33,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Sobre nosotros</a></li>
                 <li><a href="login.html">Ingresar</a></li>
+                <li><a href="RegistroInst.html" class="menu_link">Registro instituciones</a></li>
                 <li><a href="LinkDeInteres.html">Links de Interes</a></li>
-
             </ul>
         </nav>
     </div>
@@ -108,10 +108,18 @@
 
             <input type="radio" id="universitario" value="universitario" name="NivelEducativo">
             <label for="universitario">Universitario</label><br>  <br>          
-            
-            
 
+            <!--DNI-->
+            <label for="dni">Tipo de documento</label> <br>
+            <select id="dni">
+                <option value="dni">DNI</option>
+                <option value="du">DU</option>
+                <option value="pasaporte">Pasaporte</option>
+            </select>
 
+            <label for="dni">Número de documento</label> <br>
+            <input type="number" placeholder="ingrese su tipo de documento"> <br>
+        
 
             <!--Email-->
             <label for="email">Correo electrónico</label> <br>
@@ -128,6 +136,11 @@
             <a href="login.html">Ingresar</a> <br>
 
             <p>Si ya está registrado haga clic en el botón <i>Ingresar</i></p>
+
+            <!--Botón para registrarse institución-->
+            <a href="registro-al.html">Registrar institución</a> <br>
+
+            <p>Si sos una institución registrate haciendo clic en el botón <i>registrar institución</i></p>
         </form>
     </div>
        <!-- breadcrums -->
@@ -135,7 +148,7 @@
         <div class="col-md-3">
      <ol class="breadcrumb">
      <li class="breadcrumb-item">
-     <a href="file:///C:/Users/Matias/Downloads/Proyecto%20gitub/a4-g2-plataforma-virtual/index.html">Inicio</a>
+     <a href="index.html">Inicio</a>
      </li>   
      <li class="breadcrumb-item" aria-current="page">
      Registrarse
@@ -144,6 +157,7 @@
     </div>
       </div>
     </div>
+
    <footer>
         <div class="derechos">
             <p>&copy 2021 Todos los derechos reservados</p>

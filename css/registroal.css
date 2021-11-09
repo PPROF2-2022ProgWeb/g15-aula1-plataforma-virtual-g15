@@ -22,7 +22,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -34,6 +33,13 @@ body{
 .log{
     letter-spacing: 10px;
     font-size: 1.2em;
+}
+
+.breadcrumb {
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    float: center;
 }
 
 .navigation ul{
@@ -65,27 +71,23 @@ body{
     flex-wrap: wrap;
 }
 
-.login-box{
-    width: 400px;
-    height: 500px;
+.register-box{
+    width: 80%;
+    height: 195%;
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    top: 55%;
+    top: 110%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
     border-radius: 5%;
+    display: inline-block;
+    max-width: 450px;
 }
 
-.breadcrumb {
-    position: relative;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-}
-
-.logo {
+img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -94,21 +96,25 @@ body{
     left: calc(50% - 50px);
 }
 
-.login-box h1 {
+.register-box h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
 }
 
-.login-box label{
+.register-box label{
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
 }
 
-.login-box input{
+.register-box select{
+    width: 100%;
+}
+
+.register-box input{
     width: 100%;
     margin-bottom: 20px;
     padding: 7px;
@@ -116,35 +122,41 @@ body{
     border: none;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"]{
+
+.register-box input[type="text"],
+.register-box input[type="password"],
+.register-box input[type="email"],
+.register-box input[type="number"]{
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
     outline: none;
     height: 40px;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
 }
 
-.login-box input[type="submit"]{
+
+.register-box input[type="submit"]{
     border: none;
     outline: none;
     height: 40px;
     background: #300202;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.login-box a{
+
+.register-box a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 20px;
     color: darkgray;
 }
+
 form p{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -152,7 +164,7 @@ form p{
     line-height: 20px;
     color: gray;
 }
-.login-box a:hover{
+.register-box a:hover{
     color: white;
 }
 
@@ -163,15 +175,23 @@ form p{
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
-    bottom: 0;
+    bottom: -137%;
     color: beige;
     line-height: 1;
     left: 0%;
     right: 0%;
-    width: 100%;
     justify-content: space-between;
     display: flex;
 }
+
+.contenedor {
+    width: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: lawngreen;
+}
+
+
 .derechos{
     float: left;
 }
@@ -186,38 +206,12 @@ footer{
     }
 }
 
-@media only screen and (max-width: 767px){   
-    
-.login-box{
-    width: 400px;
-    height: 500px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-    border-radius: 5%;
-}
+@media only screen and (max-width: 767px){
 
     .breadcrumb {
-        position: absolute;
-        filter: alpha(opacity=50);
-        opacity: 0.5;
-        border-radius: 5%;
+    position: absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
     }
-    footer{
-        background-color: rgba(0, 0, 0, 0.2);
-        position: absolute;
-        bottom: 0;
-        color: beige;
-        line-height: 1;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-    }
+
 }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Agregar DESCRIPCION y KEYWORDS?-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Registro</title>
+    <!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/registroInt.css">
+    <link rel="shortcut icon" href="img/SaberConectar.jpg">
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="container">
+    <header class="header">
+        <div class="contain logo-nav-container">
+            <a href="index.html" class="log">Saber conectar</a>
+        <nav class="navigation">
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre nosotros</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="registro-al.html">Registro alumnos</a></li>
+                <li><a href="LinkDeInteres.html">Links de Interes</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+ 
+
+    <main class="main">
+    
+    <div class="register-box">
+        <a class="logo" href="index.html"><img src="img/SaberConectar.jpg" alt="logo de Saber Conectar"></a>
+        <h1>Cree su cuenta aquí</h1>
+        <form method="POST" action="registro.php">
+
+            <!--Nombre-->
+            <label for="nombre">Nombre </label> 
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese el nombre de la institución"> 
+            <!--Provincia-->
+            <label for="provincia de nacimiento" >Provincia </label>
+            <select name="provincia" >
+                <option value="--">Seleccione la provincia</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="Salta">Salta</option>
+                <option value="Formosa">Formosa</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Entrerios">Entre Ríos</option>
+                <option value="Stafe">Santa Fé</option>
+                <option value="Cordoba">Córdoba</option>
+                <option value="Sntigest">Santiago del Estero</option>
+                <option value="Snluis">San Luis</option>
+                <option value="Catamarca">Catamarca</option>
+                <option value="Larioja">La Rioja</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Bsas">Buenos Aires</option>
+                <option value="Lapampa">La Pampa</option>
+                <option value="Neuquen">Neuquén</option>
+                <option value="Stacruz">Santa Cruz</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Tierrafuego">Tierra del Fuego</option>
+                <option value="Tucuman">Tucumán</option>
+            </select><br>
+            <i class="edito1"></i>
+            <select name="ciudad">
+                <option value="-">Seleccione la ciudad</option>
+                <option value="salta">Salta</option>
+                <option value="sansalvardor">San Salvador de Jujuy</option>
+                <option value="salta">Salta</option>
+                <option value="formosa">Formosa</option>
+                <option value="resistencia">Resistencia</option>
+                <option value="posadas">Posadas</option>
+                <option value="corrientes">Corrientes</option>
+                <option value="parana">Paraná</option>
+                <option value="stafe">Santa Fé</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="santiagoest">Santiago del Estero</option>
+                <option value="snluis">San Luis</option>
+                <option value="snfernandocatamarca">San Fernando del Valle de Catamarca</option>
+                <option value="larioja">La Rioja</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="bsas">Buenos Aires</option>
+                <option value="starosa">Santa Rosa</option>
+                <option value="neuquen">Neuquén</option>
+                <option value="riogallegos">Río Gallegos</option>
+                <option value="rawson">Rawson</option>
+                <option value="ushuaia">Ushuaia</option>
+                <option value="snmigueltucuman">San Miguel de Tucumán</option>
+            </select><br>
+            <i class="edito2"></i>
+            <br>
+
+            <label for="cuit">CUIT</label> <br>
+            <input type="number" placeholder="ingrese su CUIT"> <br>
+        
+
+            <!--Email-->
+            <label for="email">Correo electrónico</label> <br>
+            <input type="email" placeholder="Ingrese su correo electrónico"> <br>
+
+            <!--Contraseña-->
+            <label for="password">Contraseña</label> <br>
+            <input type="password" minlength="4" maxlength="16" placeholder="Ingrese su contraseña"> <br>
+
+            <!--botón para enviar la información-->
+            <input type="submit" value="Registrarse"> <br>
+            
+            <!--Botón para ingresar-->
+            <a href="login.html">Ingresar</a> <br>
+
+            <p>Si ya está registrado haga clic en el botón <i>Ingresar</i></p>
+            
+            <!--Botón para registrarse alumnos-->
+            <a href="registro-al.html">Registrarse como alumno</a> <br>
+
+            <p>Si sos alumnos registrate haciendo clic en el botón <i>registrarse como alumno</i></p>
+        </form>
+    </div>
+       <!-- breadcrums -->
+       <nav>
+        <div class="col-md-3">
+     <ol class="breadcrumb">
+     <li class="breadcrumb-item">
+     <a href="index.html">Inicio</a>
+     </li>   
+     <li class="breadcrumb-item" aria-current="page">
+     Registrarse
+    </li>
+    </nav>
+    </div>
+      </div>
+    </div>
+
+   <footer>
+        <div class="derechos">
+            <p>&copy 2021 Todos los derechos reservados</p>
+        </div>
+
+        <div class="foto">
+            <p>Créditos de la foto libros a: FLICKR/GETTY IMAGES</p>
+        </div>
+    </footer>
+
+</body>
+</html>
