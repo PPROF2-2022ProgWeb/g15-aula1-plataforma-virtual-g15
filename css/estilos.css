@@ -27,11 +27,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-<<<<<<< HEAD
-}
-
-
-=======
 	z-index: 100
 }
 
@@ -171,7 +166,6 @@ form p{
 .register-box a:hover{
     color: white;
 }
->>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 
 main {
 	max-width: 800px;
@@ -197,14 +191,11 @@ main {
 	position: relative;
 }
 
-<<<<<<< HEAD
-=======
 .formulario_label{
 	text-align: center;
 
 }
 
->>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 .formulario__input {
 	width: 100%;
 	background: #fff;
@@ -320,11 +311,6 @@ main {
 	border: 3px solid #bb2929;
 }
 
-<<<<<<< HEAD
-
-/* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
-=======
 footer{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -376,7 +362,6 @@ footer{
 		max-width: 450px;
 	}
 
->>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 	.formulario {
 		grid-template-columns: 1fr;
 	}
@@ -390,8 +375,6 @@ footer{
 	.formulario__btn {
 		width: 100%;
 	}
-<<<<<<< HEAD
-=======
 
 	footer{
 		background-color: rgba(0, 0, 0, 0.2);
@@ -404,5 +387,4 @@ footer{
 		justify-content: space-between;
 		display: flex;
 	}
->>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 }
