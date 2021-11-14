@@ -27,9 +27,151 @@ body{
     left: 0;
     top: 0;
     right: 0;
+<<<<<<< HEAD
 }
 
 
+=======
+	z-index: 100
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    padding: 2rem 0;
+}
+
+.log{
+    letter-spacing: 10px;
+    font-size: 1.2em;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: beige;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.register-box{
+    width: 80%;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 5%;
+    display: inline-block;
+    max-width: 450px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 50px);
+}
+
+.register-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.register-box label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.register-box select{
+    width: 100%;
+}
+
+.register-box input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+}
+
+
+.register-box input[type="text"],
+.register-box input[type="password"],
+.register-box input[type="email"],
+.register-box input[type="tel"]{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+}
+
+
+.register-box input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #300202;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.register-box a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+form p{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: gray;
+}
+.register-box a:hover{
+    color: white;
+}
+>>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 
 main {
 	max-width: 800px;
@@ -55,6 +197,14 @@ main {
 	position: relative;
 }
 
+<<<<<<< HEAD
+=======
+.formulario_label{
+	text-align: center;
+
+}
+
+>>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 .formulario__input {
 	width: 100%;
 	background: #fff;
@@ -170,9 +320,63 @@ main {
 	border: 3px solid #bb2929;
 }
 
+<<<<<<< HEAD
 
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
+=======
+footer{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -10%;
+    color: beige;
+    line-height: 1;
+    left: 0%;
+    right: 0%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.contenedor {
+    width: 1000px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: lawngreen;
+}
+
+
+.derechos{
+    float: left;
+}
+
+.github{
+	float: center;
+}
+
+.foto{
+    float: right;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.register-box{
+		width: 80%;
+		height: 120%;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		top: 85%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		box-sizing: border-box;
+		padding: 70px 30px;
+		border-radius: 5%;
+		display: inline-block;
+		max-width: 450px;
+	}
+
+>>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 	.formulario {
 		grid-template-columns: 1fr;
 	}
@@ -186,4 +390,19 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
+<<<<<<< HEAD
+=======
+
+	footer{
+		background-color: rgba(0, 0, 0, 0.2);
+		position: absolute;
+		bottom: -60%;
+		color: beige;
+		line-height: 1;
+		left: 0%;
+		right: 0%;
+		justify-content: space-between;
+		display: flex;
+	}
+>>>>>>> 8a475d18d47cc749fbf24db534d121c826117a91
 }

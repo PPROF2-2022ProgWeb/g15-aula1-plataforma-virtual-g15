@@ -126,7 +126,7 @@ img {
 .register-box input[type="text"],
 .register-box input[type="password"],
 .register-box input[type="email"],
-.register-box input[type="number"]{
+.register-box input[type="tel"]{
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
