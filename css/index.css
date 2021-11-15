@@ -25,7 +25,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .header a{
@@ -88,7 +87,6 @@ h2{
     text-decoration: salmon;
     padding: 50px;
     color: rgb(226, 226, 216);
-    background-color: rgba(0, 0, 0, 0.1);
     margin-top: 10%;
 }
 
@@ -110,26 +108,32 @@ h2{
 
 #icon1 {
     font-size: 2rem;
-    color: rgb(4, 12, 12);
-    position:fixed;
-    right: 50%;
-    top: 65%;
+    color: rgb(245, 251, 251);
+    position:absolute;
+    right: 26%;
+    top: 25%;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transform: rotate(15deg);
+}
+
+#icon2 {
+    font-size: 2rem;
+    color:rgb(242, 242, 248) ;
+    right: 83%;
+    top: 45%;
+    position:absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transform: rotate(15deg);
 }
 
 .icon-school{
     font-size: 2rem;
-    color:rgb(3, 3, 136) ;
-    right: 25%;
-    top: 38%;
-    position:fixed;
-}
-
-.icon-school{
-    font-size: 2rem;
-    color:rgb(240, 240, 243) ;
-    right: 15%;
-    top: 38%;
-    position:fixed;
+    color: white;
+    right: 12%;
+    top: 5%;
+    position:absolute;
     z-index: 2;
 }
 
@@ -159,4 +163,8 @@ footer{
     opacity: 0.5;
 }
 
-
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+   
