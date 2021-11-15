@@ -69,6 +69,13 @@ body{
     flex-wrap: wrap;
 }
 
+h3{
+
+    padding: 10px;
+    color: rgb(10, 12, 8);
+    margin-top: 10%;
+}
+
 h1{
     text-align: center;
     padding: 10px;
