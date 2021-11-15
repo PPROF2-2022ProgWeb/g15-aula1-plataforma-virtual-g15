@@ -1,3 +1,5 @@
+
+
 body{
     background: url("../img/libro.jpg") center top;
     margin: 0;
@@ -10,8 +12,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
 }
 
@@ -28,6 +32,7 @@ body{
     text-decoration: none;
     padding: 2rem 0;
 }
+    
 
 .log{
     letter-spacing: 10px;
@@ -38,7 +43,7 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    justify-content: space-between;
 }
 
 .navigation ul li{
@@ -63,31 +68,26 @@ body{
     flex-wrap: wrap;
 }
 
+h3{
+
+    padding: 10px;
+    color: rgb(10, 12, 8);
+    margin-top: 10%;
+}
+
 h1{
     text-align: center;
     padding: 10px;
-    color: rgb(107, 201, 63);
+    color: rgb(214, 219, 211);
     margin-top: 10%;
 }
 
 h2{
     text-align: center;
     text-decoration: salmon;
-    padding: 10px;
-    color: rgb(234, 243, 112);
-    background-color: rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    color: rgb(226, 226, 216);
     margin-top: 10%;
-}
-
-footer{
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    bottom: 0;
-    color: beige;
-    line-height: 1;
-    width: 100%;
-    justify-content: space-between;
-    display: flex;
 }
 
 .derechos{
@@ -98,14 +98,73 @@ footer{
     text-align: right;
 }
 
-.icon {
+.icon-libro {
     font-size: 2rem;
-    color: azure;
+    color: rgb(4, 8, 8);
+    right: 56%;
+    top: 65%;
+    position: fixed;
+}
+
+#icon1 {
+    font-size: 2rem;
+    color: rgb(245, 251, 251);
     position:absolute;
-    left: 50px;
+    right: 26%;
+    top: 25%;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transform: rotate(15deg);
 }
 
+#icon2 {
+    font-size: 2rem;
+    color:rgb(242, 242, 248) ;
+    right: 83%;
+    top: 45%;
+    position:absolute;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -webkit-transform: rotate(15deg);
+}
+
+.icon-school{
+    font-size: 2rem;
+    color: white;
+    right: 12%;
+    top: 5%;
+    position:absolute;
+    z-index: 2;
+}
+
+
+footer{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    color: beige;
+    line-height: 1;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.derechos{
+    float: left;
+}
+
+.foto{
+    float: right;
+}
 .breadcrumb {
-    left:50px;
-
+    position: relative;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
 }
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+   
