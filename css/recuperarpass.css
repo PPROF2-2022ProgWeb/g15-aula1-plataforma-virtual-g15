@@ -10,8 +10,10 @@ body{
 
 .contain{
     width: 85%;
-    max-width: 850px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 
 }
 
@@ -39,7 +41,7 @@ body{
     margin: 0;
     padding: 0;
     list-style: none;
-
+    justify-content: space-between;
 }
 
 .navigation ul li{

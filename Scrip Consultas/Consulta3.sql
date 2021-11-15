@@ -1,0 +1,1 @@
+INSERT INTO `saber_conectar`.`alumnos` (`idAlumno`, `Tipo_Dni`, `Num_Dni`, `Nombre`, `Apellido`, `Pais`, `Fecha_Nacimiento`, `Nivel_Educativo`, `Correo_Electronico`, `idUsuario`, `Ciudades_idCiudades`) VALUES ('7', '2', '10328964', 'Moral', 'Carrizo', '1', '1963-08-12', '3', 'moral@carrizo.com', '7', '3');
