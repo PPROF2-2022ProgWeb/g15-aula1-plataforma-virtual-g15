@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  body{
+    background: #ffffff;
+  }
+.bg_sections{
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+}
+.bg{
+  background-image: url(assets/mujer-buscando.jpg);
+  background-position-x: -150px;
+  height: auto;
+}
+.bg_services{
+  background-image: url(assets/bg_services.svg);
+  height: 100%;
+}
+.bg_us{
+  background-image: url(assets/bg_nosotros.svg);
+}
+.title_services{
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: 2em;
+}
+.card-body h6{
+  color: #ffa751;
+  font-weight: 800;
+}

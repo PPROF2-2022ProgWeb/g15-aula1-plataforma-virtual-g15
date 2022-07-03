@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+}
+[colspan] {
+  text-align: justify;
+}
+
+.etiqueta{
+  position: relative;
+  left: -1.5rem;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600;
+    width: 200px;
+    display: block;
+    text-align: center;
+    padding: 0 20px;
+    /* transform: rotate(-45deg); */
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  transform: rotate(-45deg);
+  background: #ffffff;
+}
+
