@@ -12,7 +12,7 @@ El sistema Saber Conectar será un producto diseñado para trabajar en entornos 
 3- en su rama mergean con la rama master (por el momento es la rama JenniferFarias)
 "git pull origin JennirFarias"
 
-4- en el caso que su rama no haya sido actualizada en el repo remoto de github, ejecutan:
+4- Por ultimo ejecutan:
 "git push"
 
 //INICIAR APP
