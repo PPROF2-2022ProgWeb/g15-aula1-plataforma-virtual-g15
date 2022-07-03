@@ -1,1 +1,0 @@
-INSERT INTO `saber_conectar`.`usuarios` (`idUsuarios`, `Nombre`, `Contraseña`) VALUES ('7', 'USUARIO', '689DBA');
