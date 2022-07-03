@@ -1,0 +1,35 @@
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+          <div class="modal-dialog rounded">
+              <div class="modal-content px-3">
+                  <div class="modal-header">
+                      <div class="p-4">
+                          <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos</h4>
+                      <p class="statusMsg"></p>
+                      <form action="../php/contacto.php" method="post" id="formulario">
+                          <div class="mb-4">
+                              <label for="nombre" class="form-label">Nombre completo</label>
+                              <input type="text" class="form-control" required id="nombre" name="nombre">
+                          </div>
+                          <div class="mb-4">
+                              <label for="correo" class="form-label">Email</label>
+                              <input type="email" class="form-control" required name="correo" id="correo">
+                          </div>
+                          <div class="mb-4">
+                              <label for="mensaje" class="form-label">Consulta</label>
+                              <textarea class="form-control" id="mensaje" required name="mensaje" rows="3"></textarea>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar</button>
+                              <button class="btn btn-primary btn-block">Enviar</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>

@@ -1,0 +1,55 @@
+<header class="container-fluid px-0" id="headerHeader">
+    <nav class="navbar py-0 justify-content-end">
+      <ul class="nav my-auto">
+        <li class="nav-item my-auto mx-3" *ngIf="!estadoSesion">
+          <a class="text-decoration-none" aria-current="page" href='/login#contentForm'>Iniciar Sesión</a>
+        </li>
+        <li class="nav-item my-auto mx-3" *ngIf="estadoSesion">
+          <a class="text-decoration-none" aria-current="page" href='/login#contentForm'>{{nombreUsuario}}</a>
+        </li>
+        <li class="p-1 my-auto" *ngIf="estadoSesion">
+          <a routerLink="/checkout">
+            <i class="fas fa-cart-plus me-3">
+              <span class="position-absolute top-0 start-10 p-2 bg-danger rounded-circle" *ngIf="">
+            </span></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- NAVIGATION -->
+      <nav class="navbar sticky-top bg-white navbar-expand-lg shadow-lg" id="navHeader">
+          <div class="container-fluid" id="contenedor_nav">
+              <a class="d-inline-block align-text-top p-1" href="/login"><img src="../../../assets/logotipo.png" alt="Logo del sitio" height="80"/></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body justify-content-end" width="100">
+                      <ul class="navbar-nav my-2 my-lg-0">
+                          <li class="nav-item m-3">
+                              <a class="nav-link" aria-current="page" routerLink='/login'>Inicio</a>
+                          </li>
+                          <li class="nav-item m-3">
+                              <a class="nav-link" aria-current="page" routerLink='/nosotros'>Nosotros</a>
+                          </li>
+                          <li class="nav-item m-3">
+                              <a class="nav-link" aria-current="page" routerLink="/registro-instituciones">Instituciones</a>
+                          </li>
+                          <li class="nav-item m-3">
+                              <a class="nav-link" aria-current="page" routerLink="/registro-alumnos">Alumnos</a>
+                          </li>
+                          <li class="nav-item m-3">
+                              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contacto</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </nav>
+
+
+</header>

@@ -1,0 +1,101 @@
+<!-- MAIN -->
+<main>
+  <!-- BREADCRUMB -->
+  <header class="main_section">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white p-2">
+              <li class="breadcrumb-item active">Inicio</li>
+          </ol>
+      </nav>
+  </header>
+  <!-- SECCION LOGIN -->
+  <section class="main_section">
+      <div class="container-fluid bg-white shadow px-0" id="contentForm">
+          <!-- SECCION LOGIN -->
+          <div class="row align-items-stretch">
+              <!-- IMAGEN FONDO -->
+              <div class="col bg_sections bg d-none d-lg-block col-md-6 col-lg-6 col-xl-7 ">
+              </div>
+              <div class="col bg-white p-5">
+                  <div class="text-center">
+                      <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
+                  </div>
+                  <h2 class="font-weight-bold text-center py-5" id="titleForm">Bienvenido</h2>
+
+                  <!-- LOGIN -->
+<!-- MODIFICAR DIRECCION DE ARCHIVO PHP -->
+                  <form action="assets/php/login.php" method="post" id="formLogin">
+                      <div class="mb-4">
+                          <label for="correo" class="form-label">Email</label>
+                          <input type="email" class="form-control" required name="correo" id="correo">
+                      </div>
+                      <div class="mb-4">
+                          <label for="pass" class="form-label">Password</label>
+                          <input type="password" class="form-control" required id="pass" name="pass">
+                      </div>
+                      <!-- <div class="mb-4 form-check">
+                          <input type="checkbox" name="connected" class="form-check-input" id="connected">
+                          <label for="connected" class="form-check-label">Mantenerme conectado</label>
+                          <label id="respuesta"></label>
+                      </div> -->
+                      <div class="d-grid">
+                          <button type="submit" name="submit" class="btn btn-primary">Iniciar Sesión</button>
+                      </div>
+                      <div class="my-3">
+                          <span>¿No tienes cuenta? <a href="/registro-alumnos">Regístrate como alumno</a></span>
+                          <span> / </span>
+                          <span><a href="/registro-instituciones">Regístrate como Institución</a></span>
+                          <span><br>¿No recuerdas la contraseña? <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">Recuperar contraseña</a>
+                          </span>
+                      </div>
+                  </form>
+
+                  <!-- LOGIN CON REDES -->
+                  <div class="container w-100 my-5">
+                      <div class="row text-center">
+                          <div class="col-12">Iniciar Sesión con</div>
+                          <div class="row">
+                              <div class="col">
+                                  <button class="btn btn-outline-primary w-100 my-1">
+                                      <div class="row align-items-center">
+                                          <div class="col-2 d-none d-md-block">
+                                              <img src="../../../assets/fb.png" width="32" alt="Registrar con Facebook">
+                                          </div>
+                                          <div class="col-12 col-md-10 text-center">Facebook</div>
+                                      </div>
+                                  </button>
+                              </div>
+                              <div class="col">
+                                  <button class="btn btn-outline-danger w-100 my-1">
+                                      <div class="row align-items-center">
+                                          <div class="col-2 d-none d-md-block">
+                                              <img src="../../../assets/google.png" width="32" alt="Registrar con Google">
+                                          </div>
+                                          <div class="col-12 col-md-10 text-center">Google</div>
+                                      </div>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- SECCION SERVICIO -->
+          <div class="row d-none d-sm-block bg_sections bg_services bg-white">
+              <div class="col d-none d-sm-block col-md-12 col-lg-6 p-5 rounded-right">
+                  <div class="card body_services">
+                      <div class="card-body p-5">
+                          <h5 class="card-title title_services">Comencemos!</h5>
+                          <h6 class="card-subtitle mb-2 fs-1">TU PORTAL DE EDUCACION</h6>
+                          <p class="card-text">Registrate como alumno para poder elegir la institución y seleccionar el curso o carrera a la que vas a inscribirte.
+                              En el caso que formes parte de una institución, podés registrarte como una y cargar los cursos y carreras disponibles para poder obtener inscripciones.
+                          </p>
+                          <a class="btn btn-outline-warning mt-3" href="/login#contentForm">Comenzar</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <app-membresia></app-membresia>
+      </div>
+  </section>
+</main>

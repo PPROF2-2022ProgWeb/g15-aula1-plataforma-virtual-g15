@@ -1,0 +1,163 @@
+<!-- BREADCRUMB -->
+<header class="main_header">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb bg-white p-2">
+          <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+      </ol>
+  </nav>
+</header>
+<div class="container">
+  <main>
+
+    <div class="py-5 text-center">
+      <h2>Checkout</h2>
+      <p class="lead">Completa todos los campos antes de efectuar el pago.</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Carrito</span>
+          <span class="badge bg-primary rounded-pill">{{cAnual + cMensual}}</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Licencia Premium Anual</h6>
+              <small class="text-muted">Seleccionar la cantidad</small>
+              <label for="cantidadAnual" class="form-control mt-1">
+                <input type="number" class="border-0" min="0" [(ngModel)]="cAnual">
+              </label>
+            </div>
+            <span class="text-muted">{{cAnual * 1200 | number:'1.2'}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Licencia Premium Mensual</h6>
+              <small class="text-muted">Seleccionar la cantidad</small>
+              <label for="cantidadMensual" class="form-control mt-1">
+                <input type="number" class="border-0" min="0" [(ngModel)]="cMensual">
+              </label>
+            </div>
+            <span class="text-muted">{{cMensual * 120 | number:'1.2'}}</span>
+          </li>
+          <!-- <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Cupon Descuento</h6>
+              <small>CUPON20DESC</small>
+            </div>
+            <span class="text-success">−$20</span>
+          </li> -->
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total</span>
+            <strong>{{cAnual*1200 + cMensual*120}}</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Cupón descuento">
+            <button type="submit" class="btn btn-secondary">Agregar</button>
+          </div>
+        </form>
+        <div class="card p-3 my-3">
+          <h4>RENOVACIÓN AUTOMÁTICA:</h4>
+          <p>
+            Tu/s suscripción/es se renovará/n automáticamente cada año mediante un único pago de ${{(cAnual*1200 + cMensual*120) | number:'1.2'}}.
+            Al hacer clic en "Confirmar y pagar" aceptas nuestros <a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
+          </p>
+
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Información de compra</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Ingresa tu nombre completo.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Perez" value="" required="">
+              <div class="invalid-feedback">
+                Ingresa tu apellido.
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com">
+              <div class="invalid-feedback">
+                Por favor ingresa un email válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="Av. San Martin 800" required="">
+              <div class="invalid-feedback">
+                Por favor ingresa una dirección.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Domicilio">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">País</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Seleccionar...</option>
+                <option>Argentina</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor ingresa el país.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Ciudad</label>
+              <select class="form-select" id="state" required="">
+                <option value="">Seleccionar...</option>
+                <option>Córdoba</option>
+              </select>
+              <div class="invalid-feedback">
+               Por favor ingresa la ciudad.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">CP</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                CP requerido.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-check mt-3">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guardar información para futuras compras</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Pago <span class="text-muted fs-5">(Actualizar página en caso de no visualizar)</span> </h4>
+          <div id="cardPaymentBrick_container">
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
