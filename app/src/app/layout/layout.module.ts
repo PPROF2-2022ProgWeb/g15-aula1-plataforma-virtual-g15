@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { MembresiaComponent } from './membresia/membresia.component';
+import { CommerceHeaderComponent } from './commerce-header/commerce-header.component';
 
 
 
@@ -13,7 +14,8 @@ import { MembresiaComponent } from './membresia/membresia.component';
     HeaderComponent,
     FooterComponent,
     ContactoComponent,
-    MembresiaComponent
+    MembresiaComponent,
+    CommerceHeaderComponent
   ],
   imports: [
     CommonModule,
