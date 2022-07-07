@@ -1,22 +1,6 @@
 <header class="container-fluid px-0" id="headerHeader">
-    <nav class="navbar py-0 justify-content-end">
-      <ul class="nav my-auto">
-        <li class="nav-item my-auto mx-3" *ngIf="!estadoSesion">
-          <a class="text-decoration-none" aria-current="page" href='/login#contentForm'>Iniciar Sesión</a>
-        </li>
-        <li class="nav-item my-auto mx-3" *ngIf="estadoSesion">
-          <a class="text-decoration-none" aria-current="page" href='/login#contentForm'>{{nombreUsuario}}</a>
-        </li>
-        <li class="p-1 my-auto" *ngIf="estadoSesion">
-          <a routerLink="/checkout">
-            <i class="fas fa-cart-plus me-3">
-              <span class="position-absolute top-0 start-10 p-2 bg-danger rounded-circle" *ngIf="">
-            </span></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
     <!-- NAVIGATION -->
+    <app-commerce-header></app-commerce-header>
       <nav class="navbar sticky-top bg-white navbar-expand-lg shadow-lg" id="navHeader">
           <div class="container-fluid" id="contenedor_nav">
               <a class="d-inline-block align-text-top p-1" href="/login"><img src="../../../assets/logotipo.png" alt="Logo del sitio" height="80"/></a>

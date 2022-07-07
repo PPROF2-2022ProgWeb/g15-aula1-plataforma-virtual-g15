@@ -1,35 +1,512 @@
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
-          <div class="modal-dialog rounded">
-              <div class="modal-content px-3">
-                  <div class="modal-header">
-                      <div class="p-4">
-                          <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
-                      </div>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                      <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos</h4>
-                      <p class="statusMsg"></p>
-                      <form action="../php/contacto.php" method="post" id="formulario">
-                          <div class="mb-4">
-                              <label for="nombre" class="form-label">Nombre completo</label>
-                              <input type="text" class="form-control" required id="nombre" name="nombre">
-                          </div>
-                          <div class="mb-4">
-                              <label for="correo" class="form-label">Email</label>
-                              <input type="email" class="form-control" required name="correo" id="correo">
-                          </div>
-                          <div class="mb-4">
-                              <label for="mensaje" class="form-label">Consulta</label>
-                              <textarea class="form-control" id="mensaje" required name="mensaje" rows="3"></textarea>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar</button>
-                              <button class="btn btn-primary btn-block">Enviar</button>
-                          </div>
-                      </form>
-                  </div>
+<!-- Modal Contacto -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog rounded">
+      <div class="modal-content px-3">
+          <div class="modal-header">
+              <div class="p-4">
+                  <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
               </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos</h4>
+              <p class="statusMsg"></p>
+              <form action="../php/contacto.php" method="post" id="formulario">
+                  <div class="mb-4">
+                      <label for="nombre" class="form-label">Nombre completo</label>
+                      <input type="text" class="form-control" required id="nombre" name="nombre">
+                  </div>
+                  <div class="mb-4">
+                      <label for="correo" class="form-label">Email</label>
+                      <input type="email" class="form-control" required name="correo" id="correo">
+                  </div>
+                  <div class="mb-4">
+                      <label for="mensaje" class="form-label">Consulta</label>
+                      <textarea class="form-control" id="mensaje" required name="mensaje" rows="3"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar</button>
+                      <button class="btn btn-primary btn-block">Enviar</button>
+                  </div>
+              </form>
           </div>
       </div>
+  </div>
+</div>
+
+<!-- Modal politica -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title mx-auto" id="exampleModalLabel">Términos y Condiciones</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <section class="container text-center p-5" id="sectionPrivacidad">
+                <div class="align-items-md-center">
+                  <div class="accordion" id="accordionExample">
+                    <!-- PRIMER TARJETA -->
+                    <div class="card">
+                      <!-- TITULO -->
+                      <div class="accordion-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                          >Política de privacidad</button>
+                        </h5>
+                      </div>
+                      <div
+                        id="collapseOne"
+                        class="collapse show"
+                        aria-labelledby="headingOne"
+                        data-parent="#accordionExample"
+                      >
+                        <!-- CUERPO -->
+                        <div class="card-body">
+                          <section class="box">
+                            <h3>
+                              I.- Política de privacidad y protección de datos
+                              personales.
+                            </h3>
+                            <br />
+                            <p>
+                              En el marco del cumplimiento de lo dispuesto en art 5 de
+                              la Ley Orgánica 15/1999, de 13 de diciembre, sobre
+                              protección de Datos de Carácter Personal (LOPD), Nuestra
+                              empresa informa a los usuarios de esta web mediante este
+                              documento del uso y tratamiento de los datos personales
+                              que faciliten o vayan a facilitar en su navegación y de la
+                              política de protección de datos que se aplicará sobre
+                              dichos datos.
+                            </p>
+                            <br />
+                            <h3>
+                              II. Vías a través de las cuales se recaban datos
+                              personales. Finalidades del tratamiento.
+                            </h3>
+                            <br />
+                            <p>
+                              Formularios de contacto, peticiones de presupuesto y
+                              medios de comunicación tradicionales. Los datos personales
+                              recogidos serán objeto de tratamiento automatizado e
+                              incorporados al fichero denominado CONTACTOS NUESTRA
+                              EMPRESA del que NUESTRA EMPRESA es responsable. Asimismo,
+                              podrá facilitarnos sus datos a través de teléfono, correo
+                              electrónico y otros medios de comunicación indicados en la
+                              sección de Contacto. La finalidad del tratamiento de estos
+                              datos será la Gestión de los datos recibidos a través de
+                              formularios de la web para el Tratamiento de los mismos a
+                              las peticiones solicitadas por el usuario, inclusión en
+                              agenda de contactos, respuesta a preguntas, envío de
+                              Newsletter y comunicaciones electrónicas comerciales.Se
+                              informa que gestionará automatizadamente estos datos para
+                              la administración, ampliación y mejora de nuestros
+                              servicios así como para fines técnicos y comerciales sobre
+                              los servicios ofrecidos. En todo caso, los datos recogidos
+                              y tratados son únicamente los básicos para las finalidades
+                              señaladas anteriormente.El Usuario es responsable de la
+                              veracidad de sus datos, comprometiéndose a no introducir
+                              datos falsos y a proceder a la rectificación de los mismos
+                              si fuera necesario. El prestador pone a disposición del
+                              Usuario todos los medios para que pueda proceder a la
+                              modificación de sus datos mediante los formularios
+                              designados en nuestra web. El Usuario manifiesta que
+                              cuando no introduce sus datos personales sino los de un
+                              tercero están autorizados por éste para su introducción.El
+                              PRESTADOR quedará exonerado de responsabilidad en el caso
+                              de que la solicitud de muestra o corrección de datos se
+                              realice desde la dirección de correo electrónico que usted
+                              nos ha aportado a través de cualquiera de los formularios
+                              de la web, pues en ese caso presumirá que es el usuario
+                              quién la realiza. Los campos en los que figure un
+                              asterisco (*) son aquellos que requieren una respuesta
+                              obligatoria. De no ser cubiertos la consecuencia consiste
+                              en la imposibilidad de enviar la solicitud de información.
+                            </p>
+                            <br />
+                            <h3>
+                              III. Ejercicio de Derechos de Protección de Datos (ARCO)
+                            </h3>
+                            <br />
+                            <p>
+                              El usuario tiene derecho a solicitar y obtener
+                              gratuitamente información sobre sus datos de carácter
+                              personal sometidos a tratamiento, de su origen (que en
+                              nuestro caso serán siempre los formularios situados en la
+                              web) y de las comunicaciones que puedan afectar a los
+                              mismos. Los usuarios pueden dirigir una comunicación por
+                              escrito a la dirección de correo electrónico
+                              administracion@saberconectar.com.ar, incluyendo en ambos casos
+                              fotocopia de su DNI u otro documento identificativo
+                              similar, para solicitar el ejercicio de los derechos de
+                              acceso, rectificación, cancelación y oposición.
+                            </p>
+                            <br />
+                            <h3>
+                              IV. Consentimiento y revocación del usuario con fines
+                              informativos
+                            </h3>
+                            <br />
+                            <p>
+                              A través de la casilla de marcación el usuario acepta
+                              nuestra política de privacidad y obtenemos su
+                              consentimiento para el envío de comunicaciones
+                              informativas sobre nuestros servicios y actividades así
+                              como para la contestación a las consultas formuladas por
+                              el usuario. Así mismo podrá en cualquier momento revocar
+                              el consentimiento prestado para fines de promoción y
+                              publicidad de nuestros servicios, boletines de noticias y
+                              el envío de comunicaciones comerciales electrónicas,
+                              dirigiendo un mail a la dirección
+                              administracion@saberconectar.com.ar con el asunto BAJA LOPD, o
+                              dirigiéndose a nuestro domicilio en los términos definidos
+                              por nuestra empresa.
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- SEGUNDA TARJETA -->
+                    <div class="card">
+                      <!-- TITULO -->
+                      <div class="accordion-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="collapseTwo"
+                          >Aviso Legal</button>
+                        </h5>
+                      </div>
+                      <div
+                        id="collapseTwo"
+                        class="collapse"
+                        aria-labelledby="headingTwo"
+                        data-parent="#accordionExample"
+                      >
+                        <!-- CUERPO -->
+                        <div class="card-body">
+                          <section class="box">
+                            <p>
+                              Pensando en web, en adelante El Prestador, responsable del
+                              sitio web, pone a disposición de los usuarios el presente
+                              documento con el que pretende dar cumplimiento a las
+                              obligaciones dispuestas en la Ley 34/2002, de Servicios de
+                              la Sociedad de la Información y del Comercio Electrónico
+                              (LSSI-CE), así como informar a todos los usuarios del
+                              sitio web respecto a cuáles son las condiciones de uso del
+                              sitio web. Toda persona que acceda a este sitio web asume
+                              el papel de usuario, comprometiéndose a la observancia y
+                              cumplimiento riguroso de las disposiciones aquí
+                              dispuestas, así como a cuales quiera otra disposición
+                              legal que fuera de aplicación. El hecho de acceder a esta
+                              página implica el conocimiento y aceptación de los
+                              siguientes términos y condiciones de uso. El prestador se
+                              reserva el derecho a modificar cualquier tipo de
+                              información que pudiera aparecer en el sitio web, sin que
+                              exista obligación de preavisar o poner en conocimiento de
+                              los usuarios dichas obligaciones, entendiéndose como
+                              suficiente con la publicación en el sitio web del
+                              prestador.
+                            </p>
+                            <br />
+                            <h3>Responsabilidad</h3>
+                            <br />
+                            <p>
+                              El prestador se exime de cualquier tipo de responsabilidad
+                              derivada de la información publicada en su sitio web,
+                              siempre que esta información haya sido manipulada o
+                              introducida por un tercero ajeno al mismo.Este sitio web
+                              ha sido revisado y probado para que funcione
+                              correctamente. En principio, puede garantizarse el
+                              correcto funcionamiento los 365 días del año, 24 horas al
+                              día. No obstante, el prestador no descarta la posibilidad
+                              de que existan ciertos errores de programación, o que
+                              acontezcan causas de fuerza mayor, catástrofes naturales,
+                              huelgas, o circunstancias semejantes que hagan imposible
+                              el acceso a la página web.
+                            </p>
+                            <br />
+                            <h3>Actualización y modificación de la página web.</h3>
+                            <br />
+                            <p>
+                              El prestador se reserva el derecho de actualizar,
+                              modificar o eliminar la información contenida en su página
+                              web, y su configuración o presentación, en cualquier
+                              momento, sin previo aviso y sin asumir ningún tipo de
+                              responsabilidad por hacerlo.
+                            </p>
+                            <br />
+                            <h3>Propiedad Intelectual e industrial</h3>
+                            <br />
+                            <p>
+                              El sitio web, incluyendo a título enunciativo pero no
+                              limitativo su programación, edición, compilación y demás
+                              elementos necesarios para su funcionamiento, los diseños,
+                              textos y/o gráficos son propiedad del prestador o en su
+                              caso dispone de licencia o autorización por parte de los
+                              autores. Todos los contenidos del sitio web se encuentran
+                              debidamente protegidos por la normativa de propiedad
+                              intelectual e industrial, así como inscritos en los
+                              registros públicos correspondientes.Independientemente de
+                              la finalidad para la que fueran destinados, la
+                              reproducción total o parcial, uso, explotación,
+                              distribución y comercialización, requiere en todo caso de
+                              la autorización escrita previa por parte del prestador.
+                              Cualquier uso no autorizado previamente por parte del
+                              prestador será considerado un incumplimiento grave de los
+                              derechos de propiedad intelectual o industrial del
+                              autor.Los diseños, textos y/o gráficos ajenos al prestador
+                              y que pudieran aparecer en el sitio web, pertenecen a sus
+                              respectivos propietarios, siendo ellos mismos responsables
+                              de cualquier posible controversia que pudiera suscitarse
+                              respecto a los mismos.Para realizar cualquier tipo de
+                              observación respecto a posibles incumplimientos de los
+                              derechos de propiedad intelectual o industrial, así como
+                              sobre cualquiera de los contenidos del sitio web, puede
+                              hacerlo a través del siguiente correo electrónico
+                              administracion@saberconectar.com.ar.
+                            </p>
+                            <br />
+                            <h3>Medidas de Seguridad</h3>
+                            <br />
+                            <p>
+                              Se han adoptado los niveles de seguridad de protección de
+                              los Datos Personales legalmente requeridos por la
+                              normativa vigente, y se ha instalado todos los medios y
+                              medidas técnicas y organizativas a su alcance para evitar
+                              la pérdida, mal uso, alteración, acceso no autorizado y
+                              robo de los Datos Personales que se nos facilite. No
+                              obstante, el Usuario debe ser consciente de que las
+                              medidas de seguridad en Internet no son inexpugnables.
+                            </p>
+                            <br />
+                            <h3>Legislación y jurisdicción aplicable.</h3>
+                            <br />
+                            <p>
+                              Con carácter general, las relaciones con los usuarios,
+                              derivadas de la prestación de nuestras actividades y
+                              servicios contenida en esta página web, están sometidos a
+                              la legislación y jurisdicción argentina. Para la
+                              resolución de todos los conflictos derivados o
+                              relacionados con su uso se realizará en los Juzgados y
+                              Tribunales de Argentina. Los usuarios de esta página web
+                              son conscientes de todo lo que se ha expuesto y lo aceptan
+                              voluntariamente.
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- TERCER TARJETA -->
+                    <div class="card">
+                      <!-- TITULO -->
+                      <div class="accordion-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                          >Política de Cookies</button>
+                        </h5>
+                      </div>
+                      <div
+                        id="collapseThree"
+                        class="collapse"
+                        aria-labelledby="headingThree"
+                        data-parent="#accordionExample"
+                      >
+                        <!-- CUERPO -->
+                        <div class="card-body">
+                          <section class="box">
+                            <p>
+                              La versión de escritorio del Sitio Web utiliza una
+                              tecnología denominada “cookies”, con la finalidad de poder
+                              recabar información acerca del uso del sitio web. La
+                              presente Política de Cookies tiene por finalidad
+                              informarle de manera clara y precisa sobre las cookies que
+                              se utilizan en el sitio web.
+                            </p>
+                            <br />
+                            <h3>¿Qué son las cookies?</h3>
+                            <br />
+                            <p>
+                              Una cookie es un fichero que se descarga en su ordenador
+                              al acceder a determinadas páginas web. Las cookies
+                              permiten a una página web, entre otras cosas, almacenar y
+                              recuperar información sobre los hábitos de navegación de
+                              un usuario o de su equipo y, dependiendo de la información
+                              que contengan y de la forma en que utilice su equipo,
+                              pueden utilizarse para reconocer al usuario. Si lo desea
+                              puede configurar su navegador de manera que le avise en la
+                              pantalla si va a recibir una cookie. El usuario puede
+                              configurar su ordenador de manera que no reciba estas
+                              cookies, este hecho no impedirá que se pueda acceder a la
+                              información del sitio web. En el sitio web
+                              pensandoenweb.es se utiliza Google Analytics, un servicio
+                              de analítica web desarrollada por Google, que presta un
+                              servicio de medición y análisis de la navegación. Para
+                              encontrar más información e inhabilitar el uso de estas
+                              cookies puede visitar el siguiente
+                              enlace:http://www.google.es/intl/es/analytics/privacyoverview.html
+                              Información sobre cookies utilizadas en esta web Nombre:
+                              Analítica (Google Analytics) Origen: Google Inc Recoge:
+                              Número de visitas, páginas o secciones visitadas, tiempo
+                              de navegación, sitios visitados antes de entrar en esta
+                              página, detalles sobre los navegadores usados Finalidad:
+                              Informes estadísticos sobre el tráfico del sitio web, su
+                              audiencia total y la audiencia en una determinada campaña
+                              publicitaria Cuando se instala: Al acceder a la web
+                              Caduca: Al cerrar el navegador Puede gestionar el uso de
+                              cookies a través del navegador de su ordenador. En
+                              Pensando en web nunca guardamos los datos personales de
+                              nuestros usuarios, salvo que quiera registrarse, de forma
+                              voluntaria, en alguna de las secciones habilitadas al
+                              efecto dentro del sitio web, con el fin de hacer uso de
+                              los servicios que ponemos a su disposición y de recibir
+                              información sobre promociones y contenidos de su interés.
+                            </p>
+                            <br />
+                            <h3>Consentimiento</h3>
+                            <br />
+                            <p>
+                              Al navegar y continuar en el sitio web estará consintiendo
+                              el uso de las cookies antes enunciadas, por los plazos
+                              señalados y en las condiciones contenidas en la presente
+                              Política de Cookies.
+                            </p>
+                            <br />
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- Crear curso Modal -->
+
+<div class="modal fade" id="crearModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog rounded">
+      <div class="modal-content px-3">
+          <div class="modal-header">
+              <div class="p-4">
+                  <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
+              </div>
+              <a type="button" data-bs-dismiss="modal" aria-label="Close">
+                  <i class="fas fa-angle-up"></i>
+              </a>
+          </div>
+          <div class="modal-body">
+              <h4 class="modal-title pt-3" id="staticBackdrop">Completa todos los campos</h4>
+              <p class="statusMsg"></p>
+              <form action="#" method="get" id="formulario">
+                  <!-- NOMBRE -->
+                  <div class="mb-4">
+                      <label for="nombre" class="form-label">Nombre del Curso</label>
+                      <input type="text" class="form-control" name="nombre" data-sb-validations="required">
+                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">Falta ingresar el nombre.</div>
+                  </div>
+                  <!-- DESCRIPCION -->
+                  <div class="mb-4">
+                      <label for="descripcion" class="form-label">Descripci&oacuten<sup>(m&aacutex. 180 carcteres)</sup></label>
+                      <textarea class="form-control" name="descripcion" rows="2" maxlength="180"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">Falta ingresar la descripcion.</div>
+                  </div>
+
+                  <div class="mb-4">
+                      <label for="select" class="form-label">Seleccionar nivel:</label>
+                      <select class="form-select ml-3" aria-label="Default select example" name="select">
+                          <option selected>Seleccionar</option>
+                          <option value="1">Principiante</option>
+                          <option value="2">Medio</option>
+                          <option value="3">Avanzado</option>
+                      </select>
+                  </div>
+
+                  <div class="row mb-4">
+                      <div class="col">
+                          <label for="fechaInicio" class="form-label d-flex">Fecha de Inicio</label>
+                          <input type="date" class="form-control" name="fechaInicio">
+                      </div>
+                      <div class="col">
+                          <label for="fechaFin" class="form-label d-flex">Fecha de Cierre</label>
+                          <input type="date" class="form-control" name="fechaFin">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Crear</button>
+                      <div id="respuesta"></div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Recuperar pw -->
+<div class="modal fade" id="recModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog rounded">
+	  <div class="modal-content px-3">
+		<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Recuperar contraseña</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<form action="" method="$_POST" id="recPass">
+				<div class="mb-2">
+					<label for="email">Ingresa tu correo electronico</label>
+				</div>
+				<div class="mb-4">
+					<input type="email" class="form-control" required name="recupassword"/>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+		  <button type="button" class="btn btn-primary">Enviar</button>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- Modal Cerrar sesion -->
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Seguro quieres cerrar sesión?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">Para cerrar sesión presiona Salir.</div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" aria-current="modal" (click)="traerFuncion()">Salir</a>
+        </div>
+    </div>
+</div>
+</div>
+

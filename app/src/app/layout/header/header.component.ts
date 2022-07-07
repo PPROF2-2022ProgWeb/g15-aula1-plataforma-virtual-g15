@@ -13,11 +13,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  estadoSesion: boolean = true;
-
-  nombreUsuario: string = 'Juan Manuel';
-
-
-
-
 }
