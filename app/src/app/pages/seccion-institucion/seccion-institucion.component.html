@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col my-5 text-center">
+      <h1>Hola {{nombreInstitucion}};</h1>
+      <h2 class="fs-6">Selecciona que quieres hacer</h2>
+
+      <div class="p-3 text-center">
+        <button (click)="mostrarCursos()" class="btn btn-primary m-2" id="VerCursos">{{btnCursos}}</button>
+        <button (click)="mostrarCarreras()" class="btn btn-primary m-2">{{btnCarreras}}</button>
+      </div>
+
+      <div class="d-none" id="cursosI">
+        <app-cursos-de-institucion></app-cursos-de-institucion>
+      </div>
+      <div class="d-none" id="carrerasI">
+        <app-carreras-de-institucion></app-carreras-de-institucion>
+      </div>
+
+    </div>
+  </div>
+</div>
+

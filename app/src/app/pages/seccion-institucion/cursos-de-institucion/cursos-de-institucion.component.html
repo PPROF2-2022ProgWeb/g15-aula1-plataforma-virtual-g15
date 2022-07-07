@@ -1,0 +1,57 @@
+<h1 class="h3 mb-2">Cursos</h1>
+
+<p class="mb-4">Crea modifica y elimna tus cursos.</p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <div class="d-flex justify-content-between">
+        <h6 class="m-0 text-primary">Cursos disponibles</h6>
+        <button class="btn btn-success btn-icon-split" data-bs-toggle="modal" data-bs-target="#crearModal">
+          <span class="icon text-white">
+              <i class="fas fa-arrow-right px-2 "></i>
+          </span>
+          <span class="text">Crear curso</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                      <th>NombreCurso</th>
+                      <th>DescripcionCurso</th>
+                      <th>FechaInicioCurso</th>
+                      <th>FechaFinCurso</th>
+                      <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Curso UX</th>
+                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
+                    <th>25/09/2022</th>
+                    <th>25/12/2022</th>
+                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
+                  </tr>
+                  <tr>
+                    <th>Curso UI</th>
+                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
+                    <th>25/09/2022</th>
+                    <th>25/12/2022</th>
+                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
+                  </tr>
+                  <tr>
+                    <th>Testing Manual</th>
+                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
+                    <th>25/09/2022</th>
+                    <th>25/12/2022</th>
+                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
