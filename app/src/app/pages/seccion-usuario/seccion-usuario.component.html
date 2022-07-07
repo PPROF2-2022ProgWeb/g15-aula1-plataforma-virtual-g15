@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col my-5 text-center">
+      <h1>Hola {{nombreAlumno}}</h1>
+      <h2 class="fs-6">Selecciona que quieres ver</h2>
+
+      <div class="p-3 text-center">
+        <button (click)="mostrarCursos()" class="btn btn-primary m-2">{{btnCursos}}</button>
+        <button (click)="mostrarCarreras()" class="btn btn-primary m-2">{{btnCarreras}}</button>
+      </div>
+
+      <div class="d-none" id="cursos">
+        <app-cursos-alumnos></app-cursos-alumnos>
+      </div>
+      <div class="d-none" id="carreras">
+        <app-carreras-alumnos></app-carreras-alumnos>
+      </div>
+
+    </div>
+  </div>
+</div>

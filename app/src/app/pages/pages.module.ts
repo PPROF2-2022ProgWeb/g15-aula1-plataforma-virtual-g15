@@ -5,13 +5,17 @@ import { LoginComponent } from './login/login.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { RegistroInstitucionesComponent } from './registro-instituciones/registro-instituciones.component';
 import { RegistroAlumnosComponent } from './registro-alumnos/registro-alumnos.component';
-import { RecuperarPassComponent } from './recuperar-pass/recuperar-pass.component';
-import { PoliticaComponent } from './politica/politica.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
 import { LayoutModule } from '../layout/layout.module';
 import { PreciosComponent } from './precios/precios.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { FormsModule } from '@angular/forms';
+import { SeccionUsuarioComponent } from './seccion-usuario/seccion-usuario.component';
+import { CursosComponent } from './seccion-usuario/cursos/cursos.component';
+import { CarrerasComponent } from './seccion-usuario/carreras/carreras.component';
+import { SeccionInstitucionComponent } from './seccion-institucion/seccion-institucion.component';
+import { CursosDeInstitucionComponent } from './seccion-institucion/cursos-de-institucion/cursos-de-institucion.component';
+import { CarrerasDeInstitucionComponent } from './seccion-institucion/carreras-de-institucion/carreras-de-institucion.component';
 
 
 
@@ -21,11 +25,15 @@ import { FormsModule } from '@angular/forms';
     NosotrosComponent,
     RegistroInstitucionesComponent,
     RegistroAlumnosComponent,
-    RecuperarPassComponent,
-    PoliticaComponent,
     Pagina404Component,
     PreciosComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SeccionUsuarioComponent,
+    CursosComponent,
+    CarrerasComponent,
+    SeccionInstitucionComponent,
+    CursosDeInstitucionComponent,
+    CarrerasDeInstitucionComponent
   ],
   imports: [
     CommonModule,
@@ -38,11 +46,9 @@ import { FormsModule } from '@angular/forms';
     NosotrosComponent,
     RegistroInstitucionesComponent,
     RegistroAlumnosComponent,
-    RecuperarPassComponent,
-    PoliticaComponent,
     Pagina404Component,
     PreciosComponent,
     CheckoutComponent
   ]
 })
-export class PagesModule { }
+export class PagesModule {}
