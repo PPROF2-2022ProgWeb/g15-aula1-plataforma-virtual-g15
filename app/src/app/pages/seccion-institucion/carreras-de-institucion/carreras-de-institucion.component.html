@@ -25,30 +25,21 @@
                       <th>DescripcionCarrera</th>
                       <th>FechaInicioCarrera</th>
                       <th>FechaFinCarrera</th>
+                      <th>Cantidad Inscriptos</th>
                       <th>Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>Carrera UX</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
-                  </tr>
-                  <tr>
-                    <th>Carrera UI</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
-                  </tr>
-                  <tr>
-                    <th>QA</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-warning mx-2" (click)="modificar()">Modificar</button><button class="btn btn-danger" (click)="eliminar()">Eliminar</button></th>
+                  <tr *ngFor="let carreras of ArregloCarreras">
+                    <th>{{carreras.nombre}}</th>
+                    <th>{{carreras.descripcion}}</th>
+                    <th>{{carreras.fechaInicio}}</th>
+                    <th>{{carreras.fechaFin}}</th>
+                    <th>{{carreras.cantidadInscriptos}}</th>
+                    <th>
+                      <button class="border-0 bg-white"  data-bs-toggle="modal" data-bs-target="#crearModal"><i class="fas fa-edit mx-1 link-primary"></i></button>
+                      <button class="border-0 bg-white" (click)="eliminar()"><i class="fas fa-trash-alt mx-1 link-danger"></i></button>
+                    </th>
                   </tr>
                 </tbody>
             </table>

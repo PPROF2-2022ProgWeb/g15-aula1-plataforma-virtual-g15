@@ -20,26 +20,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>Desarrollo Web</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
-                  </tr>
-                  <tr>
-                    <th>QA</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
-                  </tr>
-                  <tr>
-                    <th>Java Developer</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
+                  <tr *ngFor="let carreras of ArregloCarreras">
+                    <th>{{carreras.nombre}}</th>
+                    <th>{{carreras.descripcion}}</th>
+                    <th>{{carreras.fechaInicio}}</th>
+                    <th>{{carreras.fechaFin}}</th>
+                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribirse</button></th>
                   </tr>
                 </tbody>
             </table>

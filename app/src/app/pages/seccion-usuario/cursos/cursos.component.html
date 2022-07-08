@@ -20,26 +20,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>Curso UX</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
-                  </tr>
-                  <tr>
-                    <th>Curso UI</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
-                  </tr>
-                  <tr>
-                    <th>Testing Manual</th>
-                    <th>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, modi.</th>
-                    <th>25/09/2022</th>
-                    <th>25/12/2022</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribir</button></th>
+                  <tr *ngFor="let cursos of ArregloCursos">
+                    <th>{{cursos.nombre}}</th>
+                    <th>{{cursos.descripcion}}</th>
+                    <th>{{cursos.fechaInicio}}</th>
+                    <th>{{cursos.fechaFin}}</th>
+                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribirse</button></th>
                   </tr>
                 </tbody>
             </table>
