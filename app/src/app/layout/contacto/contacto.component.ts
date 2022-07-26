@@ -18,4 +18,7 @@ export class ContactoComponent implements OnInit {
   traerFuncion(){
     this.comp.estadoSesion = false;
   }
+  crearCurso(item: string):void{
+    console.log('Item->', item);
+  }
 }

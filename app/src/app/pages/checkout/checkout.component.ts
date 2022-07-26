@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
+
+
   cAnual: number = 0;
   cMensual: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 }

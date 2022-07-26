@@ -9,10 +9,10 @@
         <button (click)="mostrarCarreras()" class="btn btn-primary m-2">{{btnCarreras}}</button>
       </div>
 
-      <div class="d-none" id="cursos">
+      <div [ngClass]="{'d-none': visibilidadCurso === false, 'd-block': visibilidadCurso === true}" id="cursos">
         <app-cursos-alumnos></app-cursos-alumnos>
       </div>
-      <div class="d-none" id="carreras">
+      <div [ngClass]="{'d-none': visibilidadCarrera === false, 'd-block': visibilidadCarrera === true}" id="carreras">
         <app-carreras-alumnos></app-carreras-alumnos>
       </div>
 
