@@ -9,11 +9,11 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos</h4>
+              <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos / Contact us</h4>
               <p class="statusMsg"></p>
               <form action="../php/contacto.php" method="post" id="formulario">
                   <div class="mb-4">
-                      <label for="nombre" class="form-label">Nombre completo</label>
+                      <label for="nombre" class="form-label">Nombre completo / Full Name</label>
                       <input type="text" class="form-control" required id="nombre" name="nombre">
                   </div>
                   <div class="mb-4">
@@ -21,12 +21,12 @@
                       <input type="email" class="form-control" required name="correo" id="correo">
                   </div>
                   <div class="mb-4">
-                      <label for="mensaje" class="form-label">Consulta</label>
+                      <label for="mensaje" class="form-label">Consulta / Message</label>
                       <textarea class="form-control" id="mensaje" required name="mensaje" rows="3"></textarea>
                   </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar</button>
-                      <button class="btn btn-primary btn-block">Enviar</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar / Cancel</button>
+                      <button class="btn btn-primary btn-block">Enviar / Send</button>
                   </div>
               </form>
           </div>
@@ -418,45 +418,45 @@
               </a>
           </div>
           <div class="modal-body">
-              <h4 class="modal-title pt-3" id="staticBackdrop">Completa todos los campos</h4>
+              <h4 class="modal-title pt-3" id="staticBackdrop">Completa todos los campos / Complete the fields</h4>
               <p class="statusMsg"></p>
               <form action="#" method="get" id="formulario">
                   <!-- NOMBRE -->
                   <div class="mb-4">
-                      <label for="nombre" class="form-label">Nombre del Curso</label>
-                      <input type="text" class="form-control" name="nombre" data-sb-validations="required">
-                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">Falta ingresar el nombre.</div>
+                      <label for="nombre" class="form-label">Nombre del Curso / Course Name</label>
+                      <input type="text" class="form-control" name="nombre" data-sb-validations="required" #nombreCurso>
+                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">Falta ingresar el nombre. / Please enter the name.</div>
                   </div>
                   <!-- DESCRIPCION -->
                   <div class="mb-4">
-                      <label for="descripcion" class="form-label">Descripci&oacuten<sup>(m&aacutex. 180 carcteres)</sup></label>
+                      <label for="descripcion" class="form-label">Descripción / Description<sup>(máx. 180 caracteres / 180 characters máx.)</sup></label>
                       <textarea class="form-control" name="descripcion" rows="2" maxlength="180"></textarea>
-                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">Falta ingresar la descripcion.</div>
+                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">Falta ingresar la descripcion. / Please enter a description.</div>
                   </div>
 
                   <div class="mb-4">
-                      <label for="select" class="form-label">Seleccionar nivel:</label>
+                      <label for="select" class="form-label">Seleccionar nivel: / Select a level</label>
                       <select class="form-select ml-3" aria-label="Default select example" name="select">
-                          <option selected>Seleccionar</option>
-                          <option value="1">Principiante</option>
-                          <option value="2">Medio</option>
-                          <option value="3">Avanzado</option>
+                          <option selected>Seleccionar / Select</option>
+                          <option value="1">Principiante / Begginer</option>
+                          <option value="2">Medio / Intermediate</option>
+                          <option value="3">Avanzado / Advanced</option>
                       </select>
                   </div>
 
                   <div class="row mb-4">
                       <div class="col">
-                          <label for="fechaInicio" class="form-label d-flex">Fecha de Inicio</label>
+                          <label for="fechaInicio" class="form-label d-flex">Fecha de Inicio / Start Date</label>
                           <input type="date" class="form-control" name="fechaInicio">
                       </div>
                       <div class="col">
-                          <label for="fechaFin" class="form-label d-flex">Fecha de Cierre</label>
+                          <label for="fechaFin" class="form-label d-flex">Fecha de Cierre / End Date</label>
                           <input type="date" class="form-control" name="fechaFin">
                       </div>
                   </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Crear</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar / Close</button>
+                      <button type="button" class="btn btn-primary" (click)="crearCurso(nombreCurso.value)">Crear / Create</button>
                       <div id="respuesta"></div>
                   </div>
               </form>
@@ -470,13 +470,13 @@
 	<div class="modal-dialog rounded">
 	  <div class="modal-content px-3">
 		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Recuperar contraseña</h5>
+			<h5 class="modal-title" id="exampleModalLabel">Recuperar contraseña / Password Recovery</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
 			<form action="" method="$_POST" id="recPass">
 				<div class="mb-2">
-					<label for="email">Ingresa tu correo electronico</label>
+					<label for="email">Ingresa tu correo electronico / Enter your email</label>
 				</div>
 				<div class="mb-4">
 					<input type="email" class="form-control" required name="recupassword"/>
@@ -484,8 +484,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-		  <button type="button" class="btn btn-primary">Enviar</button>
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Close</button>
+		  <button type="button" class="btn btn-primary">Enviar / Send</button>
 		</div>
 	  </div>
 	</div>
@@ -498,13 +498,13 @@ aria-hidden="true">
 <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¿Seguro quieres cerrar sesión?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">¿Seguro quieres cerrar sesión? / Sure you want to log out?</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">Para cerrar sesión presiona Salir.</div>
+        <div class="modal-body">Para cerrar sesión presiona Aceptar. / Press Accept to log out</div>
         <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" aria-current="modal" (click)="traerFuncion()">Salir</a>
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar / Cancel</button>
+            <a class="btn btn-primary" aria-current="modal" >Aceptar / Accept</a>
         </div>
     </div>
 </div>

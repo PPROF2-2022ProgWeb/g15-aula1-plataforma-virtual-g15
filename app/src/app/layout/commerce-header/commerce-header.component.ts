@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commerce-header.component.css']
 })
 export class CommerceHeaderComponent implements OnInit {
+  estadoSesion: boolean = false;
+
+  nombreUsuario: string = '#NOMBREUSARIO';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  estadoSesion: boolean = false;
-
-  nombreUsuario: string = '#NOMBREUSARIO';
 
   iniciarSesion(){
     alert("redirecciona al login pero simulamos como quedarian los botones recien presionados");

@@ -7,7 +7,7 @@
               <ol class="breadcrumb bg-white p-2">
 <!-- MODIFICAR ENLACE -->
                   <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">Inicio</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Registro de Insitutiones</li>
+                  <li class="breadcrumb-item active" aria-current="page">Registro de Insitutiones / Institutions Registration</li>
               </ol>
           </nav>
       </header>
@@ -25,14 +25,14 @@
                       <div class="text-center">
                           <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
                       </div>
-                      <h2 class="font-weight-bold text-center py-5" id="titleForm">Registro de Instituciones</h2>
+                      <h2 class="font-weight-bold text-center py-5" id="titleForm">Registro de Instituciones / Institutions Registration</h2>
                       <!-- FORMULARIO -->
 <!-- MODIFICAR ENLACE -->
                       <form action="registro.php" method="post" class="row align-items-center needs-validation" id="formRegistro">
                           <div class="col">
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="nombreInstitucion" class="form-label">Nombre del Instituto</label>
+                                      <label for="nombreInstitucion" class="form-label">Nombre del Instituto / Institution Name</label>
                                       <input type="text" class="form-control" required name="nombreInstitucion" id="validacionNombre">
                                   </div>
                               </div>
@@ -48,39 +48,39 @@
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="provincia" class="form-label">Provincia</label>
+                                      <label for="provincia" class="form-label">Provincia / Province</label>
                                       <input type="text" class="form-control" required name="provincia" id="validacionProvincia">
                                   </div>
                                   <div class="col">
-                                      <label for="ciudad" class="form-label">Ciudad</label>
+                                      <label for="ciudad" class="form-label">Ciudad / City</label>
                                       <input type="text" class="form-control" required name="ciudad">
                                   </div>
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="pw" class="form-label">Contraseña</label>
+                                      <label for="pw" class="form-label">Contraseña / Password</label>
                                       <input type="password" class="form-control" required name="pw">
                                   </div>
                                   <div class="col">
-                                      <label for="repassword" class="form-label">Confirmar contraseña</label>
+                                      <label for="repassword" class="form-label">Repetir contraseña / Repeat Password</label>
                                       <input type="password" class="form-control" required name="repassword">
                                   </div>
                               </div>
-                              <div class="row mb-4">
+                              <!-- <div class="row mb-4">
                                   <div class="col">
                                       <div class="form-check">
                                           <input type="checkbox" required name="terminos" class="form-check-input" id="terminos">
                                           <label for="terminos" class="form-check-label"><a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto términos y condiciones</a></label>
                                       </div>
                                   </div>
-                              </div>
+                              </div> -->
                           </div>
                           <div class="d-grid">
-                              <button type="submit" class="btn btn-primary">Registrar</button><a class="btn btn-warning mt-2" routerLink="/instituciones">Iniciar Sesion como INSTITUCION (solo prueba) </a>
+                              <button type="submit" class="btn btn-primary">Registrar / Sign Up</button><a class="btn btn-warning mt-2" routerLink="/instituciones">Iniciar Sesion como INSTITUCION (solo prueba) / Institutions Log In</a>
                           </div>
                           <div class="my-3">
-                              <span>¿Ya tienes cuenta? <a href="/login#contentForm">Ingresar</a></span>
-                              <span><br>¿No recuerdas la contraseña? <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">Recuperar contraseña</a>
+                              <span>¿Ya tienes cuenta? / Do you have an account <a href="/login#contentForm">Ingresar / Log In</a></span>
+                              <span><br>¿No recuerdas la contraseña? / Forgot password <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">Recuperar contraseña / Password Recovery</a>
                               </span>
                           </div>
                       </form>

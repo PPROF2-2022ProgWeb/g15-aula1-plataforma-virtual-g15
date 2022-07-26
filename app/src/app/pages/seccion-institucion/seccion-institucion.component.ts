@@ -9,29 +9,29 @@ export class SeccionInstitucionComponent implements OnInit {
   nombreInstitucion = "{{NombreInstitucion}}";
   btnCursos = "Ver mis Cursos";
   btnCarreras = "Ver mis carreras";
+  visibilidadCurso:boolean = false;
+  visibilidadCarrera:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-  mostrarCursos(){
-    let cursos= document.getElementById('cursosI');
-    if (cursos?.classList.contains('d-none')) {
-      cursos?.classList.replace('d-none', 'd-block');
+  mostrarCursos():void{
+    if(this.visibilidadCurso === false){
+      this.visibilidadCurso = true;
       this.btnCursos = "Ocultar mis cursos";
     }else{
-      cursos?.classList.replace('d-block','d-none');
-      this.btnCursos = "Ver mis cursos"
+      this.visibilidadCurso = false;
+      this.btnCursos = "Ver mis cursos";
     }
-    }
-  mostrarCarreras(){
-    let carreras= document.getElementById('carrerasI');
-    if (carreras?.classList.contains('d-none')) {
-      carreras?.classList.replace('d-none', 'd-block');
+  }
+  mostrarCarreras():void{
+    if(this.visibilidadCarrera === false){
+      this.visibilidadCarrera = true;
       this.btnCarreras = "Ocultar mis carreras";
     }else{
-      carreras?.classList.replace('d-block','d-none');
-      this.btnCarreras = "Ver mis cursos";
+      this.visibilidadCarrera = false;
+      this.btnCarreras = "Ver mis carreras";
     }
-    }
+  }
 
 }
