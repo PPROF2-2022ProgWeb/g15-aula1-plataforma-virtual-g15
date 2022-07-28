@@ -4,7 +4,7 @@
   <header class="main_section">
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white p-2">
-              <li class="breadcrumb-item active">Inicio / Home</li>
+              <li class="breadcrumb-item active">{{"LINKS.INICIO" | translate}}</li>
           </ol>
       </nav>
   </header>
@@ -20,16 +20,16 @@
                   <div class="text-center">
                       <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
                   </div>
-                  <h2 class="font-weight-bold text-center py-5" id="titleForm">Bienvenido / Welcome</h2>
+                  <h2 class="font-weight-bold text-center py-5" id="titleForm">{{ "SECCION.SALUDO" | translate}}</h2>
 
                   <!-- LOGIN -->
                   <form>
                       <div class="mb-4">
-                          <label for="correo" class="form-label">Email</label>
+                          <label for="correo" class="form-label">{{ "INPUTS.EMAIL" | translate}}</label>
                           <input type="email" class="form-control" id="email">
                       </div>
                       <div class="mb-4">
-                          <label for="pass" class="form-label">Password</label>
+                          <label for="pass" class="form-label"> {{ "INPUTS.PASSWORD" | translate}} </label>
                           <input type="password" class="form-control" required id="password">
                       </div>
                       <!-- <div class="mb-4 form-check">
@@ -38,13 +38,13 @@
                           <label id="respuesta"></label>
                       </div> -->
                       <div class="d-grid">
-                          <button type="submit" name="submit" class="btn btn-primary">Iniciar Sesión / Log in</button>
+                          <button type="submit" name="submit" class="btn btn-primary">{{"LINKS.INICIARSESION" | translate}}</button>
                       </div>
                       <div class="my-3">
-                          <span>¿No tienes cuenta? / you dont have a account? <a href="/registro-alumnos">Regístrate como alumno / Create a student account</a></span>
+                          <span>{{"LINKS.TIENESCUENTA" | translate}} <a href="/registro-alumnos">{{"LINKS.CREARALUMNO" | translate}}</a></span>
                           <span> / </span>
-                          <span><a href="/registro-instituciones">Regístrate como Institución / Create a institution account</a></span>
-                          <span><br>¿No recuerdas la contraseña? / Forgot password? <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">Recuperar contraseña / Password Recovery</a>
+                          <span><a href="/registro-instituciones">{{"LINKS.CREARINSTITUCION" | translate}}</a></span>
+                          <span><br>{{"LINKS.RECUERDASPASS" | translate}} <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">{{"LINKS.RECUPERARPASS" | translate}}</a>
                           </span>
                       </div>
                   </form>
@@ -52,7 +52,7 @@
                   <!-- LOGIN CON REDES -->
                   <div class="container w-100 my-5">
                       <div class="row text-center">
-                          <div class="col-12">Iniciar Sesión con / Log in with</div>
+                          <div class="col-12">{{"LINKS.INICIARSESION" | translate}} {{"SECCION.CON" | translate}}</div>
                           <div class="row">
                               <div class="col">
                                   <button class="btn btn-outline-primary w-100 my-1">
@@ -84,13 +84,11 @@
               <div class="col d-none d-sm-block col-md-12 col-lg-6 p-5 rounded-right">
                   <div class="card body_services">
                       <div class="card-body p-5">
-                          <h5 class="card-title title_services">Comencemos! / Let's start!</h5>
-                          <h6 class="card-subtitle mb-2 fs-1">TU PORTAL DE EDUCACION / YOUR EDUCATION SITE</h6>
-                          <p class="card-text">Registrate como alumno para poder elegir la institución y seleccionar el curso o carrera a la que vas a inscribirte.
-                              En el caso que formes parte de una institución, podés registrarte como una y cargar los cursos y carreras disponibles para poder obtener inscripciones.<br><br>Register as a student to be able to choose the institution and select the course or career to which you are going to enroll.
-                              If you are an institution, you can register as one and load the available courses and careers to obtain registrations.
+                          <h5 class="card-title title_services">{{"SECCION.COMENCEMOS" | translate}}</h5>
+                          <h6 class="card-subtitle mb-2 fs-1 text-uppercase">{{"SECCION.TITULOINDEX" | translate}}</h6>
+                          <p class="card-text">{{"SECCION.DESCRIPCIONINDEX" | translate}}
                           </p>
-                          <a class="btn btn-outline-warning mt-3" href="/login#contentForm">Comenzar / Start</a>
+                          <a class="btn btn-outline-warning mt-3" href="/login#contentForm">{{"LINKS.COMENZAR" | translate}}</a>
                       </div>
                   </div>
               </div>

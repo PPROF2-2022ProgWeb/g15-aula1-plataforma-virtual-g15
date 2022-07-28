@@ -6,8 +6,8 @@
           <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
               <ol class="breadcrumb bg-white p-2">
 <!-- MODIFICAR ENLACE -->
-                  <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">Inicio</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Registro de Insitutiones / Institutions Registration</li>
+                  <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">{{"LINKS.INICIO" | translate}}</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{"LINKS.INSTITUCIONES" | translate}}</li>
               </ol>
           </nav>
       </header>
@@ -25,20 +25,20 @@
                       <div class="text-center">
                           <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
                       </div>
-                      <h2 class="font-weight-bold text-center py-5" id="titleForm">Registro de Instituciones / Institutions Registration</h2>
+                      <h2 class="font-weight-bold text-center py-5" id="titleForm">{{"LINKS.REGISTRAR" | translate}}</h2>
                       <!-- FORMULARIO -->
 <!-- MODIFICAR ENLACE -->
                       <form action="registro.php" method="post" class="row align-items-center needs-validation" id="formRegistro">
                           <div class="col">
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="nombreInstitucion" class="form-label">Nombre del Instituto / Institution Name</label>
+                                      <label for="nombreInstitucion" class="form-label">{{"INPUTS.NOMBREINSTITUTO" | translate}}</label>
                                       <input type="text" class="form-control" required name="nombreInstitucion" id="validacionNombre">
                                   </div>
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="email" class="form-label">Email</label>
+                                      <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
                                       <input type="email" class="form-control" required name="email">
                                   </div>
                                   <div class="col">
@@ -48,21 +48,21 @@
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="provincia" class="form-label">Provincia / Province</label>
+                                      <label for="provincia" class="form-label">{{"INPUTS.PROVINCIA" | translate}}</label>
                                       <input type="text" class="form-control" required name="provincia" id="validacionProvincia">
                                   </div>
                                   <div class="col">
-                                      <label for="ciudad" class="form-label">Ciudad / City</label>
+                                      <label for="ciudad" class="form-label">{{"INPUTS.CIUDAD" | translate}}</label>
                                       <input type="text" class="form-control" required name="ciudad">
                                   </div>
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
-                                      <label for="pw" class="form-label">Contraseña / Password</label>
+                                      <label for="pw" class="form-label">{{"INPUTS.PASSWORD" | translate}}</label>
                                       <input type="password" class="form-control" required name="pw">
                                   </div>
                                   <div class="col">
-                                      <label for="repassword" class="form-label">Repetir contraseña / Repeat Password</label>
+                                      <label for="repassword" class="form-label">{{"INPUTS.REPASSWORD" | translate}}</label>
                                       <input type="password" class="form-control" required name="repassword">
                                   </div>
                               </div>
@@ -76,11 +76,11 @@
                               </div> -->
                           </div>
                           <div class="d-grid">
-                              <button type="submit" class="btn btn-primary">Registrar / Sign Up</button><a class="btn btn-warning mt-2" routerLink="/instituciones">Iniciar Sesion como INSTITUCION (solo prueba) / Institutions Log In</a>
+                              <button type="submit" class="btn btn-primary">{{"LINKS.REGISTRAR" | translate}}</button><a class="btn btn-warning mt-2" routerLink="/instituciones">{{"LINKS.INICIARSESION" | translate}} {{"LINKS.INICIARSESIONPRUEBA" | translate}}</a>
                           </div>
                           <div class="my-3">
-                              <span>¿Ya tienes cuenta? / Do you have an account <a href="/login#contentForm">Ingresar / Log In</a></span>
-                              <span><br>¿No recuerdas la contraseña? / Forgot password <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">Recuperar contraseña / Password Recovery</a>
+                              <span>{{"LINKS.YATIENESCUENTA" | translate}} <a href="/login#contentForm">{{"LINKS.INICIARSESION" | translate}}</a></span>
+                              <span><br>{{"LINKS.RECUERDASPASS" | translate}} <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">{{"LINKS.RECUPERARPASS" | translate}}</a>
                               </span>
                           </div>
                       </form>

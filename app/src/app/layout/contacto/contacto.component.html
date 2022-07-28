@@ -9,24 +9,24 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <h4 class="modal-title text-center pt-3" id="staticBackdrop">Consultanos / Contact us</h4>
+              <h4 class="modal-title text-center pt-3" id="staticBackdrop">{{"LINKS.CONTACTO" | translate}}</h4>
               <p class="statusMsg"></p>
               <form action="../php/contacto.php" method="post" id="formulario">
                   <div class="mb-4">
-                      <label for="nombre" class="form-label">Nombre completo / Full Name</label>
+                      <label for="nombre" class="form-label">{{"INPUTS.NOMBRE" | translate}}</label>
                       <input type="text" class="form-control" required id="nombre" name="nombre">
                   </div>
                   <div class="mb-4">
-                      <label for="correo" class="form-label">Email</label>
+                      <label for="correo" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
                       <input type="email" class="form-control" required name="correo" id="correo">
                   </div>
                   <div class="mb-4">
-                      <label for="mensaje" class="form-label">Consulta / Message</label>
+                      <label for="mensaje" class="form-label">{{"INPUTS.MENSAJE" | translate}}</label>
                       <textarea class="form-control" id="mensaje" required name="mensaje" rows="3"></textarea>
                   </div>
                   <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">Cerrar / Cancel</button>
-                      <button class="btn btn-primary btn-block">Enviar / Send</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.reload()">{{"LINKS.CANCELAR" | translate}}</button>
+                      <button class="btn btn-primary btn-block">{{"LINKS.ENVIAR" | translate}}</button>
                   </div>
               </form>
           </div>
@@ -470,13 +470,13 @@
 	<div class="modal-dialog rounded">
 	  <div class="modal-content px-3">
 		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Recuperar contraseña / Password Recovery</h5>
+			<h5 class="modal-title" id="exampleModalLabel">{{"LINKS.RECUPERARPASS" | translate}}</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
 			<form action="" method="$_POST" id="recPass">
 				<div class="mb-2">
-					<label for="email">Ingresa tu correo electronico / Enter your email</label>
+					<label for="email">{{"INPUTS.INGRESA" | translate}} {{"INPUTS.EMAIL" | translate}}</label>
 				</div>
 				<div class="mb-4">
 					<input type="email" class="form-control" required name="recupassword"/>
@@ -484,8 +484,8 @@
 			</form>
 		</div>
 		<div class="modal-footer">
-		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar / Close</button>
-		  <button type="button" class="btn btn-primary">Enviar / Send</button>
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{"LINKS.CANCELAR" | translate}}</button>
+		  <button type="button" class="btn btn-primary">{{"LINKS.ENVIAR" | translate}}</button>
 		</div>
 	  </div>
 	</div>
@@ -498,13 +498,13 @@ aria-hidden="true">
 <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">¿Seguro quieres cerrar sesión? / Sure you want to log out?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{"SECCION.ESTASSEGURO" | translate}}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">Para cerrar sesión presiona Aceptar. / Press Accept to log out</div>
+        <div class="modal-body">{{"SECCION.PARACERRAR" | translate}}</div>
         <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar / Cancel</button>
-            <a class="btn btn-primary" aria-current="modal" >Aceptar / Accept</a>
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">{{"LINKS.CANCELAR" | translate}}</button>
+            <a class="btn btn-primary" aria-current="modal" >{{"LINKS.ACEPTAR" | translate}}</a>
         </div>
     </div>
 </div>
