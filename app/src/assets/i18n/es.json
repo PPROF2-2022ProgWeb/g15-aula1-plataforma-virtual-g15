@@ -1,0 +1,66 @@
+{
+  "PAISES":{
+    "ARGENTINA": "Argentina"
+  },
+  "LINKS":{
+    "INICIO": "Inicio",
+    "NOSOTROS": "Nosotros",
+    "INSTITUCIONES": "Instituciones",
+    "ALUMNOS": "Alumnos",
+    "CONTACTO": "Contacto",
+    "INTERES": "Links de interés",
+    "NATMINEDUC": "Ministerio de Educación de la Nación",
+    "PROVMINEDUC": "Ministerio de Educación de la Provincia",
+
+    "REGISTRAR": "Registrar",
+    "INICIARSESION": "Iniciar Sesión",
+    "INICIARSESIONPRUEBA": "(Modo de prueba)",
+    "CERRARSESION": "Cerrar Sesión",
+    "YATIENESCUENTA": "¿Ya tienes cuenta?",
+    "TIENESCUENTA": "¿No tienes cuenta?",
+    "RECUERDASPASS": "¿No recuerdas la contraseña?",
+    "RECUPERARPASS": "Recuperar contraseña",
+    "CREARINSTITUCION": "Registrate como institución",
+    "CREARALUMNO": "Registrate como alumno",
+
+    "HAZTEPREMIUM": "Hazte PREMIUM",
+
+    "COMENZAR": "Comenzar",
+    "ENVIAR": "Enviar",
+    "ACEPTAR": "Aceptar",
+    "CANCELAR": "Cancelar"
+  },
+
+  "INPUTS":{
+    "EMAIL": "Correo",
+    "PROVINCIA": "Provincia",
+    "CIUDAD": "Ciudad",
+    "PASSWORD": "Contraseña",
+    "REPASSWORD": "Repetir contraseña",
+    "NOMBRE": "Nombre",
+    "APELLIDO": "Apellido",
+    "FECHANAC": "Fecha de Nacimiento",
+    "TIPODOC": "Tipo de Documento",
+    "SELECCIONAR": "Seleccionar",
+    "DOCUMENTO": "Número de Documento",
+    "PAIS": "País",
+    "NOMBREINSTITUTO": "Nombre de la Institución",
+    "MENSAJE": "Mensaje",
+    "INGRESA": "Ingresa tu"
+  },
+
+  "SECCION":{
+    "ACCEDE":"Accede sin límite a todo el contenido.",
+    "ESTASSEGURO": "¿Seguro quieres cerrar sesión?",
+    "PARACERRAR": "Para cerrar sesión presiona Aceptar",
+    "SALUDO": "Bienvenidos!",
+    "CON": "con",
+    "COMENCEMOS": "Comencemos!",
+    "TITULOINDEX": "Tu portal de educación",
+    "DESCRIPCIONINDEX": "Registrate como alumno para poder elegir la institución y seleccionar el curso o carrera a la que vas a inscribirte. En el caso que formes parte de una institución, podés registrarte como una y cargar los cursos y carreras disponibles para poder obtener inscripciones.",
+
+    "TITULONOSOTROS":"que hacemos",
+    "DESCRIPCIONNOSOTROS":"<p>Somos un grupo de personas que nos conocimos en un trayecto académico y formamos <strong>Saber Conectar</strong> como una plafaforma educativa virtual.<br>En este espacio ofrecemos un servicio diseñado para la comunidad educativa: estudiantes e instituciones en su conjunto.<br>Aquí podrás encontrar toda la oferta académica del país.</p><p>Nuestro objetivo es brindar un espacio donde encuentres todo lo que buscas, en materia educativa, en un solo lugar.<br>Las instituciones educativas del país se registran en nuestra plataforma ofreciendo su oferta académica y nuestros usuarios gozan de la posibilidad de encontrar todas estas propuestas e inscribirse a ellas de forma fácil y segura.</p>"
+  },
+  "FOOTER": "Estudiantes de TSDWAD © 2021"
+}

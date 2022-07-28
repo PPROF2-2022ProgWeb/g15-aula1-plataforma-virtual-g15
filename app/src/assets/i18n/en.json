@@ -1,0 +1,67 @@
+{
+  "PAISES":{
+    "ARGENTINA": "Argentine"
+  },
+  "LINKS":{
+    "INICIO": "Home",
+    "NOSOTROS": "Us",
+    "INSTITUCIONES": "Institutions",
+    "ALUMNOS": "Students",
+    "CONTACTO": "Contact",
+    "INTERES": "Interesting Links",
+    "NATMINEDUC": "National Ministry of Education",
+    "PROVMINEDUC": "Provincial Ministry of Education",
+
+    "REGISTRAR": "Sign up",
+    "INICIARSESION": "Log In",
+    "INICIARSESIONPRUEBA": "(TEST MODE)",
+    "CERRARSESION": "Log Out",
+    "YATIENESCUENTA": "Do you have an account?",
+    "TIENESCUENTA": "You don't have an account?",
+    "RECUERDASPASS": "Forgot password?",
+    "RECUPERARPASS": "Password Recovery",
+    "CREARINSTITUCION": "Create an institution account",
+    "CREARALUMNO": "Create a student account",
+
+    "HAZTEPREMIUM": "Be PREMIUM",
+
+    "COMENZAR": "Start",
+    "ENVIAR": "Send",
+    "ACEPTAR": "Accept",
+    "CANCELAR": "Cancel"
+  },
+
+  "INPUTS":{
+    "EMAIL": "Email",
+    "PROVINCIA": "Province",
+    "CIUDAD": "City",
+    "PASSWORD": "Password",
+    "REPASSWORD": "Repeat password",
+    "NOMBRE": "Name",
+    "APELLIDO": "Lastname",
+    "FECHANAC": "Date of Birth",
+    "TIPODOC": "Document Type",
+    "SELECCIONAR": "Select",
+    "DOCUMENTO": "Number",
+    "PAIS": "Country",
+    "NOMBREINSTITUTO": "Institution name",
+    "MENSAJE": "Message",
+    "INGRESA": "Enter your"
+  },
+
+  "SECCION":{
+    "ACCEDE":"Unlimited Access",
+    "ESTASSEGURO": "Sure you want to log out?",
+    "PARACERRAR": "Press Accept to log out",
+
+    "SALUDO": "Welcome!",
+    "CON": "with",
+
+    "COMENCEMOS": "Let's start!",
+    "TITULOINDEX": "Your education site",
+    "DESCRIPCIONINDEX": "Register as a student to be able to choose the institution and select the course or career to which you are going to enroll. If you are an institution, you can register as one and load the available courses and careers to obtain registrations.",
+    "TITULONOSOTROS":"What we do",
+    "DESCRIPCIONNOSOTROS":"<p>We are a group of people who met on an academic journey and formed <strong>Saber Conectar</strong> as a virtual educational platform.<br>In this space we offer a service designed for the educational community: students and institutions as a whole.<br>Here you can find all the academic offer of the country.</p><p>Our goal is to provide a space where you can find everything you are looking for, in educational matters, in one place.<br>The educational institutions of the country register on our platform offering their academic offer and our users enjoy the possibility of finding all these proposals and registering for them easily and safely.</p>"
+  },
+  "FOOTER": "TSDWAD Students © 2021"
+  }
