@@ -12,19 +12,19 @@
 
     <div class="py-5 text-center">
       <h2>Checkout</h2>
-      <p class="lead">Completa todos los campos antes de efectuar el pago.</p>
+      <p class="lead">{{ "SECCION.COMPLETACAMPO" | translate}}</p>
     </div>
 
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Carrito</span>
+          <span class="text-primary">{{ "SECCION.CARRITO" | translate}}</span>
           <span *ngIf="cMensual || cAnual" class="badge bg-primary rounded-pill">{{cAnual + cMensual}}</span>
         </h4>
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-              <h6 class="my-0">Licencia Premium Anual</h6>
+              <h6 class="my-0">{{ "SECCION.LICENCPREMANUAL" | translate}}</h6>
               <small class="text-muted">Seleccionar la cantidad</small>
               <label for="cantidadAnual" class="form-control mt-1">
                 <input type="number" class="border-0" min="0" [(ngModel)]="cAnual">
@@ -34,7 +34,7 @@
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-              <h6 class="my-0">Licencia Premium Mensual</h6>
+              <h6 class="my-0">{{ "SECCION.LICENCPREMMENS" | translate}}</h6>
               <small class="text-muted">Seleccionar la cantidad</small>
               <label for="cantidadMensual" class="form-control mt-1">
                 <input type="number" class="border-0" min="0" [(ngModel)]="cMensual">
@@ -58,24 +58,24 @@
         <form class="card p-2">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Cupón descuento">
-            <button type="submit" class="btn btn-secondary">Agregar</button>
+            <button type="submit" class="btn btn-secondary">{{ "LINKS.AGREGAR" | translate}}</button>
           </div>
         </form>
         <div class="card p-3 my-3">
-          <h4>RENOVACIÓN AUTOMÁTICA:</h4>
+          <h4>{{ "SECCION.RENOVAUTO" | translate}}</h4>
           <p>
-            Tu/s suscripción/es se renovará/n automáticamente cada año mediante un único pago de ${{(cAnual*1200 + cMensual*120) | number:'1.2'}}.
-            Al hacer clic en "Confirmar y pagar" aceptas nuestros <a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
+            {{ "SECCION.SUSCRENOV" | translate}} ${{(cAnual*1200 + cMensual*120) | number:'1.2'}}.
+            {{ "SECCION.SUSCRENOV2" | translate}} <a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
           </p>
 
         </div>
       </div>
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Información de compra</h4>
+        <h4 class="mb-3">{{ "SECCION.INFOCOMPRA" | translate}}</h4>
         <form class="needs-validation" novalidate="">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">Nombre Completo</label>
+              <label for="firstName" class="form-label">{{ "INPUTS.NOMBRECOMP" | translate}}</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
               <div class="invalid-feedback">
                 Ingresa tu nombre completo.
@@ -83,7 +83,7 @@
             </div>
 
             <div class="col-sm-6">
-              <label for="lastName" class="form-label">Apellido</label>
+              <label for="lastName" class="form-label">{{ "INPUTS.APELLIDO" | translate}}</label>
               <input type="text" class="form-control" id="lastName" placeholder="Perez" value="" required="">
               <div class="invalid-feedback">
                 Ingresa tu apellido.
@@ -100,7 +100,7 @@
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Dirección</label>
+              <label for="address" class="form-label">{{ "INPUTS.DIRECCION" | translate}}</label>
               <input type="text" class="form-control" id="address" placeholder="Av. San Martin 800" required="">
               <div class="invalid-feedback">
                 Por favor ingresa una dirección.
@@ -108,12 +108,12 @@
             </div>
 
             <div class="col-12">
-              <label for="address2" class="form-label">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+              <label for="address2" class="form-label"> {{ "INPUTS.DIRECCION" | translate}} 2 <span class="text-muted">{{ "INPUTS.OPCIONAL" | translate}}<</span></label>
               <input type="text" class="form-control" id="address2" placeholder="Domicilio">
             </div>
 
             <div class="col-md-5">
-              <label for="country" class="form-label">País</label>
+              <label for="country" class="form-label">{{ "INPUTS.PAIS" | translate}}</label>
               <select class="form-select" id="country" required="">
                 <option value="">Seleccionar...</option>
                 <option>Argentina</option>
@@ -124,7 +124,7 @@
             </div>
 
             <div class="col-md-4">
-              <label for="state" class="form-label">Ciudad</label>
+              <label for="state" class="form-label">{{ "INPUTS.CIUDAD"| translate}}</label>
               <select class="form-select" id="state" required="">
                 <option value="">Seleccionar...</option>
                 <option>Córdoba</option>
@@ -135,7 +135,7 @@
             </div>
 
             <div class="col-md-3">
-              <label for="zip" class="form-label">CP</label>
+              <label for="zip" class="form-label">{{ "INPUTS.CP"| translate}} </label>
               <input type="text" class="form-control" id="zip" placeholder="" required="">
               <div class="invalid-feedback">
                 CP requerido.
@@ -145,12 +145,12 @@
 
           <div class="form-check mt-3">
             <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Guardar información para futuras compras</label>
+            <label class="form-check-label" for="save-info">{{ "SECCION.GUARDARINFO" | translate}}</label>
           </div>
 
           <hr class="my-4">
 
-          <h4 class="mb-3">Pago <span class="text-muted fs-5">(Actualizar página en caso de no visualizar)</span> </h4>
+          <h4 class="mb-3">{{ "SECCION.PAGO"| translate}} <span class="text-muted fs-5">(Actualizar página en caso de no visualizar)</span> </h4>
           <div id="cardPaymentBrick_container">
           </div>
 

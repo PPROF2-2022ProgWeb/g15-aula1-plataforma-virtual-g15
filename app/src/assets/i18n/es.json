@@ -28,16 +28,22 @@
     "COMENZAR": "Comenzar",
     "ENVIAR": "Enviar",
     "ACEPTAR": "Aceptar",
-    "CANCELAR": "Cancelar"
+    "CANCELAR": "Cancelar",
+    "AGREGAR":"Agregar",
+    "INSCRIBIRSE":"Inscribirse"
+
+   
+    
   },
 
   "INPUTS":{
     "EMAIL": "Correo",
     "PROVINCIA": "Provincia",
-    "CIUDAD": "Ciudad",
+    "CIUDAD": "Cuidad",
     "PASSWORD": "Contraseña",
     "REPASSWORD": "Repetir contraseña",
     "NOMBRE": "Nombre",
+    "NOMBRECOMP":"Nombre completo",
     "APELLIDO": "Apellido",
     "FECHANAC": "Fecha de Nacimiento",
     "TIPODOC": "Tipo de Documento",
@@ -46,7 +52,13 @@
     "PAIS": "País",
     "NOMBREINSTITUTO": "Nombre de la Institución",
     "MENSAJE": "Mensaje",
-    "INGRESA": "Ingresa tu"
+    "INGRESA": "Ingresa tu",
+    "DIRECCION": "Direccion",
+    "CP":"CP"
+
+
+    
+    
   },
 
   "SECCION":{
@@ -60,7 +72,64 @@
     "DESCRIPCIONINDEX": "Registrate como alumno para poder elegir la institución y seleccionar el curso o carrera a la que vas a inscribirte. En el caso que formes parte de una institución, podés registrarte como una y cargar los cursos y carreras disponibles para poder obtener inscripciones.",
 
     "TITULONOSOTROS":"que hacemos",
-    "DESCRIPCIONNOSOTROS":"<p>Somos un grupo de personas que nos conocimos en un trayecto académico y formamos <strong>Saber Conectar</strong> como una plafaforma educativa virtual.<br>En este espacio ofrecemos un servicio diseñado para la comunidad educativa: estudiantes e instituciones en su conjunto.<br>Aquí podrás encontrar toda la oferta académica del país.</p><p>Nuestro objetivo es brindar un espacio donde encuentres todo lo que buscas, en materia educativa, en un solo lugar.<br>Las instituciones educativas del país se registran en nuestra plataforma ofreciendo su oferta académica y nuestros usuarios gozan de la posibilidad de encontrar todas estas propuestas e inscribirse a ellas de forma fácil y segura.</p>"
+    "DESCRIPCIONNOSOTROS":"<p>Somos un grupo de personas que nos conocimos en un trayecto académico y formamos <strong>Saber Conectar</strong> como una plafaforma educativa virtual.<br>En este espacio ofrecemos un servicio diseñado para la comunidad educativa: estudiantes e instituciones en su conjunto.<br>Aquí podrás encontrar toda la oferta académica del país.</p><p>Nuestro objetivo es brindar un espacio donde encuentres todo lo que buscas, en materia educativa, en un solo lugar.<br>Las instituciones educativas del país se registran en nuestra plataforma ofreciendo su oferta académica y nuestros usuarios gozan de la posibilidad de encontrar todas estas propuestas e inscribirse a ellas de forma fácil y segura.</p>",
+    
+
+
+    "PRECIOFINAL": "*Precio final, incluye impuestos.",
+    "SUSPMENSUAL": "Suscripción Mensual",
+    "SUSPANUAL": "Suscripción Anual",
+    "COMPRARLIC": "Comprar Licencia",
+    "MEJOROPC": "Mejor opción",
+    "PORMES": "por mes",
+    "MES": "/mes",
+    "AÑO": "/año",
+    "GRATIS": "Gratuito",
+    "OPC1":"Inscripcion semestral a un curso / carrera",
+    "OPC2": "Publicacion de un curso / carrera por semestre",
+    "OPC3": "Anuncios publicitarios",
+    "OPC4": "Publicaciones de cursos sin límites",
+    "OPC5": "Publicaciones de carreras sin límites",
+    "OPC6": "Inscripciones a cursos sin límites",
+    "OPC7": "Inscripciones a carreras sin límites",
+    "OPC8": "Soporte 24/07",
+
+    "COMPLETACAMPO": "Completa todos los campos antes de efectuar el pago.",
+    "OPCIONAL": "Opcional",
+    "CARRITO": "Carrito",
+    "INFOCOMPRA": "Información de compra",
+   "LICENCPREMANUAL":"Licencia Premium Anual",
+   "LICENCPREMMENS":"Licencia Premium Mensual",
+   "GUARDARINFO":"Guardar información para futuras compras",
+   "RENOVAUTO":"RENOVACIÓN AUTOMÁTICA:",
+   "SUSCRENOV":"Tu/s suscripción/es se renovará/n automáticamente cada año mediante un único pago de ",
+  "SUSCRENOV2":"Al hacer clic en aceptas nuestros",
+  "PAGO":"Pago",
+  "ERROR": "Ups! no encontramos la página que buscabas.",
+  "CARRERAS":"Carreras disponibles",
+  "CARRERASTEXT":"Selecciona la carrera que mejor se adapte e inscribete.",
+  "CREARCARRERA": "Crear carrera",
+  "NOMBCARRERA":"NombreCarrera",
+  "DESCRIPCARR" :" DescripcionCarrera",
+   "FECHAINICIOCARR":"fechaInicioCarrera",
+   "FECHAFINCARR" :" FechaFinCarrera",
+   "CANTIDINSCRIP" : "Cantidad Inscriptos",
+   "ACCIONES":"Acciones",
+   "CARRERS":"Carreras",
+   "CARRERSTEXT": "Crea modifica y elimna tus carreras.",
+   "CURSOSTEXT": "Crea modifica y elimna tus cursos.",
+   "CURSOS":"Cursos",
+   "CURSOSDISP":"Cursos disponibles",
+  "CREARCURSOS": "Crear curso",
+  "NOMBCURSO":"NombreCurso",
+  "DESCRIPCURS" :" DescripcionCurso",
+   "FECHAINICIOCURS":"fechaInicioCurso",
+   "FECHAFINCURS" :" FechaFinCurso",
+   "MSJHOLAALUMNO": "Hola {{nombreAlumno}}",
+   "TEXTSELECT": "Selecciona que quieres ver",
+   "MOSTRARCARR":"mostrarCarreras()",
+   "MOSTRARCURS":"mostrarCursos()"
+
   },
   "FOOTER": "Estudiantes de TSDWAD © 2021"
 }
