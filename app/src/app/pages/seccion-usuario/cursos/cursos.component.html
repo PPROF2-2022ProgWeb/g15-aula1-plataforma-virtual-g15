@@ -1,31 +1,32 @@
-<h1 class="h3 mb-2">Cursos</h1>
+<h1 class="h3 mb-2">{{ "SECCION.NOMBCURSO" | translate}}</h1>
 
 <p class="mb-4">Selecciona el curso que mejor se adapte e inscribete.</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex">
-        <h6 class="m-0 text-primary">Cursos disponibles</h6>
+        <h6 class="m-0 text-primary">{{ "SECCION.CURSOSDISP" | translate}}</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                      <th>NombreCurso</th>
-                      <th>DescripcionCurso</th>
-                      <th>FechaInicioCurso</th>
-                      <th>FechaFinCurso</th>
-                      <th>Acciones</th>
+                      <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
+                      <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
+                      <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
+                      <th>{{ "SECCION.FECHAFINCURS" | translate}}</th>
+                      <th>{{ "SECCION.ACCIONES" | translate}}</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let cursos of ArregloCursos">
-                    <th>{{cursos.nombre}}</th>
-                    <th>{{cursos.descripcion}}</th>
-                    <th>{{cursos.fechaInicio}}</th>
-                    <th>{{cursos.fechaFin}}</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">Inscribirse</button></th>
+                    <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
+                      <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
+                      <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
+                      <th>{{ "SECCION.FECHAFINCURS" | translate}}</th>
+                      <th>{{ "SECCION.ACCIONES" | translate}}</th>
+                    <th><button class="btn btn-success" (click)="inscribirse()">(Actualizar página en caso de no visualizar)</button></th>
                   </tr>
                 </tbody>
             </table>

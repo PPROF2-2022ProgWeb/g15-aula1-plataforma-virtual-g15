@@ -1,6 +1,6 @@
 {
   "PAISES":{
-    "ARGENTINA": "Argentine"
+    "ARGENTINA": "Argentina"
   },
   "LINKS":{
     "INICIO": "Home",
@@ -28,7 +28,14 @@
     "COMENZAR": "Start",
     "ENVIAR": "Send",
     "ACEPTAR": "Accept",
-    "CANCELAR": "Cancel"
+    "CANCELAR": "Cancel",
+    "AGREGAR":"Add",
+    "INSCRIBIRSE":"Register"
+
+    
+
+    
+
   },
 
   "INPUTS":{
@@ -38,7 +45,8 @@
     "PASSWORD": "Password",
     "REPASSWORD": "Repeat password",
     "NOMBRE": "Name",
-    "APELLIDO": "Lastname",
+    "NOMBRECOMP":"Full name",
+    "APELLIDO": "Last name",
     "FECHANAC": "Date of Birth",
     "TIPODOC": "Document Type",
     "SELECCIONAR": "Select",
@@ -46,7 +54,14 @@
     "PAIS": "Country",
     "NOMBREINSTITUTO": "Institution name",
     "MENSAJE": "Message",
-    "INGRESA": "Enter your"
+    "INGRESA": "Enter your",
+    "DIRECCION": "Adress",
+    "CP":"PC"
+   
+
+
+   
+
   },
 
   "SECCION":{
@@ -61,7 +76,65 @@
     "TITULOINDEX": "Your education site",
     "DESCRIPCIONINDEX": "Register as a student to be able to choose the institution and select the course or career to which you are going to enroll. If you are an institution, you can register as one and load the available courses and careers to obtain registrations.",
     "TITULONOSOTROS":"What we do",
-    "DESCRIPCIONNOSOTROS":"<p>We are a group of people who met on an academic journey and formed <strong>Saber Conectar</strong> as a virtual educational platform.<br>In this space we offer a service designed for the educational community: students and institutions as a whole.<br>Here you can find all the academic offer of the country.</p><p>Our goal is to provide a space where you can find everything you are looking for, in educational matters, in one place.<br>The educational institutions of the country register on our platform offering their academic offer and our users enjoy the possibility of finding all these proposals and registering for them easily and safely.</p>"
+    "DESCRIPCIONNOSOTROS":"<p>We are a group of people who met on an academic journey and formed <strong>Saber Conectar</strong> as a virtual educational platform.<br>In this space we offer a service designed for the educational community: students and institutions as a whole.<br>Here you can find all the academic offer of the country.</p><p>Our goal is to provide a space where you can find everything you are looking for, in educational matters, in one place.<br>The educational institutions of the country register on our platform offering their academic offer and our users enjoy the possibility of finding all these proposals and registering for them easily and safely.</p>",
+    
+    "PRECIOFINAL": "*Final price, includes taxes.",
+  
+    "SUSPMENSUAL": "Monthly Subscription",
+    "SUSPANUAL": "Annual subscription",
+    "COMPRARLIC": "Buy license",
+    "MEJOROPC": "Better option",
+    "PORMES": "per month",
+    "MES": "/month",
+    "AÑO": "/year",
+    "GRATIS": "Free",
+    "OPC1":"Semester registration to a course / career",
+    "OPC2": "Publication of a course / career per semester",
+    "OPC3": "Advertisement",
+    "OPC4": "Unlimited Course Posts",
+    "OPC5": "Unlimited Racing Posts",
+    "OPC6": "Unlimited course enrollment",
+    "OPC7": "Unlimited race entries",
+    "OPC8": "Support 24/07",
+
+    "COMPLETACAMPO": "Complete all the fields before making the payment.",
+    "OPCIONAL": "Opcional",
+    "CARRITO": "Trolley",
+    "INFOCOMPRA": "Purchase information",
+    "LICENCPREMANUAL":"Annual Premium License",
+   "LICENCPREMMENS":"Monthly Premium License",
+   "GUARDARINFO":"Save information for future purchases",
+   "RENOVAUTO":"AUTOMATIC RENEWAL:",
+   "SUSCRENOV":"Your subscription(s) will be automatically renewed each year through a single payment of ",
+   "SUSCRENOV2":"By clicking you accept our",
+   "PAGO":"Payment",
+   "ERROR": "oops! We couldn't find the page you were looking for.",
+   "CARRERAS":"Available careers",
+   "CREARCARRERA": "Create career",
+   "NOMBCARRERA":"CareerName",
+   "DESCRIPCARR" :" DescriptionCareer",
+   "FECHAINICIOCARR":"DateStartCareer",
+   "FECHAFINCARR" :" DateEndCareer",
+   "CANTIDINSCRIP" : "Number Enrolled",
+   "ACCIONES":"Actions",
+   "CARRERS":"Careers",
+   "CARRERASTEXT":"Select the race that best suits you and sign up.",
+   "CARRERSTEXT": "Create, modify and delete your careers.",
+   "CURSOSTEXT": "Create, modify and delete your courses.",
+   "CURSOS":"Courses",
+   "CURSOSDISP":"Available courses",
+  "CREARCURSOS": "Create course",
+  "NOMBCURSO":"CourseName",
+  "DESCRIPCURS" :" Course Description",
+   "FECHAINICIOCURS":"DateStartCourse",
+   "FECHAFINCURS" :" DateEndCourse",
+   "MSJHOLAALUMNO": "Hello {{StudentName}}",
+   "TEXTSELECT": "Select what you want to see",
+   "MOSTRARCARR":"show careers()",
+   "MOSTRARCURS":"show courses()",
+   "TEXTACTUALIZARPAG": "(Refresh page if not displayed)"
+
+
   },
   "FOOTER": "TSDWAD Students © 2021"
   }
