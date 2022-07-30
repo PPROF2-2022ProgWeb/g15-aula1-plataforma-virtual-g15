@@ -1,8 +1,6 @@
-<a href="url"><img src="https://github.com/PPROF2-2022ProgWeb/g15-aula1-plataforma-virtual-g15/blob/JenniferFarias/app/src/assets/logotipo.png" align="center" height="100"></a>
+<a href="url"><img src="https://github.com/PPROF2-2022ProgWeb/g15-aula1-plataforma-virtual-g15/blob/JenniferFarias/app/src/assets/logotipo.png" align="right" height="200"></a><br><br><br><br><br>
 
 # Saber Conectar - plataforma virtual   ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green) [![Ver Online Badge](https://img.shields.io/badge/-Ver%20Wiki-yellow?style=flatsquare&link=https://github.com/PPROF2-2022ProgWeb/g15-aula1-plataforma-virtual-g15/wiki)](https://github.com/PPROF2-2022ProgWeb/g15-aula1-plataforma-virtual-g15/wiki)  [![Ver Online Badge](https://img.shields.io/badge/-Visitar%20Web-green?style=flatsquare&link=https://acodemy.000webhostapp.com/login)](https://acodemy.000webhostapp.com/)
-
-<br>
 
 ## :construction: Proyecto en construcción :construction:
 ### Perspectiva del producto:
