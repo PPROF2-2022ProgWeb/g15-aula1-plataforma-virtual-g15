@@ -1,6 +1,6 @@
 <h1 class="h3 mb-2">{{ "SECCION.NOMBCURSO" | translate}}</h1>
 
-<p class="mb-4">Selecciona el curso que mejor se adapte e inscribete.</p>
+<p class="mb-4">{{"SECCION.SELECCIONAOPCION" | translate}}</p>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -13,7 +13,7 @@
                 <thead>
                   <tr>
                       <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
-                      <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
+                      <th>{{ "SECCION.DESCRIPCION" | translate}}</th>
                       <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
                       <th>{{ "SECCION.FECHAFINCURS" | translate}}</th>
                       <th>{{ "SECCION.ACCIONES" | translate}}</th>
@@ -21,12 +21,11 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let cursos of ArregloCursos">
-                    <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
-                      <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
-                      <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
-                      <th>{{ "SECCION.FECHAFINCURS" | translate}}</th>
-                      <th>{{ "SECCION.ACCIONES" | translate}}</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">(Actualizar página en caso de no visualizar)</button></th>
+                      <th>{{cursos.nombre}}</th>
+                      <th>{{cursos.descripcion}}</th>
+                      <th>{{cursos.fechaInicio}}</th>
+                      <th>{{cursos.fechaFin}}</th>
+                    <th><button class="btn btn-success" (click)="inscribirse()">{{"LINKS.INSCRIBIRSE" | translate}}</button></th>
                   </tr>
                 </tbody>
             </table>

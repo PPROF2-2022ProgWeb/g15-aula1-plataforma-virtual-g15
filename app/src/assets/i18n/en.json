@@ -1,8 +1,9 @@
 {
   "PAISES":{
-    "ARGENTINA": "Argentina"
+    "ARGENTINA": "Argentine"
   },
   "LINKS":{
+    "PRECIOS": "Prices",
     "INICIO": "Home",
     "NOSOTROS": "Us",
     "INSTITUCIONES": "Institutions",
@@ -22,8 +23,9 @@
     "RECUPERARPASS": "Password Recovery",
     "CREARINSTITUCION": "Create an institution account",
     "CREARALUMNO": "Create a student account",
-
     "HAZTEPREMIUM": "Be PREMIUM",
+
+    "CREAR": "Create",
 
     "COMENZAR": "Start",
     "ENVIAR": "Send",
@@ -32,13 +34,16 @@
     "AGREGAR":"Add",
     "INSCRIBIRSE":"Register"
 
-    
 
-    
+
+
 
   },
 
   "INPUTS":{
+    "VERCARRERAS":"Show careers",
+    "VERCURSOS":"Show courses",
+
     "EMAIL": "Email",
     "PROVINCIA": "Province",
     "CIUDAD": "City",
@@ -55,19 +60,35 @@
     "NOMBREINSTITUTO": "Institution name",
     "MENSAJE": "Message",
     "INGRESA": "Enter your",
-    "DIRECCION": "Adress",
-    "CP":"PC"
-   
+    "DIRECCION": "Address",
+    "CP":"PC",
 
-
-   
+    "NOMBRECURSO": "Course Name",
+    "DESCRIPCION": "Description",
+    "SELECCIONARNIVEL": "Select a level",
+    "FECHAINICIO":"Start Date",
+    "FECHAFIN":"End Date",
+    "PRINCIPIANTE":"Begginer",
+    "MEDIO":"Intermediate",
+    "AVANZADO":"Advanced"
 
   },
 
   "SECCION":{
+    "FALTAEMAIL": "Enter a valid email",
+    "INGRESAAPELLIDO": "Enter your lastname",
+    "TERMINOS": "Terms and conditions",
+    "CARRITO": "Order",
+    "CHECKOUT": "Checkout",
+    "SELECCIONAOPCION":"Select an option and subscribe",
+    "FALTADESCRIPCION": "Please enter a description.",
+    "MAXCARACTERES": "(180 characters máx.)",
+    "FALTANOMBRE": "Please enter the name.",
+    "COMPLETALOSCAMPOS": "Complete the fields",
     "ACCEDE":"Unlimited Access",
     "ESTASSEGURO": "Sure you want to log out?",
     "PARACERRAR": "Press Accept to log out",
+
 
     "SALUDO": "Welcome!",
     "CON": "with",
@@ -77,9 +98,9 @@
     "DESCRIPCIONINDEX": "Register as a student to be able to choose the institution and select the course or career to which you are going to enroll. If you are an institution, you can register as one and load the available courses and careers to obtain registrations.",
     "TITULONOSOTROS":"What we do",
     "DESCRIPCIONNOSOTROS":"<p>We are a group of people who met on an academic journey and formed <strong>Saber Conectar</strong> as a virtual educational platform.<br>In this space we offer a service designed for the educational community: students and institutions as a whole.<br>Here you can find all the academic offer of the country.</p><p>Our goal is to provide a space where you can find everything you are looking for, in educational matters, in one place.<br>The educational institutions of the country register on our platform offering their academic offer and our users enjoy the possibility of finding all these proposals and registering for them easily and safely.</p>",
-    
+
     "PRECIOFINAL": "*Final price, includes taxes.",
-  
+
     "SUSPMENSUAL": "Monthly Subscription",
     "SUSPANUAL": "Annual subscription",
     "COMPRARLIC": "Buy license",
@@ -98,8 +119,7 @@
     "OPC8": "Support 24/07",
 
     "COMPLETACAMPO": "Complete all the fields before making the payment.",
-    "OPCIONAL": "Opcional",
-    "CARRITO": "Trolley",
+    "OPCIONAL": "(Optional)",
     "INFOCOMPRA": "Purchase information",
     "LICENCPREMANUAL":"Annual Premium License",
    "LICENCPREMMENS":"Monthly Premium License",
@@ -125,16 +145,14 @@
    "CURSOSDISP":"Available courses",
   "CREARCURSOS": "Create course",
   "NOMBCURSO":"CourseName",
-  "DESCRIPCURS" :" Course Description",
-   "FECHAINICIOCURS":"DateStartCourse",
-   "FECHAFINCURS" :" DateEndCourse",
-   "MSJHOLAALUMNO": "Hello {{StudentName}}",
-   "TEXTSELECT": "Select what you want to see",
-   "MOSTRARCARR":"show careers()",
-   "MOSTRARCURS":"show courses()",
-   "TEXTACTUALIZARPAG": "(Refresh page if not displayed)"
-
-
+  "DESCRIPCION" : "Description",
+  "FECHAINICIOCURS":"DateStartCourse",
+  "FECHAFINCURS" :" DateEndCourse",
+  "MSJHOLA": "Hello {{nombreAlumno}}",
+  "TEXTSELECT": "Select what you want",
+  "MOSTRARCARR":"mostrarCarreras()",
+  "MOSTRARCURS":"mostrarCursos()",
+  "TEXTACTUALIZARPAG": "(Refresh page if not displayed)"
   },
   "FOOTER": "TSDWAD Students © 2021"
   }

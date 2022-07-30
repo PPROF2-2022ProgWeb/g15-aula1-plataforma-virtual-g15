@@ -2,8 +2,9 @@
 <header class="main_header">
   <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
       <ol class="breadcrumb bg-white p-2">
-          <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">Inicio</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">{{"LINKS.INICIO" | translate}}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{"LINKS.PRECIOS" | translate}}</li>
+          <li class="breadcrumb-item active" aria-current="page">{{"SECCION.CARRITO" | translate}}</li>
       </ol>
   </nav>
 </header>
@@ -11,7 +12,7 @@
   <main>
 
     <div class="py-5 text-center">
-      <h2>Checkout</h2>
+      <h2>{{"SECCION.CHECKOUT" | translate}}</h2>
       <p class="lead">{{ "SECCION.COMPLETACAMPO" | translate}}</p>
     </div>
 
@@ -65,7 +66,7 @@
           <h4>{{ "SECCION.RENOVAUTO" | translate}}</h4>
           <p>
             {{ "SECCION.SUSCRENOV" | translate}} ${{(cAnual*1200 + cMensual*120) | number:'1.2'}}.
-            {{ "SECCION.SUSCRENOV2" | translate}} <a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
+            {{ "SECCION.SUSCRENOV2" | translate}} <!--<a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">{{"SECCION.TERMINOS" | translate}}</a>-->
           </p>
 
         </div>
@@ -78,7 +79,7 @@
               <label for="firstName" class="form-label">{{ "INPUTS.NOMBRECOMP" | translate}}</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
               <div class="invalid-feedback">
-                Ingresa tu nombre completo.
+                {{"SECCION.FALTANOMBRE" | translate}}
               </div>
             </div>
 
@@ -86,16 +87,16 @@
               <label for="lastName" class="form-label">{{ "INPUTS.APELLIDO" | translate}}</label>
               <input type="text" class="form-control" id="lastName" placeholder="Perez" value="" required="">
               <div class="invalid-feedback">
-                Ingresa tu apellido.
+                {{"SECCION.INGRESAAPELLIDO" | translate}}
               </div>
             </div>
 
 
             <div class="col-12">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
               <input type="email" class="form-control" id="email" placeholder="tu@email.com">
               <div class="invalid-feedback">
-                Por favor ingresa un email válido.
+                {{"SECCION.FALTAEMAIL" | translate}}
               </div>
             </div>
 
@@ -108,15 +109,15 @@
             </div>
 
             <div class="col-12">
-              <label for="address2" class="form-label"> {{ "INPUTS.DIRECCION" | translate}} 2 <span class="text-muted">{{ "INPUTS.OPCIONAL" | translate}}<</span></label>
+              <label for="address2" class="form-label"> {{ "INPUTS.DIRECCION" | translate}} 2 <span class="text-muted">{{ "SECCION.OPCIONAL" | translate}}</span></label>
               <input type="text" class="form-control" id="address2" placeholder="Domicilio">
             </div>
 
             <div class="col-md-5">
               <label for="country" class="form-label">{{ "INPUTS.PAIS" | translate}}</label>
               <select class="form-select" id="country" required="">
-                <option value="">Seleccionar...</option>
-                <option>Argentina</option>
+                <option value="">{{"INPUTS.SELECCIONAR" | translate}}...</option>
+                <option>{{"PAISES.ARGENTINA" | translate}}</option>
               </select>
               <div class="invalid-feedback">
                 Por favor ingresa el país.
@@ -126,7 +127,7 @@
             <div class="col-md-4">
               <label for="state" class="form-label">{{ "INPUTS.CIUDAD"| translate}}</label>
               <select class="form-select" id="state" required="">
-                <option value="">Seleccionar...</option>
+                <option value="">{{"INPUTS.SELECCIONAR" | translate}}...</option>
                 <option>Córdoba</option>
               </select>
               <div class="invalid-feedback">

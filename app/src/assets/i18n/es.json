@@ -3,6 +3,9 @@
     "ARGENTINA": "Argentina"
   },
   "LINKS":{
+    "PRECIOS": "Precios",
+    "VERCARRERAS":"Ver Carreras",
+    "VERCURSOS":"Ver Cursos",
     "INICIO": "Inicio",
     "NOSOTROS": "Nosotros",
     "INSTITUCIONES": "Instituciones",
@@ -22,8 +25,9 @@
     "RECUPERARPASS": "Recuperar contraseña",
     "CREARINSTITUCION": "Registrate como institución",
     "CREARALUMNO": "Registrate como alumno",
-
     "HAZTEPREMIUM": "Hazte PREMIUM",
+
+    "CREAR": "Crear",
 
     "COMENZAR": "Comenzar",
     "ENVIAR": "Enviar",
@@ -31,9 +35,6 @@
     "CANCELAR": "Cancelar",
     "AGREGAR":"Agregar",
     "INSCRIBIRSE":"Inscribirse"
-
-   
-    
   },
 
   "INPUTS":{
@@ -54,14 +55,30 @@
     "MENSAJE": "Mensaje",
     "INGRESA": "Ingresa tu",
     "DIRECCION": "Direccion",
-    "CP":"CP"
+    "CP":"CP",
 
+    "NOMBRECURSO": "Nombre del curso",
+    "SELECCIONARNIVEL": "Selecciona un nivel",
+    "FECHAINICIO":"Fecha Inicio",
+    "FECHAFIN":"Fecha Fin",
+    "PRINCIPIANTE":"Principiante",
+    "MEDIO":"Medio",
+    "AVANZADO":"Avanzado"
 
-    
-    
   },
 
   "SECCION":{
+
+    "FALTAEMAIL": "Ingresa un email válido",
+    "INGRESAAPELLIDO": "Ingresa tu apellido",
+    "TERMINOS": "Términos y condiciones",
+    "CARRITO": "Orden",
+    "CHECKOUT": "Carrito",
+    "SELECCIONAOPCION":"Selecciona una opcion y suscribete",
+    "FALTADESCRIPCION": "Falta ingresar la descripcion.",
+    "MAXCARACTERES": "(máx. 180 caracteres)",
+    "FALTANOMBRE": "Ingresa el nombre",
+    "COMPLETALOSCAMPOS": "Completa todos los campos",
     "ACCEDE":"Accede sin límite a todo el contenido.",
     "ESTASSEGURO": "¿Seguro quieres cerrar sesión?",
     "PARACERRAR": "Para cerrar sesión presiona Aceptar",
@@ -73,7 +90,7 @@
 
     "TITULONOSOTROS":"que hacemos",
     "DESCRIPCIONNOSOTROS":"<p>Somos un grupo de personas que nos conocimos en un trayecto académico y formamos <strong>Saber Conectar</strong> como una plafaforma educativa virtual.<br>En este espacio ofrecemos un servicio diseñado para la comunidad educativa: estudiantes e instituciones en su conjunto.<br>Aquí podrás encontrar toda la oferta académica del país.</p><p>Nuestro objetivo es brindar un espacio donde encuentres todo lo que buscas, en materia educativa, en un solo lugar.<br>Las instituciones educativas del país se registran en nuestra plataforma ofreciendo su oferta académica y nuestros usuarios gozan de la posibilidad de encontrar todas estas propuestas e inscribirse a ellas de forma fácil y segura.</p>",
-    
+
 
 
     "PRECIOFINAL": "*Precio final, incluye impuestos.",
@@ -94,15 +111,14 @@
     "OPC7": "Inscripciones a carreras sin límites",
     "OPC8": "Soporte 24/07",
 
-    "COMPLETACAMPO": "Completa todos los campos antes de efectuar el pago.",
-    "OPCIONAL": "Opcional",
-    "CARRITO": "Carrito",
-    "INFOCOMPRA": "Información de compra",
-   "LICENCPREMANUAL":"Licencia Premium Anual",
-   "LICENCPREMMENS":"Licencia Premium Mensual",
-   "GUARDARINFO":"Guardar información para futuras compras",
-   "RENOVAUTO":"RENOVACIÓN AUTOMÁTICA:",
-   "SUSCRENOV":"Tu/s suscripción/es se renovará/n automáticamente cada año mediante un único pago de ",
+  "COMPLETACAMPO": "Completa todos los campos antes de efectuar el pago.",
+  "OPCIONAL": "(Opcional)",
+  "INFOCOMPRA": "Información de compra",
+  "LICENCPREMANUAL":"Licencia Premium Anual",
+  "LICENCPREMMENS":"Licencia Premium Mensual",
+  "GUARDARINFO":"Guardar información para futuras compras",
+  "RENOVAUTO":"RENOVACIÓN AUTOMÁTICA:",
+  "SUSCRENOV":"Tu/s suscripción/es se renovará/n automáticamente cada año mediante un único pago de ",
   "SUSCRENOV2":"Al hacer clic en aceptas nuestros",
   "PAGO":"Pago",
   "ERROR": "Ups! no encontramos la página que buscabas.",
@@ -111,24 +127,24 @@
   "CREARCARRERA": "Crear carrera",
   "NOMBCARRERA":"NombreCarrera",
   "DESCRIPCARR" :" DescripcionCarrera",
-   "FECHAINICIOCARR":"fechaInicioCarrera",
-   "FECHAFINCARR" :" FechaFinCarrera",
-   "CANTIDINSCRIP" : "Cantidad Inscriptos",
-   "ACCIONES":"Acciones",
-   "CARRERS":"Carreras",
-   "CARRERSTEXT": "Crea modifica y elimna tus carreras.",
-   "CURSOSTEXT": "Crea modifica y elimna tus cursos.",
-   "CURSOS":"Cursos",
-   "CURSOSDISP":"Cursos disponibles",
+  "FECHAINICIOCARR":"fechaInicioCarrera",
+  "FECHAFINCARR" :" FechaFinCarrera",
+  "CANTIDINSCRIP" : "Cantidad Inscriptos",
+  "ACCIONES":"Acciones",
+  "CARRERS":"Carreras",
+  "CARRERSTEXT": "Crea modifica y elimna tus carreras.",
+  "CURSOSTEXT": "Crea modifica y elimna tus cursos.",
+  "CURSOS":"Cursos",
+  "CURSOSDISP":"Cursos disponibles",
   "CREARCURSOS": "Crear curso",
   "NOMBCURSO":"NombreCurso",
-  "DESCRIPCURS" :" DescripcionCurso",
-   "FECHAINICIOCURS":"fechaInicioCurso",
-   "FECHAFINCURS" :" FechaFinCurso",
-   "MSJHOLAALUMNO": "Hola {{nombreAlumno}}",
-   "TEXTSELECT": "Selecciona que quieres ver",
-   "MOSTRARCARR":"mostrarCarreras()",
-   "MOSTRARCURS":"mostrarCursos()"
+  "DESCRIPCION" :" Descripcion",
+  "FECHAINICIOCURS":"fechaInicioCurso",
+  "FECHAFINCURS" :" FechaFinCurso",
+  "MSJHOLA": "Hola {{nombreAlumno}}",
+  "TEXTSELECT": "Selecciona una opción",
+  "MOSTRARCARR":"mostrarCarreras()",
+  "MOSTRARCURS":"mostrarCursos()"
 
   },
   "FOOTER": "Estudiantes de TSDWAD © 2021"
