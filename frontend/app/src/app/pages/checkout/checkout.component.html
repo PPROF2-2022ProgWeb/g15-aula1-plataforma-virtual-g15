@@ -1,0 +1,163 @@
+<!-- BREADCRUMB -->
+<header class="main_header">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb bg-white p-2">
+          <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">{{"LINKS.INICIO" | translate}}</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/precios" class="text-decoration-none">{{"LINKS.PRECIOS" | translate}}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{"SECCION.CARRITO" | translate}}</li>
+      </ol>
+  </nav>
+</header>
+<div class="container">
+  <main>
+
+    <div class="py-5 text-center">
+      <h2>{{"SECCION.CHECKOUT" | translate}}</h2>
+      <p class="lead">{{ "SECCION.COMPLETACAMPO" | translate}}</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">{{ "SECCION.CARRITO" | translate}}</span>
+          <span *ngIf="cMensual || cAnual" class="badge bg-primary rounded-pill">{{cAnual + cMensual}}</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">{{ "SECCION.LICENCPREMANUAL" | translate}}</h6>
+              <small class="text-muted">Seleccionar la cantidad</small>
+              <label for="cantidadAnual" class="form-control mt-1">
+                <input type="number" class="border-0" min="0" [(ngModel)]="cAnual">
+              </label>
+            </div>
+            <span *ngIf="cAnual" class="text-muted">{{cAnual * 1200 | number:'1.2'}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">{{ "SECCION.LICENCPREMMENS" | translate}}</h6>
+              <small class="text-muted">Seleccionar la cantidad</small>
+              <label for="cantidadMensual" class="form-control mt-1">
+                <input type="number" class="border-0" min="0" [(ngModel)]="cMensual">
+              </label>
+            </div>
+            <span *ngIf="cMensual" class="text-muted">{{cMensual * 120 | number:'1.2'}}</span>
+          </li>
+          <!-- <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Cupon Descuento</h6>
+              <small>CUPON20DESC</small>
+            </div>
+            <span class="text-success">−$20</span>
+          </li> -->
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total</span>
+            <strong *ngIf="cMensual || cAnual">{{cAnual*1200 + cMensual*120}}</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Cupón descuento">
+            <button type="submit" class="btn btn-secondary">{{ "LINKS.AGREGAR" | translate}}</button>
+          </div>
+        </form>
+        <div class="card p-3 my-3">
+          <h4>{{ "SECCION.RENOVAUTO" | translate}}</h4>
+          <p>
+            {{ "SECCION.SUSCRENOV" | translate}} ${{(cAnual*1200 + cMensual*120) | number:'1.2'}}.
+            {{ "SECCION.SUSCRENOV2" | translate}} <!--<a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">{{"SECCION.TERMINOS" | translate}}</a>-->
+          </p>
+
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">{{ "SECCION.INFOCOMPRA" | translate}}</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">{{ "INPUTS.NOMBRECOMP" | translate}}</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                {{"SECCION.FALTANOMBRE" | translate}}
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">{{ "INPUTS.APELLIDO" | translate}}</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Perez" value="" required="">
+              <div class="invalid-feedback">
+                {{"SECCION.INGRESAAPELLIDO" | translate}}
+              </div>
+            </div>
+
+
+            <div class="col-12">
+              <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
+              <input type="email" class="form-control" id="email" placeholder="tu@email.com">
+              <div class="invalid-feedback">
+                {{"SECCION.FALTAEMAIL" | translate}}
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">{{ "INPUTS.DIRECCION" | translate}}</label>
+              <input type="text" class="form-control" id="address" placeholder="Av. San Martin 800" required="">
+              <div class="invalid-feedback">
+                Por favor ingresa una dirección.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label"> {{ "INPUTS.DIRECCION" | translate}} 2 <span class="text-muted">{{ "SECCION.OPCIONAL" | translate}}</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Domicilio">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">{{ "INPUTS.PAIS" | translate}}</label>
+              <select class="form-select" id="country" required="">
+                <option value="">{{"INPUTS.SELECCIONAR" | translate}}...</option>
+                <option>{{"PAISES.ARGENTINA" | translate}}</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor ingresa el país.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">{{ "INPUTS.CIUDAD"| translate}}</label>
+              <select class="form-select" id="state" required="">
+                <option value="">{{"INPUTS.SELECCIONAR" | translate}}...</option>
+                <option>Córdoba</option>
+              </select>
+              <div class="invalid-feedback">
+               Por favor ingresa la ciudad.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">{{ "INPUTS.CP"| translate}} </label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                CP requerido.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-check mt-3">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">{{ "SECCION.GUARDARINFO" | translate}}</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">{{ "SECCION.PAGO"| translate}} <span class="text-muted fs-5">(Actualizar página en caso de no visualizar)</span> </h4>
+          <div id="cardPaymentBrick_container">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+

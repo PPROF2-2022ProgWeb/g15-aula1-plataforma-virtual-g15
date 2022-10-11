@@ -1,0 +1,99 @@
+<!-- MAIN -->
+<main>
+  <!-- BREADCRUMB -->
+  <header class="main_section">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white p-2">
+              <li class="breadcrumb-item active">{{"LINKS.INICIO" | translate}}</li>
+          </ol>
+      </nav>
+  </header>
+  <!-- SECCION LOGIN -->
+  <section class="main_section">
+      <div class="container-fluid bg-white shadow px-0" id="contentForm">
+          <!-- SECCION LOGIN -->
+          <div class="row align-items-stretch">
+              <!-- IMAGEN FONDO -->
+              <div class="col bg_sections bg d-none d-lg-block col-md-6 col-lg-6 col-xl-7 ">
+              </div>
+              <div class="col bg-white p-5">
+                  <div class="text-center">
+                      <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
+                  </div>
+                  <h2 class="font-weight-bold text-center py-5" id="titleForm">{{"SECCION.SALUDO" | translate}}</h2>
+
+                  <!-- LOGIN -->
+                  <form>
+                      <div class="mb-4">
+                          <label for="correo" class="form-label">{{ "INPUTS.EMAIL" | translate}}</label>
+                          <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="mb-4">
+                          <label for="pass" class="form-label"> {{ "INPUTS.PASSWORD" | translate}} </label>
+                          <input type="password" class="form-control" required id="password">
+                      </div>
+                      <!-- <div class="mb-4 form-check">
+                          <input type="checkbox" name="connected" class="form-check-input" id="connected">
+                          <label for="connected" class="form-check-label">Mantenerme conectado</label>
+                          <label id="respuesta"></label>
+                      </div> -->
+                      <div class="d-grid">
+                          <button type="submit" name="submit" class="btn btn-primary">{{"LINKS.INICIARSESION" | translate}}</button>
+                      </div>
+                      <div class="my-3">
+                          <span>{{"LINKS.TIENESCUENTA" | translate}} <a href="/registro-alumnos">{{"LINKS.CREARALUMNO" | translate}}</a></span>
+                          <span> / </span>
+                          <span><a href="/registro-instituciones">{{"LINKS.CREARINSTITUCION" | translate}}</a></span>
+                          <span><br>{{"LINKS.RECUERDASPASS" | translate}} <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">{{"LINKS.RECUPERARPASS" | translate}}</a>
+                          </span>
+                      </div>
+                  </form>
+
+                  <!-- LOGIN CON REDES -->
+                  <div class="container w-100 my-5">
+                      <div class="row text-center">
+                          <div class="col-12">{{"LINKS.INICIARSESION" | translate}} {{"SECCION.CON" | translate}}</div>
+                          <div class="row">
+                              <div class="col">
+                                  <button class="btn btn-outline-primary w-100 my-1">
+                                      <div class="row align-items-center">
+                                          <div class="col-2 d-none d-md-block">
+                                              <img src="../../../assets/fb.png" width="32" alt="Registrar con Facebook">
+                                          </div>
+                                          <div class="col-12 col-md-10 text-center">Facebook</div>
+                                      </div>
+                                  </button>
+                              </div>
+                              <div class="col">
+                                  <button class="btn btn-outline-danger w-100 my-1">
+                                      <div class="row align-items-center">
+                                          <div class="col-2 d-none d-md-block">
+                                              <img src="../../../assets/google.png" width="32" alt="Registrar con Google">
+                                          </div>
+                                          <div class="col-12 col-md-10 text-center">Google</div>
+                                      </div>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- SECCION SERVICIO -->
+          <div class="row d-none d-sm-block bg_sections bg_services bg-white">
+              <div class="col d-none d-sm-block col-md-12 col-lg-6 p-5 rounded-right">
+                  <div class="card body_services">
+                      <div class="card-body p-5">
+                          <h5 class="card-title title_services">{{"SECCION.COMENCEMOS" | translate}}</h5>
+                          <h6 class="card-subtitle mb-2 fs-1 text-uppercase">{{"SECCION.TITULOINDEX" | translate}}</h6>
+                          <p class="card-text">{{"SECCION.DESCRIPCIONINDEX" | translate}}
+                          </p>
+                          <a class="btn btn-outline-warning mt-3" href="/login#contentForm">{{"LINKS.COMENZAR" | translate}}</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <app-membresia></app-membresia>
+      </div>
+  </section>
+</main>

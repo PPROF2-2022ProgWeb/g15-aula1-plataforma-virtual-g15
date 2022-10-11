@@ -1,0 +1,115 @@
+    <!-- MAIN -->
+
+    <main class="main">
+      <!-- BREADCRUMB -->
+      <header class="main_header">
+          <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb bg-white p-2">
+                  <li class="breadcrumb-item active"><a href="/login#contentForm" class="text-decoration-none">{{"LINKS.INICIO" | translate}}</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{"LINKS.ALUMNOS" | translate}}</li>
+              </ol>
+          </nav>
+      </header>
+      <section class="main_section">
+          <div class="container-fluid px-0 bg-white shadow" id="contentForm">
+              <!-- SECCION LOGIN -->
+              <div class="row align-items-stretch">
+                  <!-- BG COLUMN -->
+                  <div class="col bg_sections bg d-none d-lg-block col-md-6 col-lg-6 col-xl-7"></div>
+                  <!-- REGISTER COLUMN -->
+                  <div class="col bg-white p-5">
+                      <!-- LOGOTIPO -->
+                      <div class="text-center">
+                          <img src="../../../assets/logotipo.png" width="100" alt="logotipo">
+                      </div>
+                      <h2 class="font-weight-bold text-center py-5" id="titleForm">{{"LINKS.REGISTRAR" | translate}}</h2>
+                      <!-- LOGIN -->
+<!-- MODIFICAR ENLACE -->
+                      <form action="registro.php" method="post" class="row align-items-center" id="formLogin">
+                          <div class="col">
+                              <div class="row mb-4">
+                                  <div class="col">
+                                      <label for="nombre" class="form-label">{{"INPUTS.NOMBRE" | translate}}</label>
+                                      <input type="text" class="form-control" required name="nombreAlumno">
+                                  </div>
+                                  <div class="col">
+                                      <label for="apellido" class="form-label">{{"INPUTS.APELLIDO" | translate}}</label>
+                                      <input type="text" class="form-control" required name="apellido">
+                                  </div>
+                              </div>
+                              <div class="row mb-4">
+                                  <div class="col">
+                                      <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
+                                      <input type="email" class="form-control" required name="email">
+                                  </div>
+                                  <div class="col">
+                                      <label for="fechaNac" class="form-label">{{"INPUTS.FECHANAC" | translate}}</label>
+                                      <input type="date" class="form-control" name="fechaNac" required>
+                                  </div>
+                              </div>
+                              <div class="row mb-4">
+                                  <div class="col">
+                                      <label for="selectTipo" class="form-label">{{"INPUTS.TIPODOC" | translate}}</label>
+                                      <select class="form-select" aria-label="Default select example" name="selectTipo">
+                                          <option selected>{{"INPUTS.SELECCIONAR" | translate}}</option>
+                                          <option value="1">DNI</option>
+                                          <option value="2">LE</option>
+                                          <option value="3">LC</option>
+                                      </select>
+                                  </div>
+                                  <div class="col">
+                                      <label for="documento" class="form-label">{{"INPUTS.DOCUMENTO" | translate}}</label>
+                                      <input type="text" class="form-control" required name="documento">
+                                  </div>
+                              </div>
+                              <div class="row mb-4">
+                                  <div class="col">
+                                      <label for="pais" class="form-label">{{"INPUTS.PAIS" | translate}}</label>
+                                      <input type="text" class="form-control" required name="pais">
+                                  </div>
+                                  <div class="col">
+                                      <label for="provincia" class="form-label">{{"INPUTS.PROVINCIA" | translate}}</label>
+                                      <input type="text" class="form-control" required name="provincia">
+                                  </div>
+                              </div>
+                              <div class="row mb-4">
+                              <div class="col">
+                                      <label for="ciudad" class="form-label">{{"INPUTS.CIUDAD" | translate}}</label>
+                                      <input type="text" class="form-control" required name="ciudad">
+                                  </div>
+                              </div>
+                              <div class="row mb-4">
+                                  <div class="col">
+                                      <label for="pw" class="form-label">{{"INPUTS.PASSWORD" | translate}}</label>
+                                      <input type="password" class="form-control" required name="pw">
+                                  </div>
+                                  <div class="col">
+                                      <label for="repassword" class="form-label">{{"INPUTS.REPASSWORD" | translate}}</label>
+                                      <input type="password" class="form-control" required name="repassword">
+                                  </div>
+                              </div>
+                              <!-- <div class="row mb-4">
+                                  <div class="col">
+                                      <div class="form-check">
+                                          <input type="checkbox" required name="terminos" class="form-check-input" id="terminos">
+                                          <label for="terminos" class="form-check-label"><a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto términos y condiciones</a></label>
+                                      </div>
+                                  </div>
+                              </div> -->
+                          </div>
+                          <div class="d-grid">
+                              <button type="submit" class="btn btn-primary">{{"LINKS.REGISTRAR" | translate}}</button>
+                              <a class="btn btn-warning mt-2" routerLink="/alumnos">{{"LINKS.INICIARSESION" | translate}} {{"LINKS.INICIARSESIONPRUEBA" | translate}}</a>
+                          </div>
+                          <div class="my-3">
+                              <span>{{"LINKS.YATIENESCUENTA" | translate}} <a href="/login#contentForm">{{"LINKS.INICIARSESION" | translate}}</a></span>
+                              <span><br>{{"LINKS.RECUERDASPASS" | translate}} <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">{{"LINKS.RECUPERARPASS" | translate}}</a>
+                              </span>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <app-membresia></app-membresia>
+      </section>
+  </main>
