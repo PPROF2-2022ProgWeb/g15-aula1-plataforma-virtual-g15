@@ -1,7 +1,12 @@
 package com.saberconectar.sc.service.impl;
 
 import com.saberconectar.sc.dto.ProductDTO;
+import com.saberconectar.sc.entity.ProductEntity;
+import com.saberconectar.sc.exception.ParamNotFound;
+import com.saberconectar.sc.mapper.ProductMapper;
+import com.saberconectar.sc.repository.ProductRepository;
 import com.saberconectar.sc.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
@@ -16,7 +21,7 @@ public class ProductServiceImpl implements ProductService {
         return dtos;
     }
     public ProductDTO save(ProductDTO product) {
-        ProductEntity entity = productMapper.productDTO2Entity(type);
+        ProductEntity entity = productMapper.productDTO2Entity(product);
         ProductEntity entitySaved = productRepository.save(entity);
         ProductDTO result = productMapper.productEntity2DTO(entitySaved);
         return result;

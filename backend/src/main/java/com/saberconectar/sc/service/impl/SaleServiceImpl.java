@@ -1,7 +1,12 @@
 package com.saberconectar.sc.service.impl;
 
 import com.saberconectar.sc.dto.SaleDTO;
+import com.saberconectar.sc.entity.SaleEntity;
+import com.saberconectar.sc.exception.ParamNotFound;
+import com.saberconectar.sc.mapper.SaleMapper;
+import com.saberconectar.sc.repository.SaleRepository;
 import com.saberconectar.sc.service.SaleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service
 public class SaleServiceImpl implements SaleService {
@@ -12,8 +17,8 @@ public class SaleServiceImpl implements SaleService {
     public SaleDTO getSaleById(Long id) {
         isCorrect(id);
         SaleEntity entity = saleRepository.getReferenceById(id);
-        SaleDTO dto = saleMapper.saleEntity2DTO(entity);
-        return dto;
+        SaleDTO sDto = saleMapper.saleEntity2DTO(entity);
+        return sDto;
     }
     public SaleDTO save(SaleDTO sale){
         SaleEntity entity = saleMapper.saleDTO2Entity(sale);

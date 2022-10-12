@@ -30,9 +30,9 @@ public class ProductMapper {
         return dtos;
     }
     public ProductEntity update(ProductEntity entity, ProductDTO dto){
-        productEntity.setName(dto.getName());
-        productEntity.setPrice(dto.getPrice());
-        productEntity.setDeleted(dto.getDeleted());
+        entity.setName(dto.getName());
+        entity.setPrice(dto.getPrice());
+        entity.setDeleted(dto.getDeleted());
         return entity;
     }
 }
