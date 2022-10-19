@@ -1,10 +1,22 @@
 package com.saberconectar.sc.auth.controller;
 
+import com.saberconectar.sc.auth.dto.AuthenticationRequest;
+import com.saberconectar.sc.auth.dto.AuthenticationResponse;
 import com.saberconectar.sc.auth.service.JwtUtils;
 import com.saberconectar.sc.auth.service.UserDetailsCustomService;
 import com.saberconectar.sc.dto.InstitutionDTO;
 import com.saberconectar.sc.service.InstitutionService;
-import com.saberconectar.sc.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -26,7 +38,7 @@ public class UserAuthInstitutionController {
         this.institutionService = institutionService;
     }
     @PostMapping("/register")
-    public ResponseEntity<Boolean> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
+    public ResponseEntity<InstitutionDTO> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
         this.institutionService.institutionRegister(user);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

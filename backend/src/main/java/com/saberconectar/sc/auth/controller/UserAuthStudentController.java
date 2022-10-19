@@ -1,10 +1,22 @@
 package com.saberconectar.sc.auth.controller;
 
+import com.saberconectar.sc.auth.dto.AuthenticationRequest;
 import com.saberconectar.sc.auth.dto.AuthenticationResponse;
 import com.saberconectar.sc.auth.service.JwtUtils;
 import com.saberconectar.sc.auth.service.UserDetailsCustomService;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")

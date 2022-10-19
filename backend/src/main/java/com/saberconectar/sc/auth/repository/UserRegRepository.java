@@ -1,9 +1,10 @@
 package com.saberconectar.sc.auth.repository;
 
-import com.saberconectar.sc.entity.InstitutionEntity;
-import com.saberconectar.sc.entity.StudentEntity;
+import com.saberconectar.sc.entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRegRepository extends JpaRepository<Object<InstitutionEntity, StudentEntity>, Long> {
-    Object<InstitutionEntity, StudentEntity> findByUsername(String username);
+public interface UserRegRepository extends JpaRepository<UserEntity, Long> {
+    UserEntity findByEmail(String username);
 }

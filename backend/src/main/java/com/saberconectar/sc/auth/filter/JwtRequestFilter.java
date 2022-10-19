@@ -1,4 +1,18 @@
 package com.saberconectar.sc.auth.filter;
+import com.saberconectar.sc.auth.service.JwtUtils;
+import com.saberconectar.sc.auth.service.UserDetailsCustomService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter{
     /*@Order(Ordered.HIGHEST_PRECEDENCE)

@@ -1,4 +1,6 @@
 package com.saberconectar.sc.auth.dto;
+
+import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
