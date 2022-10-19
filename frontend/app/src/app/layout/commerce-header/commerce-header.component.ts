@@ -19,7 +19,8 @@ export class CommerceHeaderComponent{
     alert("redirecciona al login pero simulamos como quedarian los botones recien presionados");
     this.estadoSesion = true;
   }
-  changeLeng(idioma:string):void{
-    this.newItemEvent.emit(idioma);
+
+  changeLeng(palabra:string):void{
+    this.newItemEvent.emit(palabra);
   }
 }

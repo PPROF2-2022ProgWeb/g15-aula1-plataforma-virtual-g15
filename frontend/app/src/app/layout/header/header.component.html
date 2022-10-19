@@ -1,4 +1,6 @@
 <header class="container-fluid px-0" id="headerHeader">
+
+
     <!-- NAVIGATION -->
     <app-commerce-header (newItemEvent)="changeLeng($event)"></app-commerce-header>
       <nav class="navbar sticky-top bg-white navbar-expand-lg shadow-lg" id="navHeader">
@@ -15,12 +17,15 @@
                   <div class="offcanvas-body justify-content-end" width="100">
                       <ul class="navbar-nav my-2 my-lg-0">
                           <li class="nav-item m-3">
+                            <!--LINK INICIO-->
                               <a class="nav-link" aria-current="page" routerLink='/login'>{{ "LINKS.INICIO" | translate}}</a>
                           </li>
                           <li class="nav-item m-3">
+                            <!--LINK NOSOTROS-->
                               <a class="nav-link" aria-current="page" routerLink='/nosotros'>{{ "LINKS.NOSOTROS" | translate}}</a>
                           </li>
                           <li class="nav-item m-3">
+                            <!--LINK INSTITUCIONES-->
                               <a class="nav-link" aria-current="page" routerLink="/registro-instituciones">{{ "LINKS.INSTITUCIONES" | translate}}</a>
                           </li>
                           <li class="nav-item m-3">

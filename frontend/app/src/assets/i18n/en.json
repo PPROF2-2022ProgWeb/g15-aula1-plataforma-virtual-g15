@@ -33,17 +33,11 @@
     "CANCELAR": "Cancel",
     "AGREGAR":"Add",
     "INSCRIBIRSE":"Register"
-
-
-
-
-
   },
 
   "INPUTS":{
     "VERCARRERAS":"Show careers",
     "VERCURSOS":"Show courses",
-
     "EMAIL": "Email",
     "PROVINCIA": "Province",
     "CIUDAD": "City",
