@@ -1,6 +1,7 @@
 package com.saberconectar.sc.dto;
 
 import com.saberconectar.sc.entity.InstitutionEntity;
+import com.saberconectar.sc.entity.StudentEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,4 +17,5 @@ public class CourseDTO {
     private LocalDate endingDay;
     private Boolean deleted;
     private List<InstitutionEntity> institutions;
+    private List<StudentEntity> students;
 }

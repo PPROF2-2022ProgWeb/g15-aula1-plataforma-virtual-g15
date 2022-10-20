@@ -19,7 +19,7 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentMapper studentMapper;
     public StudentDTO studentRegister(StudentDTO dto) {
-        StudentEntity entity = studentMapper.studentDTO2Entity(dto);
+        StudentEntity entity = studentMapper.studentDTO2Entity(dto,false);
         StudentEntity entitySaved = studentRepository.save(entity);
         StudentDTO result = studentMapper.studentEntity2DTO(entitySaved,
                 true, false);
@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService {
         isCorrect(id, "id");
         StudentEntity entity = studentRepository.getReferenceById(id);
         StudentDTO dto = studentMapper.studentEntity2DTO(entity,
-                true ,false);
+                true ,true);
         return dto;
     }
     public StudentDTO getStudentANDCoursesById(Long id) {

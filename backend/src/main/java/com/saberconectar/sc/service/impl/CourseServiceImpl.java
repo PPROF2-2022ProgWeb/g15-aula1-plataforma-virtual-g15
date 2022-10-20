@@ -17,13 +17,13 @@ public class CourseServiceImpl implements CourseService {
     public CourseDTO save(CourseDTO dto) {
         CourseEntity entity = courseMapper.courseDTO2Entity(dto, false);
         CourseEntity entitySaved = courseRepository.save(entity);
-        CourseDTO course = courseMapper.courseEntity2DTO(entitySaved, false);
+        CourseDTO course = courseMapper.courseEntity2DTO(entitySaved,false, false);
         return course;
     }
     public CourseDTO getCourseById(Long id) {
         isCorrect(id, "id");
         CourseEntity entity = courseRepository.getReferenceById(id);
-        CourseDTO dto = courseMapper.courseEntity2DTO(entity, true);
+        CourseDTO dto = courseMapper.courseEntity2DTO(entity, true,true);
         return dto;
     }
     public CourseDTO update(Long id, CourseDTO dto){
@@ -31,7 +31,7 @@ public class CourseServiceImpl implements CourseService {
         CourseEntity entityId = courseRepository.getReferenceById(id);
         CourseEntity entity = courseMapper.update(entityId,dto);
         CourseEntity entityUpdated = courseRepository.save(entity);
-        CourseDTO result = courseMapper.courseEntity2DTO(entityUpdated, false);
+        CourseDTO result = courseMapper.courseEntity2DTO(entityUpdated,false, false);
         return result;
     }
     public void delete(Long id) {

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f1e94c9e-5d30-41d8-953e-616212150ae2",
+		"_postman_id": "4b714fb9-14bb-4d3d-8956-69998dbf4fdd",
 		"name": "Saber Conectar",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20891741"
@@ -12,11 +12,21 @@
 				{
 					"name": "countries",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Perú\",\r\n    \"deleted\": false\r\n}",
+							"raw": "{\r\n    \"name\": \"Bolivia\",\r\n    \"deleted\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1274,17 +1284,27 @@
 										}
 									],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
 						{
 							"name": "students/id",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/students/30",
+									"raw": "http://localhost:8080/students/15",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1292,7 +1312,7 @@
 									"port": "8080",
 									"path": [
 										"students",
-										"30"
+										"15"
 									]
 								},
 								"description": "Save user.\n\nAll fields are required."
@@ -1351,10 +1371,20 @@
 				{
 					"name": "/students/id/courses/id",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/students/30/courses/47",
+							"raw": "http://localhost:8080/students/15/courses/21",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1362,9 +1392,9 @@
 							"port": "8080",
 							"path": [
 								"students",
-								"30",
+								"15",
 								"courses",
-								"47"
+								"21"
 							]
 						},
 						"description": "inscribe student in a course"
@@ -1649,7 +1679,7 @@
 										}
 									],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -1726,6 +1756,16 @@
 				{
 					"name": "institutions/id/courses",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -1738,7 +1778,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/institutions/44/courses",
+							"raw": "http://localhost:8080/institutions/10/courses",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1746,7 +1786,7 @@
 							"port": "8080",
 							"path": [
 								"institutions",
-								"44",
+								"10",
 								"courses"
 							]
 						},
@@ -1818,7 +1858,7 @@
 								}
 							],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				},
@@ -2093,6 +2133,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -2105,7 +2155,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/courses/47",
+							"raw": "http://localhost:8080/courses/21",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -2113,7 +2163,7 @@
 							"port": "8080",
 							"path": [
 								"courses",
-								"47"
+								"21"
 							]
 						},
 						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
@@ -2270,6 +2320,140 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Institution Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"IES@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 7,\r\n            \"provinceId\": 6,\r\n            \"cityId\": 5\r\n        },\r\n    \"courses\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/institution/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"institution",
+								"register"
+							]
+						},
+						"description": "Creación se usuario.  \nAl momento de crear el usuario, si el resultado es exitoso, se envía un email a la cuenta de registro con el resultado obtenido."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ispc@cbagov.com.ar\",\r\n    \"password\":\"SADASDASD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Generación de token de acceso."
+					},
+					"response": []
+				},
+				{
+					"name": "Students Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"JUANEM@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 7,\r\n            \"provinceId\": 6,\r\n            \"cityId\": 5\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/student/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"student",
+								"register"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "jwt",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpc3BjQGNiYWdvdi5jb20uYXIiLCJleHAiOjE2NjYzMzM4ODIsImlhdCI6MTY2NjI5Nzg4Mn0.a1L_sNMPziroVDpGk4VrV0Os6fZjnIBa4bb3sy4pfMM",
+			"type": "string"
 		}
 	]
 }

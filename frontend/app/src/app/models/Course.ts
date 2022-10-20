@@ -11,7 +11,8 @@ export class Course{
     constructor(name:string,
         description:string,
         beginningDay:string,
-        endingDay:string, institutions?: Array<Institution>){
+        endingDay:string,
+        institutions?: Array<Institution>){
             this.name=name;
             this.description=description;
             this.beginningDay=beginningDay;

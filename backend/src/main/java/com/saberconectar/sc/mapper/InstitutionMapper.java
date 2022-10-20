@@ -42,7 +42,7 @@ public class InstitutionMapper {
             dto.setUserEntity(userEntity);
         }
         if (loadCourses){
-            Set<CourseDTO> dtos = courseMapper.courseEntitySet2DTOSet(entity.getCourses(), false);
+            Set<CourseDTO> dtos = courseMapper.courseEntitySet2DTOSet(entity.getCourses(),false, false);
             Set<CourseEntity> entities = courseMapper.courseDTOSet2EntitySet(dtos, false);
             dto.setCourses(entities);
         }
@@ -61,7 +61,7 @@ public class InstitutionMapper {
     public List<InstitutionDTO> institutionEntityList2DTOList(List<InstitutionEntity> entities,boolean loadUsers, boolean loadCourses){
         List<InstitutionDTO> dtos = new ArrayList<>();
         for(InstitutionEntity entity: entities){
-            dtos.add(this.institutionEntity2DTO(entity,loadUsers, loadCourses));
+            dtos.add(institutionEntity2DTO(entity,loadUsers, loadCourses));
         }
         return dtos;
     }
