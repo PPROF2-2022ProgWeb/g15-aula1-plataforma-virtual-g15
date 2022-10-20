@@ -24,12 +24,12 @@ public class UserMapper {
         dto.setCountryId(entity.getCountryId());
         dto.setProvinceId(entity.getProvinceId());
         dto.setCityId(entity.getCityId());
-        if(setStudent){
+        /*if(setStudent){
             dto.setStudentEntity(entity.getStudentEntity());
         }
         if(setInstitution){
             dto.setInstitutionEntity(entity.getInstitutionEntity());
-        }
+        }*/
         return dto;
     }
     public UserEntity update(UserEntity entity, UserDTO dto){

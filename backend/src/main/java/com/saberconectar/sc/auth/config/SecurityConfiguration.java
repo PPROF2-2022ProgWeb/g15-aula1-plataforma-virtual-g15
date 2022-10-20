@@ -65,7 +65,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll()*/
                 .antMatchers(
                         HttpMethod.POST,
-                        "/auth/*"
+                        "/auth/**", "/institutions","/cities","/provinces","/countries"
                         //TODO aclarar endpoints "POST" sin token
                 ).permitAll()
                 .anyRequest().authenticated()

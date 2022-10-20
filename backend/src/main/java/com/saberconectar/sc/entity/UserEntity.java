@@ -26,15 +26,15 @@ public class UserEntity {
     @Column(name="city_id", nullable = false)
     private Long cityId;
     //COUNTRY
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "country_id", insertable = false, updatable = false)
     private CountryEntity country; // search info into country datatable
     //PROVINCE
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "province_id", insertable = false, updatable = false)
     private ProvinceEntity province; // search info into province datatable
     //CITY
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id", insertable = false, updatable = false)
     private CityEntity city; // search info into city datatable
 

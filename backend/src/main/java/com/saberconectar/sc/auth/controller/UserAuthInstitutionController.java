@@ -20,7 +20,7 @@ import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/auth/institution")
+@RequestMapping("/auth")
 public class UserAuthInstitutionController {
     private UserDetailsCustomService userDetailsService;
     private AuthenticationManager authenticationManager;
@@ -37,12 +37,12 @@ public class UserAuthInstitutionController {
         this.jwtTokenUtil = jwtTokenUtil;
         this.institutionService = institutionService;
     }
-    @PostMapping("/register")
+    @PostMapping("/institution/register")
     public ResponseEntity<InstitutionDTO> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
-        this.institutionService.institutionRegister(user);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        InstitutionDTO institutionSaved = institutionService.institutionRegister(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(institutionSaved);
     }
-    @PostMapping("/login")
+    @PostMapping("/institution/login")
     public ResponseEntity<AuthenticationResponse> singIn(@RequestBody AuthenticationRequest authRequest) throws Exception{
         UserDetails userDetails;
         try{

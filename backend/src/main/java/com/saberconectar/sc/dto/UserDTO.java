@@ -14,6 +14,4 @@ public class UserDTO {
     private Long countryId;
     private Long provinceId;
     private Long cityId;
-    private StudentEntity studentEntity;
-    private InstitutionEntity institutionEntity;
 }
