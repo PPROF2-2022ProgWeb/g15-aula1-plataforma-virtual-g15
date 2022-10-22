@@ -59,7 +59,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 /*.antMatchers(
                         HttpMethod.GET,
-                        "/books/all"
+                        "/institutions/**",
+                        "/students/**",
+                        "/sales/**",
+                        "/students/**",
                         //TODO aclarar endpoints "GET" sin token
                 )
                 .permitAll()*/
