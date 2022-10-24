@@ -1,6 +1,5 @@
 export class AuthenticationResponse {
-    constructor(
-      public jwt:string
-      ){}
+  username?:string;
+  jwt!:string;
   }
   

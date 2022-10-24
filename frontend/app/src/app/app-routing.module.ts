@@ -12,7 +12,7 @@ import { SeccionInstitucionComponent } from './pages/seccion-institucion/seccion
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'nosotros', component: NosotrosComponent},
   { path: 'registro-instituciones', component: RegistroInstitucionesComponent},

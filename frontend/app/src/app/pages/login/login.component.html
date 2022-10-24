@@ -23,14 +23,14 @@
                   <h2 class="font-weight-bold text-center py-5" id="titleForm">{{"SECCION.SALUDO" | translate}}</h2>
 
                   <!-- LOGIN -->
-                  <form>
+                  <form [formGroup]="login" (ngSubmit)="onSubmit()">
                       <div class="mb-4">
                           <label for="correo" class="form-label">{{ "INPUTS.EMAIL" | translate}}</label>
-                          <input type="email" class="form-control" id="email">
+                          <input type="email" class="form-control" formControlName="username" id="email">
                       </div>
                       <div class="mb-4">
                           <label for="pass" class="form-label"> {{ "INPUTS.PASSWORD" | translate}} </label>
-                          <input type="password" class="form-control" required id="password">
+                          <input type="password" class="form-control" formControlName="password" required id="password">
                       </div>
                       <!-- <div class="mb-4 form-check">
                           <input type="checkbox" name="connected" class="form-check-input" id="connected">
@@ -38,7 +38,7 @@
                           <label id="respuesta"></label>
                       </div> -->
                       <div class="d-grid">
-                          <button type="submit" name="submit" class="btn btn-primary">{{"LINKS.INICIARSESION" | translate}}</button>
+                          <button type="submit" name="submit" class="btn btn-primary" [disabled]="!login.valid">{{"LINKS.INICIARSESION" | translate}}</button>
                       </div>
                       <div class="my-3">
                           <span>{{"LINKS.TIENESCUENTA" | translate}} <a href="/registro-alumnos">{{"LINKS.CREARALUMNO" | translate}}</a></span>

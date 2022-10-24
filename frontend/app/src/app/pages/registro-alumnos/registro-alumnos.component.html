@@ -25,26 +25,26 @@
                       <h2 class="font-weight-bold text-center py-5" id="titleForm">{{"LINKS.REGISTRAR" | translate}}</h2>
                       <!-- LOGIN -->
 <!-- MODIFICAR ENLACE -->
-                      <form action="registro.php" method="post" class="row align-items-center" id="formLogin">
+                      <form class="row align-items-center" id="formLogin" [formGroup]="datos">
                           <div class="col">
                               <div class="row mb-4">
                                   <div class="col">
                                       <label for="nombre" class="form-label">{{"INPUTS.NOMBRE" | translate}}</label>
-                                      <input type="text" class="form-control" required name="nombreAlumno">
+                                      <input type="text" class="form-control" required formControlName="name">
                                   </div>
                                   <div class="col">
                                       <label for="apellido" class="form-label">{{"INPUTS.APELLIDO" | translate}}</label>
-                                      <input type="text" class="form-control" required name="apellido">
+                                      <input type="text" class="form-control" required formControlName="surname">
                                   </div>
                               </div>
                               <div class="row mb-4">
                                   <div class="col">
                                       <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
-                                      <input type="email" class="form-control" required name="email">
+                                      <input type="email" class="form-control" required formControlName="username">
                                   </div>
                                   <div class="col">
                                       <label for="fechaNac" class="form-label">{{"INPUTS.FECHANAC" | translate}}</label>
-                                      <input type="date" class="form-control" name="fechaNac" required>
+                                      <input type="date" class="form-control" formControlName="date" required>
                                   </div>
                               </div>
                               <div class="row mb-4">
@@ -59,47 +59,57 @@
                                   </div>
                                   <div class="col">
                                       <label for="documento" class="form-label">{{"INPUTS.DOCUMENTO" | translate}}</label>
-                                      <input type="text" class="form-control" required name="documento">
+                                      <input type="text" class="form-control" required formControlName="documentNumber">
                                   </div>
                               </div>
                               <div class="row mb-4">
-                                  <div class="col">
-                                      <label for="pais" class="form-label">{{"INPUTS.PAIS" | translate}}</label>
-                                      <input type="text" class="form-control" required name="pais">
-                                  </div>
-                                  <div class="col">
-                                      <label for="provincia" class="form-label">{{"INPUTS.PROVINCIA" | translate}}</label>
-                                      <input type="text" class="form-control" required name="provincia">
-                                  </div>
+                                <div class="col">
+                                    <label for="provincia" class="form-label">{{"INPUTS.PROVINCIA" | translate}}</label>
+                                    <!-- <select class="form-select" aria-label="Default select example" formControlName="provinceId">
+                                      <option selected>{{"INPUTS.SELECCIONAR" | translate}}</option>
+                                      <option value=6>Córdoba</option>
+                                    </select> -->
+                                    <input type="text" class="form-control" required formControlName="provinceId" id="validacionProvincia">
+                                </div>
+                                <div class="col">
+                                    <label for="ciudad" class="form-label">{{"INPUTS.CIUDAD" | translate}}</label>
+                                    <!-- <select class="form-select" aria-label="Default select example" formControlName="cityId">
+                                      <option selected>{{"INPUTS.SELECCIONAR" | translate}}</option>
+                                      <option value=5>Córdoba Capital</option>
+                                    </select> -->
+                                    <input type="text" class="form-control" required formControlName="cityId">
+                                </div>
+                                <div class="col">
+                                  <label for="country" class="form-label">{{"INPUTS.PAIS" | translate}}</label>
+                                  <!-- <select class="form-select" aria-label="Default select example" formControlName="countryId">
+                                    <option selected>{{"INPUTS.SELECCIONAR" | translate}}</option>
+                                    <option value=7>Perú</option>
+                                    <option value=12>Bolivia</option>
+                                  </select> -->
+                                  <input type="text" class="form-control" required formControlName="countryId">
                               </div>
-                              <div class="row mb-4">
-                              <div class="col">
-                                      <label for="ciudad" class="form-label">{{"INPUTS.CIUDAD" | translate}}</label>
-                                      <input type="text" class="form-control" required name="ciudad">
-                                  </div>
-                              </div>
+                            </div>
                               <div class="row mb-4">
                                   <div class="col">
                                       <label for="pw" class="form-label">{{"INPUTS.PASSWORD" | translate}}</label>
-                                      <input type="password" class="form-control" required name="pw">
+                                      <input type="password" class="form-control" required formControlName="password">
                                   </div>
                                   <div class="col">
                                       <label for="repassword" class="form-label">{{"INPUTS.REPASSWORD" | translate}}</label>
-                                      <input type="password" class="form-control" required name="repassword">
+                                      <input type="password" class="form-control" required formControlName="repassword">
                                   </div>
                               </div>
-                              <!-- <div class="row mb-4">
+                              <div class="row mb-4">
                                   <div class="col">
                                       <div class="form-check">
-                                          <input type="checkbox" required name="terminos" class="form-check-input" id="terminos">
+                                          <input type="checkbox" required formControlName="check" class="form-check-input" id="terminos">
                                           <label for="terminos" class="form-check-label"><a class="nav" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Acepto términos y condiciones</a></label>
                                       </div>
                                   </div>
-                              </div> -->
+                              </div>
                           </div>
                           <div class="d-grid">
-                              <button type="submit" class="btn btn-primary">{{"LINKS.REGISTRAR" | translate}}</button>
-                              <a class="btn btn-warning mt-2" routerLink="/alumnos">{{"LINKS.INICIARSESION" | translate}} {{"LINKS.INICIARSESIONPRUEBA" | translate}}</a>
+                              <button type="submit" class="btn btn-primary" (click)="onSubmit()">{{"LINKS.REGISTRAR" | translate}}</button>
                           </div>
                           <div class="my-3">
                               <span>{{"LINKS.YATIENESCUENTA" | translate}} <a href="/login#contentForm">{{"LINKS.INICIARSESION" | translate}}</a></span>

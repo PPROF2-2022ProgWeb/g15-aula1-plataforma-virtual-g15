@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seccion-institucion.component.css']
 })
 export class SeccionInstitucionComponent implements OnInit {
-  nombreInstitucion = "{{NombreInstitucion}}";
+  nombreInstitucion?:string;
+
   btnCursos = "Ver mis Cursos";
   btnCarreras = "Ver mis carreras";
   visibilidadCurso:boolean = false;
   visibilidadCarrera:boolean = false;
-  constructor() { }
+
+  constructor(private auth:AuthService) {
+   }
 
   ngOnInit(): void {
+    this.nombreInstitucion = this.auth.userValue.username?.slice(0, this.auth.userValue.username?.indexOf("@"));
   }
   mostrarCursos():void{
     if(this.visibilidadCurso === false){

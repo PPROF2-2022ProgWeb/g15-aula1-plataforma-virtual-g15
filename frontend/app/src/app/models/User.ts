@@ -5,19 +5,19 @@ export class User {
     email: string;
     password: string;
     deleted: boolean = false;
-    // CAMBIAR ID SEGUN LOS REGISTROS CREADOS EN SUS PROPIAS TABLAS
-    countryId: number = 7;
-    provinceId: number = 6;
-    cityId: number = 5;
+    //TODO CAMBIAR ID SEGUN LOS REGISTROS CREADOS EN SUS PROPIAS TABLAS
+    countryId: string;
+    provinceId: string;
+    cityId: string;
     //
     studentEntity?: Student;
     institutionEntity?: string;
-    constructor(email: string, password: string){
+    constructor(email: string, password: string, countryId: string, provinceId: string, cityId:string){
     this.email = email;
     this.password = password;
     this.deleted;
-    this.countryId;
-    this.provinceId;
-    this.cityId;
+    this.countryId = countryId;
+    this.provinceId = provinceId;
+    this.cityId = cityId;
     }
 }

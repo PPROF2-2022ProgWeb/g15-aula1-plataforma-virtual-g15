@@ -8,7 +8,8 @@
       <a class="text-decoration-none" (click)="iniciarSesion()" aria-current="page" href='/login#contentForm'>{{"LINKS.INICIARSESION" | translate}}</a>
     </li>
     <li class="nav-item my-auto mx-3" *ngIf="estadoSesion">
-      <a class="text-decoration-none" aria-current="page" href='/login#contentForm'>{{nombreUsuario}}</a>
+       <!--<p class="text-decoration-none">{{nombreUsuario}}</p>-->
+      <a class="text-decoration-none" aria-current="page" href='/'>{{nombreUsuario}}</a>
     </li>
     <li class="p-1 my-auto" *ngIf="estadoSesion">
       <a routerLink="/checkout">
@@ -16,7 +17,26 @@
       </a>
     </li>
     <li class="nav-item my-auto mx-3" *ngIf="estadoSesion">
-      <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">{{"LINKS.CERRARSESION" | translate}}</a>
+      <a class="text-decoration-none" href="#"  data-bs-toggle="modal" data-bs-target="#logoutModal">{{"LINKS.CERRARSESION" | translate}}</a>
     </li>
   </ul>
 </nav>
+
+<!-- Modal Cerrar sesion -->
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{"SECCION.ESTASSEGURO" | translate}}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">{{"SECCION.PARACERRAR" | translate}}</div>
+          <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">{{"LINKS.CANCELAR" | translate}}</button>
+              <a class="btn btn-primary" aria-current="modal" data-bs-dismiss="modal" (click)="cerrarSesion()">{{"LINKS.ACEPTAR" | translate}}</a>
+          </div>
+      </div>
+  </div>
+</div>

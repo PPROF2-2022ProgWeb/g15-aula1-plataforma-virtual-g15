@@ -1,4 +1,3 @@
-import { Course } from "./Course";
 import { User } from "./User";
 
 export class Institution {    
@@ -7,12 +6,10 @@ export class Institution {
     cuitNumber: string;
     deleted: boolean = false;
     userEntity: User;
-    courses?: Set<Course>;
-    constructor(name:string, cuitNumber:string,documentNumber:string,date:string,userEntity:User, courses?:Set<Course>){
+    constructor(name:string, cuitNumber:string,userEntity:User){
         this.name=name;
         this.cuitNumber=cuitNumber;
         this.deleted;
         this.userEntity=userEntity;
-        this.courses=courses;
     }
 }
