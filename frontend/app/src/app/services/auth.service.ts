@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable, Output, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { AuthenticationRequest } from '../models/AuthenticationRequest';
@@ -20,7 +21,7 @@ export class AuthService{
   private isStudent:boolean = false;
 
 
-  constructor(private http: HttpClient, private cookieService:CookieService) {
+  constructor(private http: HttpClient, private cookieService:CookieService, private route: Router) {
 
     // this.userSubject = new BehaviorSubject<Token>(localStorage.getItem('auth_token') as any);
     // this.user = this.userSubject.asObservable();
@@ -32,7 +33,6 @@ export class AuthService{
     headers: new HttpHeaders({
     }),
   };
-
   login(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
 
     return this.http
@@ -70,10 +70,14 @@ export class AuthService{
     return this.cookieService.get('auth_token');
   }
   logout() {
-    this.fireIsLoggedIn.emit(this.estado =false);
-    this.fireIsLogged.emit(this.userName='Iniciar Sesión');
-    //sessionStorage.removeItem('auth_token');
-    this.cookieService.delete('auth_token');
+    this.route.navigate(['/login']).then(()=>{
+      this.fireIsLoggedIn.emit(this.estado =false);
+      this.fireIsLogged.emit(this.userName='Iniciar Sesión');
+      //sessionStorage.removeItem('auth_token');
+      this.cookieService.delete('auth_token');
+      this.cookieService.delete('estado');
+      window.location.reload();
+    });
     //this.userSubject.closed;
   }
 

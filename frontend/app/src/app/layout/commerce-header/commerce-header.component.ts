@@ -37,7 +37,6 @@ export class CommerceHeaderComponent{
   }
   cerrarSesion(){
     this.auth.logout();
-    this.router.navigate(['/login']);
   }
 
   changeLeng(palabra:string):void{

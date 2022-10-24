@@ -66,8 +66,7 @@ export function createTranslateLoader(http: HttpClient) {
       useClass: JwtInterceptorInterceptor,
       multi: true
     },
-  CookieService,
-  Subject],
+  CookieService],
   exports: [
     LoginComponent,
     NosotrosComponent,
