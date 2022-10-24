@@ -17,19 +17,17 @@ export class AuthService {
   public user: Observable<AuthenticationResponse>;
   private estado: boolean = false;
   private userName!:string;
+  private isStudent:boolean = false;
 
 
   constructor(private http: HttpClient, private cookieService:CookieService) {
 
-    this.userSubject = new BehaviorSubject<AuthenticationResponse>
-    (
-      JSON.parse((`${localStorage.getItem('auth_token')}`))
-    );
+    this.userSubject = new BehaviorSubject<AuthenticationResponse>(JSON.parse((`${localStorage.getItem('auth_token')}`)));
     this.user = this.userSubject.asObservable();
    }
    public get userValue(): AuthenticationResponse {
     return this.userSubject.value;
-  }
+    }
   httpOptions = {
     headers: new HttpHeaders({
     }),
@@ -44,7 +42,9 @@ export class AuthService {
           let datos: AuthenticationResponse = {
             username: user.username,
             jwt: user.jwt,
+            isStudent: user.isStudent
           };
+          this.isStudent = datos.isStudent;
           this.userName=datos.username as string;
           localStorage.setItem('auth_token', datos.jwt);
           this.userSubject.next(datos);
@@ -66,14 +66,14 @@ export class AuthService {
     return this.userName; 
   } 
   getToken(){
-    return localStorage.getItem('auth_token');
+    return sessionStorage.getItem('auth_token');
   }
   logout() {
     this.fireIsLoggedIn.emit(this.estado =false);
     this.fireIsLogged.emit(this.userName='Iniciar Sesión');
-    localStorage.removeItem('auth_token');
+    //sessionStorage.removeItem('auth_token');
     this.cookieService.delete('auth_token');
-    this.userSubject.closed;
+    //this.userSubject.closed;
   }
 
 }

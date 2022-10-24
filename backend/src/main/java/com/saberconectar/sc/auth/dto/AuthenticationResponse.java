@@ -7,4 +7,5 @@ import lombok.*;
 public class AuthenticationResponse {
     private String username;
     private String jwt;
+    private Boolean isStudent;
 }

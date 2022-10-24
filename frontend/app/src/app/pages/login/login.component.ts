@@ -37,15 +37,22 @@ export class LoginComponent implements OnInit {
     let usuario = this.login.value.username;
     let password = this.login.value.password;
     const data = new AuthenticationRequest(usuario,password);
-    this.auth.login(data).subscribe(({jwt})=>{
-      this.cookieService.set('auth_token', jwt);
+
+    this.auth.login(data).subscribe((data)=>{
+      this.cookieService.set('auth_token', data.jwt);
       alert("Bienvenido " + data.username);
+
       //
       //this.estado = true;
       //this.estadoEvent.emit(this.estado);
       //this.cookieService.set('estadoSesion', 'true');
       //
-      this.router.navigate(['/instituciones']);
+      if(data.isStudent){
+        this.router.navigate(['/alumnos']);
+      }else{
+        this.router.navigate(['/instituciones']);
+      }
+
     }, (e)=>{
       e = "Datos inválidos";
       alert(this.error = e);

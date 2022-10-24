@@ -16,6 +16,11 @@ public class UserController {
         UserDTO user = userService.getUserById(id, false, false);
         return ResponseEntity.ok().body(user);
     }
+    @GetMapping("/email/{email}")
+    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String email){
+        UserDTO user = userService.getUserByEmail(email, false, false);
+        return ResponseEntity.ok().body(user);
+    }
     @PostMapping
     public ResponseEntity<UserDTO> save(@RequestBody UserDTO user){
         UserDTO userSaved = userService.save(user, false, false);

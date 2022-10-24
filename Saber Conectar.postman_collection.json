@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4b714fb9-14bb-4d3d-8956-69998dbf4fdd",
+		"_postman_id": "576dcc1e-ecc0-4fa9-b6cd-7553dab935a4",
 		"name": "Saber Conectar",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20891741"
@@ -889,6 +889,75 @@
 							"path": [
 								"users",
 								"14"
+							]
+						},
+						"description": "Get by id"
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 21:55:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"email\": \"juanem@hotmail.com\",\n    \"password\": \"bananitaDolca123\",\n    \"deleted\": false,\n    \"countryId\": 1,\n    \"provinceId\": 3,\n    \"cityId\": 11\n}"
+						}
+					]
+				},
+				{
+					"name": "users/email/{username}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/email/IES@cbagov.com.ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"email",
+								"IES@cbagov.com.ar"
 							]
 						},
 						"description": "Get by id"
@@ -2331,7 +2400,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"IES@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 7,\r\n            \"provinceId\": 6,\r\n            \"cityId\": 5\r\n        },\r\n    \"courses\":[]\r\n}",
+							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"IES@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": false\r\n        },\r\n    \"courses\":[]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2362,7 +2431,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"ispc@cbagov.com.ar\",\r\n    \"password\":\"SADASDASD\"\r\n}",
+							"raw": "{\r\n    \"username\":\"JUANEM@hotmail.com\",\r\n    \"password\":\"SADASDASD\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2388,21 +2457,11 @@
 				{
 					"name": "Students Register",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{jwt}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"JUANEM@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 7,\r\n            \"provinceId\": 6,\r\n            \"cityId\": 5\r\n        }\r\n}",
+							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"JUANEM@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": true\r\n        }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2452,7 +2511,7 @@
 	"variable": [
 		{
 			"key": "jwt",
-			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpc3BjQGNiYWdvdi5jb20uYXIiLCJleHAiOjE2NjYzMzM4ODIsImlhdCI6MTY2NjI5Nzg4Mn0.a1L_sNMPziroVDpGk4VrV0Os6fZjnIBa4bb3sy4pfMM",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2Rhc0Bhc2Rhc2QiLCJleHAiOjE2NjY2MTI2NDMsImlhdCI6MTY2NjYwOTA0M30.PjZmZXPraApVGTyif2YOkfh0eRcv2AJIhIiutre2DbI",
 			"type": "string"
 		}
 	]

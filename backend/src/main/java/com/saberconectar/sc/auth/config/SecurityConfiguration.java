@@ -57,15 +57,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 //.authorizeRequests().antMatchers("/lendings/users/{idUser}/books/{idBook}").permitAll()
                 .authorizeRequests()
-                /*.antMatchers(
+                .antMatchers(
                         HttpMethod.GET,
-                        "/institutions/**",
-                        "/students/**",
-                        "/sales/**",
-                        "/students/**",
+                        "/users/email/{username}"
                         //TODO aclarar endpoints "GET" sin token
                 )
-                .permitAll()*/
+                .permitAll()
                 .antMatchers(
                         HttpMethod.POST,
                         //"/auth/**", "/institutions","/cities","/provinces","/countries"

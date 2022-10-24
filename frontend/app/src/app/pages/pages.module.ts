@@ -23,6 +23,7 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { CookieService } from 'ngx-cookie-service';
 import { JwtInterceptorInterceptor } from '../interceptor/jwt-interceptor.interceptor';
+import { Subject } from 'rxjs';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -65,7 +66,8 @@ export function createTranslateLoader(http: HttpClient) {
       useClass: JwtInterceptorInterceptor,
       multi: true
     },
-  CookieService],
+  CookieService,
+  Subject],
   exports: [
     LoginComponent,
     NosotrosComponent,

@@ -19,6 +19,12 @@ public class UserEntity {
     private String password;
     //soft-delete
     private Boolean deleted = Boolean.FALSE;
+    private String countryId;
+    private String provinceId;
+    private String cityId;
+    private Boolean isStudent;
+    /*
+    //TODO se modificaron los tipos de datos para facilitar los tiempos de produccion
     @Column(name="country_id", nullable = false)
     private Long countryId;
     @Column(name="province_id", nullable = false)
@@ -43,4 +49,5 @@ public class UserEntity {
 
     @OneToOne(mappedBy = "userEntity")
     private InstitutionEntity institutionEntity;
+     */
 }

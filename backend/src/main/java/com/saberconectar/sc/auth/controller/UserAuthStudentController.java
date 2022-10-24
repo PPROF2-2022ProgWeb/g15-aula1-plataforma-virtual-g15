@@ -6,8 +6,10 @@ import com.saberconectar.sc.auth.service.JwtUtils;
 import com.saberconectar.sc.auth.service.UserDetailsCustomService;
 import com.saberconectar.sc.dto.InstitutionDTO;
 import com.saberconectar.sc.dto.StudentDTO;
+import com.saberconectar.sc.dto.UserDTO;
 import com.saberconectar.sc.service.InstitutionService;
 import com.saberconectar.sc.service.StudentService;
+import com.saberconectar.sc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,18 +31,21 @@ public class UserAuthStudentController {
     private StudentService studentService;
     private JwtUtils jwtTokenUtil;
     private InstitutionService institutionService;
+    private UserService userService;
     @Autowired
     public UserAuthStudentController(
             UserDetailsCustomService userDetailsService,
             AuthenticationManager authenticationManager,
             JwtUtils jwtTokenUtil,
             StudentService studentService,
-            InstitutionService institutionService){
+            InstitutionService institutionService,
+            UserService userService){
         this.userDetailsService = userDetailsService;
         this.authenticationManager = authenticationManager;
         this.jwtTokenUtil = jwtTokenUtil;
         this.studentService = studentService;
         this.institutionService = institutionService;
+        this.userService = userService;
     }
     @PostMapping("/institution/register")
     public ResponseEntity<InstitutionDTO> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
@@ -64,7 +69,8 @@ public class UserAuthStudentController {
             throw new Exception("Incorrect username or password", e);
         }
         final String username = authRequest.getUsername();
+        UserDTO dto = userService.getUserByEmail(username, false, false);
         final String jwt = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new AuthenticationResponse(username,jwt));
+        return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent()));
     }
 }

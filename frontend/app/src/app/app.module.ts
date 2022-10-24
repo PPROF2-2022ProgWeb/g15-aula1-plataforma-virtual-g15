@@ -1,3 +1,4 @@
+
 import { PagesModule } from './pages/pages.module';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
@@ -6,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
+import { Subject } from 'rxjs';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     LayoutModule,
     PagesModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
