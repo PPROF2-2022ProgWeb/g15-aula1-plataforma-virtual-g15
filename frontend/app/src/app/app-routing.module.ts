@@ -1,3 +1,4 @@
+import { UserGuardGuard } from './guard/user-guard.guard';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { PreciosComponent } from './pages/precios/precios.component';
 import { Pagina404Component } from './pages/pagina404/pagina404.component';
@@ -19,7 +20,10 @@ const routes: Routes = [
   { path: 'registro-alumnos', component: RegistroAlumnosComponent},
   { path: 'precios', component: PreciosComponent},
   { path: 'checkout', component: CheckoutComponent},
+  //{ path: 'checkout', component: CheckoutComponent, canActivate:[UserGuardGuard]},
   { path: 'alumnos', component: SeccionUsuarioComponent},
+  //{ path: 'alumnos', component: SeccionUsuarioComponent, canActivate:[UserGuardGuard]},
+  //{ path: 'instituciones', component: SeccionInstitucionComponent, canActivate:[UserGuardGuard]},
   { path: 'instituciones', component: SeccionInstitucionComponent},
   { path: '**', component: Pagina404Component }
 ];

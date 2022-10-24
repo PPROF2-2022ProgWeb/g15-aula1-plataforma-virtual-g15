@@ -11,10 +11,10 @@ import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angu
 export class CommerceHeaderComponent{
 
   @Output() newItemEvent = new EventEmitter<string>();
-  
+
 
   estadoSesion: boolean = false;
-  
+
 
   nombreUsuario?: string;
 
@@ -23,13 +23,13 @@ export class CommerceHeaderComponent{
    ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.auth.getEmitter().subscribe((estado) => { 
+    this.auth.getEmitter().subscribe((estado) => {
       this.estadoSesion = estado;
-    }); 
-    this.auth.getEmitter2().subscribe((userName) => { 
+    });
+    this.auth.getEmitter2().subscribe((userName) => {
       this.nombreUsuario = userName;
-    }); 
-    
+    });
+
    }
 
   iniciarSesion(){
