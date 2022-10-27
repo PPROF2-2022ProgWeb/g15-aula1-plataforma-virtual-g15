@@ -57,19 +57,28 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 //.authorizeRequests().antMatchers("/lendings/users/{idUser}/books/{idBook}").permitAll()
                 .authorizeRequests()
+
                 .antMatchers(
                         HttpMethod.GET,
                         "/users/email/{username}"
                         //TODO aclarar endpoints "GET" sin token
                 )
                 .permitAll()
+
                 .antMatchers(
                         HttpMethod.POST,
                         //"/auth/**", "/institutions","/cities","/provinces","/countries"
                         "/auth/**"
                         //TODO aclarar endpoints "POST" sin token
                 ).permitAll()
+
+
                 .anyRequest().authenticated()
+
+
+
+
+
                 .and().exceptionHandling()
                 .and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);

@@ -10,6 +10,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { RegistroAlumnosComponent } from './pages/registro-alumnos/registro-alumnos.component';
 import { SeccionUsuarioComponent } from './pages/seccion-usuario/seccion-usuario.component';
 import { SeccionInstitucionComponent } from './pages/seccion-institucion/seccion-institucion.component';
+import { StudentGuardGuard } from './guard/student-guard.guard';
 
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'nosotros', component: NosotrosComponent},
   { path: 'registro-instituciones', component: RegistroInstitucionesComponent},
-  { path: 'registro-alumnos', component: RegistroAlumnosComponent},
+  { path: 'registro-alumnos', component: RegistroAlumnosComponent, },
   { path: 'precios', component: PreciosComponent},
 
    //

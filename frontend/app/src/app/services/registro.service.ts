@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegistroService {
-  
+
   httpOptions = {
     headers: new HttpHeaders({
     }),
