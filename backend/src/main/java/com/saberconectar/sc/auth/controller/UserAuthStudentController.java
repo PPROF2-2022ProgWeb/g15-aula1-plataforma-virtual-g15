@@ -7,6 +7,8 @@ import com.saberconectar.sc.auth.service.UserDetailsCustomService;
 import com.saberconectar.sc.dto.InstitutionDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.dto.UserDTO;
+import com.saberconectar.sc.exception.ParamNotFound;
+import com.saberconectar.sc.repository.UserRepository;
 import com.saberconectar.sc.service.InstitutionService;
 import com.saberconectar.sc.service.StudentService;
 import com.saberconectar.sc.service.UserService;
@@ -32,6 +34,7 @@ public class UserAuthStudentController {
     private JwtUtils jwtTokenUtil;
     private InstitutionService institutionService;
     private UserService userService;
+    private UserRepository userRepository;
     @Autowired
     public UserAuthStudentController(
             UserDetailsCustomService userDetailsService,
@@ -39,13 +42,15 @@ public class UserAuthStudentController {
             JwtUtils jwtTokenUtil,
             StudentService studentService,
             InstitutionService institutionService,
-            UserService userService){
+            UserService userService,
+            UserRepository userRepository){
         this.userDetailsService = userDetailsService;
         this.authenticationManager = authenticationManager;
         this.jwtTokenUtil = jwtTokenUtil;
         this.studentService = studentService;
         this.institutionService = institutionService;
         this.userService = userService;
+        this.userRepository = userRepository;
     }
     @PostMapping("/institution/register")
     public ResponseEntity<InstitutionDTO> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
@@ -72,5 +77,12 @@ public class UserAuthStudentController {
         UserDTO dto = userService.getUserByEmail(username, false, false);
         final String jwt = jwtTokenUtil.generateToken(userDetails);
         return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent()));
+    }
+    @GetMapping("/email/{email}")
+    public boolean existsByEmail(@PathVariable String email){
+        if(userRepository.existsByEmail(email)){
+            return true;
+        }
+        return false;
     }
 }
