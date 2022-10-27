@@ -1,26 +1,31 @@
-import { CookieService } from 'ngx-cookie-service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserGuardGuard implements CanActivate {
 
-  constructor(private cookiService: CookieService, private router: Router){
+  constructor(private auth: AuthService, private router: Router){
 
   }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      const cookie = this.cookiService.check('auth_token');
-      if(!cookie){
-        alert("Debes iniciar sesión");
-        this.router.navigate(['/login']);
-      }
-    return true;
-    }
+  canActivate(): Observable<boolean>{
+
+    return this.auth.isLoggedIn.pipe(
+      //tomamos el primer valor emitido por el observable
+      take(1),
+      map((isLogged:boolean)=>isLogged)
+    );}
+
+    canUserStudent(): Observable<boolean>{
+
+      return this.auth.isUserStudent.pipe(
+        //tomamos el primer valor emitido por el observable
+        take(1),
+        map((isStudent:boolean)=>!isStudent)
+      );}
 
 }

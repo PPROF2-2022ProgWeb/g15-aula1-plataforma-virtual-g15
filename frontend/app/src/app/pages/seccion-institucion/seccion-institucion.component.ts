@@ -18,7 +18,9 @@ export class SeccionInstitucionComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.nombreInstitucion = this.auth.getUsername().slice(0, this.auth.getUsername().indexOf("@"));
+    this.auth.username.subscribe((nombre) => {
+      this.nombreInstitucion = nombre.slice(0, nombre.indexOf("@"));
+    });
   }
   mostrarCursos():void{
     if(this.visibilidadCurso === false){

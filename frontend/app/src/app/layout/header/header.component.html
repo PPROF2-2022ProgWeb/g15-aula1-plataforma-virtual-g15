@@ -5,7 +5,7 @@
     <app-commerce-header (newItemEvent)="changeLeng($event)"></app-commerce-header>
       <nav class="navbar sticky-top bg-white navbar-expand-lg shadow-lg" id="navHeader">
           <div class="container-fluid" id="contenedor_nav">
-              <a class="d-inline-block align-text-top p-1" href="/login"><img src="../../../assets/logotipo.png" alt="Logo del sitio" height="80"/></a>
+              <a class="d-inline-block align-text-top p-1" [routerLink]="['/login']" routerLinkActive="router-link-active"><img src="../../../assets/logotipo.png" alt="Logo del sitio" height="80"/></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
               </button>
@@ -16,7 +16,7 @@
                   </div>
                   <div class="offcanvas-body justify-content-end" width="100">
                       <ul class="navbar-nav my-2 my-lg-0">
-                          <li class="nav-item m-3">
+                          <li class="nav-item m-3" *ngIf="!estadoSesion">
                             <!--LINK INICIO-->
                               <a class="nav-link" aria-current="page" data-bs-dismiss="offcanvas" routerLink='/login'>{{ "LINKS.INICIO" | translate}}</a>
                           </li>
@@ -24,11 +24,11 @@
                             <!--LINK NOSOTROS-->
                               <a class="nav-link" aria-current="page" data-bs-dismiss="offcanvas" routerLink='/nosotros'>{{ "LINKS.NOSOTROS" | translate}}</a>
                           </li>
-                          <li class="nav-item m-3">
+                          <li class="nav-item m-3" *ngIf="!estadoSesion">
                             <!--LINK INSTITUCIONES-->
                               <a class="nav-link" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/registro-instituciones">{{ "LINKS.INSTITUCIONES" | translate}}</a>
                           </li>
-                          <li class="nav-item m-3">
+                          <li class="nav-item m-3" *ngIf="!estadoSesion">
                               <a class="nav-link" aria-current="page" data-bs-dismiss="offcanvas" routerLink="/registro-alumnos">{{ "LINKS.ALUMNOS" | translate}}</a>
                           </li>
                           <li class="nav-item m-3">

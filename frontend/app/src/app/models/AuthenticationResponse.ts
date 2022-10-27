@@ -1,6 +1,5 @@
 export class AuthenticationResponse {
-  username?:string;
+  username!:string;
   jwt!:string;
   isStudent!:boolean;
   }
-  

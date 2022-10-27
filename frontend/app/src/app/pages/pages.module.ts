@@ -9,8 +9,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
 import { LayoutModule } from '../layout/layout.module';
 import { PreciosComponent } from './precios/precios.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { FormsModule,
-  ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SeccionUsuarioComponent } from './seccion-usuario/seccion-usuario.component';
 import { CursosComponent } from './seccion-usuario/cursos/cursos.component';
 import { CarrerasComponent } from './seccion-usuario/carreras/carreras.component';
@@ -23,7 +22,6 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { CookieService } from 'ngx-cookie-service';
 import { JwtInterceptorInterceptor } from '../interceptor/jwt-interceptor.interceptor';
-import { Subject } from 'rxjs';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

@@ -1,3 +1,5 @@
+import { AuthService } from 'src/app/services/auth.service';
+import { PagesModule } from './../pages/pages.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';

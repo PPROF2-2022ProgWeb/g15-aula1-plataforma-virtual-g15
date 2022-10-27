@@ -41,9 +41,9 @@
                           <button type="submit" name="submit" class="btn btn-primary" [disabled]="!login.valid">{{"LINKS.INICIARSESION" | translate}}</button>
                       </div>
                       <div class="my-3">
-                          <span>{{"LINKS.TIENESCUENTA" | translate}} <a href="/registro-alumnos">{{"LINKS.CREARALUMNO" | translate}}</a></span>
+                          <span>{{"LINKS.TIENESCUENTA" | translate}} <a routerLink='/registro-alumnos'>{{"LINKS.CREARALUMNO" | translate}}</a></span>
                           <span> / </span>
-                          <span><a href="/registro-instituciones">{{"LINKS.CREARINSTITUCION" | translate}}</a></span>
+                          <span><a routerLink='/registro-instituciones'>{{"LINKS.CREARINSTITUCION" | translate}}</a></span>
                           <span><br>{{"LINKS.RECUERDASPASS" | translate}} <a href="#" data-bs-toggle="modal" data-bs-target="#recModal">{{"LINKS.RECUPERARPASS" | translate}}</a>
                           </span>
                       </div>

@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { EventEmitter, Injectable, Output, OnInit } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
 import { AuthenticationRequest } from '../models/AuthenticationRequest';
 import { AuthenticationResponse } from '../models/AuthenticationResponse';
 
@@ -11,74 +11,65 @@ import { AuthenticationResponse } from '../models/AuthenticationResponse';
 })
 export class AuthService{
 
-  @Output() fireIsLoggedIn: EventEmitter<any> = new EventEmitter<any>();
-  @Output() fireIsLogged: EventEmitter<any> = new EventEmitter<any>();
 
-  // private userSubject: BehaviorSubject<Token>;
-  // public user: Observable<Token>;
-  private estado: boolean = false;
-  private userName!:string;
-  private isStudent:boolean = false;
+  private loggedIn =  new BehaviorSubject<boolean>(false);
+  private student =  new BehaviorSubject<boolean>(false);
+  private userName= new BehaviorSubject<string>('');
 
+  get isLoggedIn():Observable<boolean>{
+    return this.loggedIn.asObservable();
+  }
+  get username():Observable<string>{
+    return this.userName.asObservable();
+  }
+  get isUserStudent():Observable<boolean>{
+    return this.student.asObservable();
+  }
 
-  constructor(private http: HttpClient, private cookieService:CookieService, private route: Router) {
-
-    // this.userSubject = new BehaviorSubject<Token>(localStorage.getItem('auth_token') as any);
-    // this.user = this.userSubject.asObservable();
-   }
-  //  public get userValue(): Token {
-  //   return this.userSubject.value;
-  //   }
   httpOptions = {
     headers: new HttpHeaders({
     }),
   };
-  login(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
 
+  constructor(private http: HttpClient, private cookieService:CookieService, private route: Router) {}
+
+  login(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
     return this.http
       .post<AuthenticationResponse>('http://localhost:8080/auth/login', usuario, this.httpOptions)
       .pipe(
         map((user : AuthenticationResponse) => {
-          let datos: AuthenticationResponse = {
-            username: user.username,
-            jwt: user.jwt,
-            isStudent: user.isStudent
-          };
-          this.isStudent = datos.isStudent;
-          this.userName=datos.username as string;
-          this.cookieService.set('auth_token', datos.jwt);
-          // localStorage.setItem('auth_token', datos.jwt);
-          // this.userSubject.next(datos);
-          this.estado = true;
-          this.fireIsLoggedIn.emit(this.estado);
-          this.fireIsLogged.emit(this.userName);
-
-          return datos;
-        })
+          this.setToken(user.jwt);
+          this.loggedIn.next(true);
+          this.student.next(user.isStudent);
+          this.userName.next(user.username);
+          return user;
+        }),
+        catchError((err) => this.handlerError(err))
       );
   }
-  getEmitter() {
-    return this.fireIsLoggedIn;
-  }
-  getEmitter2() {
-    return this.fireIsLogged;
-  }
-  getUsername() {
-    return this.userName;
-  }
   getToken(){
-    return this.cookieService.get('auth_token');
+    // this.cookieService.get('auth_token');
+    localStorage.getItem('auth_token');
   }
-  logout() {
+  setToken(token: string){
+    // this.cookieService.set('auth_token', token);
+    localStorage.setItem('auth_token', token);
+  }
+  logout():void{
     this.route.navigate(['/login']).then(()=>{
-      this.fireIsLoggedIn.emit(this.estado =false);
-      this.fireIsLogged.emit(this.userName='Iniciar Sesión');
-      //sessionStorage.removeItem('auth_token');
-      this.cookieService.delete('auth_token');
-      this.cookieService.delete('estado');
-      window.location.reload();
+      localStorage.removeItem('auth_token');
+      this.loggedIn.next(false);
+      this.student.next(false);
     });
-    //this.userSubject.closed;
+  }
+  handlerError(err : any):Observable<never>{
+    let errorMessage = 'An error occured retrieving data';
+    if(err){
+      errorMessage = `Error: code ${err.message}`;
+    }
+    //window.alert(errorMessage);
+    window.alert('Datos incorrectos');
+    return throwError(errorMessage);
   }
 
 }

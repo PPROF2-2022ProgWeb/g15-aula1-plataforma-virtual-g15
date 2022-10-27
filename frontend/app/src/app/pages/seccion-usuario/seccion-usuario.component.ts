@@ -17,7 +17,10 @@ export class SeccionUsuarioComponent implements OnInit {
   constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
-    this.nombreAlumno = this.auth.getUsername().slice(0, this.auth.getUsername().indexOf("@"));
+
+    this.auth.username.subscribe((nombre) => {
+      this.nombreAlumno = nombre.slice(0, nombre.indexOf("@"));
+    });
   }
   mostrarCursos():void{
     if(this.visibilidadCurso === false){

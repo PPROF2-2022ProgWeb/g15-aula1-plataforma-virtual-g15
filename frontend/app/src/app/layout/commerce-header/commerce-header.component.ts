@@ -19,16 +19,16 @@ export class CommerceHeaderComponent{
   nombreUsuario?: string;
 
   constructor(private router: Router, private auth: AuthService) {
-   }
-   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.auth.getEmitter().subscribe((estado) => {
+    this.auth.isLoggedIn.subscribe((estado) => {
       this.estadoSesion = estado;
     });
-    this.auth.getEmitter2().subscribe((userName) => {
+    this.auth.username.subscribe((userName) => {
       this.nombreUsuario = userName;
     });
+    // this.nombreUsuario = this.auth.getUsername();
+    // this.estadoSesion = this.estadoSesion;
+   }
+   ngOnInit(): void {
 
    }
 
