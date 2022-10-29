@@ -40,7 +40,8 @@
                               <div class="row mb-4">
                                   <div class="col">
                                       <label for="email" class="form-label">{{"INPUTS.EMAIL" | translate}}</label>
-                                      <input type="email" class="form-control" required formControlName="username">
+                                      <input type="email" class="form-control" required formControlName="username"
+                                      pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
                                   </div>
                                   <div class="col">
                                       <label for="fechaNac" class="form-label">{{"INPUTS.FECHANAC" | translate}}</label>
@@ -92,11 +93,11 @@
                               <div class="row mb-4">
                                   <div class="col">
                                       <label for="pw" class="form-label">{{"INPUTS.PASSWORD" | translate}}</label>
-                                      <input type="password" class="form-control" required formControlName="password">
+                                      <input type="password" class="form-control" required formControlName="password" minlength="8">
                                   </div>
                                   <div class="col">
                                       <label for="repassword" class="form-label">{{"INPUTS.REPASSWORD" | translate}}</label>
-                                      <input type="password" class="form-control" required formControlName="repassword">
+                                      <input type="password" class="form-control" required formControlName="repassword" minlength="8">
                                   </div>
                               </div>
                               <div class="row mb-4">
@@ -109,7 +110,7 @@
                               </div>
                           </div>
                           <div class="d-grid">
-                              <button type="submit" class="btn btn-primary" (click)="onSubmit()">{{"LINKS.REGISTRAR" | translate}}</button>
+                              <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!datos.valid">{{"LINKS.REGISTRAR" | translate}}</button>
                           </div>
                           <div class="my-3">
                               <span>{{"LINKS.YATIENESCUENTA" | translate}} <a href="/login#contentForm">{{"LINKS.INICIARSESION" | translate}}</a></span>

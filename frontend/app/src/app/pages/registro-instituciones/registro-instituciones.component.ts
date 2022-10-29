@@ -28,7 +28,7 @@ export class RegistroInstitucionesComponent implements OnInit {
     countryId: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
     repassword: new FormControl('', Validators.required),
-    check: new FormControl(Validators.required)
+    check: new FormControl('',Validators.required)
   });
 
   onSubmit() {
@@ -52,16 +52,13 @@ export class RegistroInstitucionesComponent implements OnInit {
       if(this.datos.value['password'] != this.datos.value['repassword']){
         return alert("Las contraseñas no coinciden");
       }else{
-        return this.reg.institutionRegister(institution).subscribe(inst => {
-          console.log(inst);
-          this.registrado = true;
-          if(!this.registrado){
-            alert("Intenta de nuevo");
-          }else{
-            this.router.navigate(['/login']);
-            alert("Registro exitoso");
-          }
-        });
+        return this.reg
+                   .institutionRegister(institution)
+                   .subscribe(() => {
+                     this.registrado = true;
+                     this.router.navigate(['/login']);
+                     alert("Registro exitoso");
+                   })
       }
     }
   }

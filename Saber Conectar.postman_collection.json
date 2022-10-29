@@ -2400,7 +2400,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"IES@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": false\r\n        },\r\n    \"courses\":[]\r\n}",
+							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ispc@ho.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": false\r\n        },\r\n    \"courses\":[]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2455,13 +2455,35 @@
 					"response": []
 				},
 				{
+					"name": "check email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/auth/email/jaimito@hotmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"email",
+								"jaimito@hotmail.com"
+							]
+						},
+						"description": "Generación de token de acceso."
+					},
+					"response": []
+				},
+				{
 					"name": "Students Register",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"JUANEM@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": true\r\n        }\r\n}",
+							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"juanem@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": true\r\n        }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

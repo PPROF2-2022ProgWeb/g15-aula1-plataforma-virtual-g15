@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    //this.login = new FormGroup({
     this.login = new FormGroup({
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
@@ -40,20 +39,12 @@ export class LoginComponent implements OnInit {
     const data = new AuthenticationRequest(usuario,password);
 
     this.auth.login(data).subscribe((data)=>{
-      // this.cookieService.set('auth_token', data.jwt);
       alert("Bienvenido " + data.username);
-
-      //
-      //this.estado = true;
-      //this.estadoEvent.emit(this.estado);
-      //this.cookieService.set('estadoSesion', 'true');
-      //
       if(data.isStudent){
         this.router.navigate(['/alumnos']);
       }else{
         this.router.navigate(['/instituciones']);
       }
-
     }, (e)=>{
       this.login.reset();
     })
@@ -63,8 +54,6 @@ export class LoginComponent implements OnInit {
     console.log("Correcto");
     return this.auth.logout();
   }
-  //TODO emitir evento de variable estado par q el app module se lo comunique al layout module y al header
-
 
 
 

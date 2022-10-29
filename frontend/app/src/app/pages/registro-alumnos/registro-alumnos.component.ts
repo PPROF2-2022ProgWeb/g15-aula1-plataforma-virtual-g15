@@ -1,9 +1,11 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Student } from './../../models/Student';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistroService } from 'src/app/services/registro.service';
 import { User } from 'src/app/models/User';
+import { catchError, pipe } from 'rxjs';
 
 @Component({
   selector: 'app-registro-alumnos',
@@ -12,7 +14,7 @@ import { User } from 'src/app/models/User';
 })
 export class RegistroAlumnosComponent implements OnInit {
 
-  constructor(private reg: RegistroService, private router: Router) { }
+  constructor(private reg: RegistroService,private auth:AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -30,7 +32,7 @@ export class RegistroAlumnosComponent implements OnInit {
     countryId: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
     repassword: new FormControl('', Validators.required),
-    check: new FormControl(Validators.required)
+    check: new FormControl('',Validators.required)
   });
 
   onSubmit(){
@@ -56,16 +58,13 @@ export class RegistroAlumnosComponent implements OnInit {
       if(this.datos.value['password'] != this.datos.value['repassword']){
         return alert("Las contraseñas no coinciden");
       }else{
-        return this.reg.studentRegister(student).subscribe(stu => {
-          console.log(stu);
-          this.registrado = true;
-          if(!this.registrado){
-            alert("Intenta de nuevo");
-          }else{
-            this.router.navigate(['/login']);
-            alert("Registro exitoso");
-          }
-        });
+        return this.reg
+                   .studentRegister(student)
+                   .subscribe(() => {
+                     this.registrado = true;
+                     this.router.navigate(['/login']);
+                     alert("Registro exitoso");
+                   })
       }
     }
   }

@@ -67,7 +67,6 @@ export class AuthService{
     if(err){
       errorMessage = `Error: code ${err.message}`;
     }
-    //window.alert(errorMessage);
     window.alert('Datos incorrectos');
     return throwError(errorMessage);
   }
