@@ -8,4 +8,5 @@ public class AuthenticationResponse {
     private String username;
     private String jwt;
     private Boolean isStudent;
+    private Long id;
 }

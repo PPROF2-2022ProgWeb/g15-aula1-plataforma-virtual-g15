@@ -1,3 +1,4 @@
+import { Institution } from "./Institution";
 import { Student } from "./Student";
 
 export class User {
@@ -12,7 +13,7 @@ export class User {
     isStudent: boolean;
     //
     studentEntity?: Student;
-    institutionEntity?: string;
+    institutionEntity?: Institution;
     constructor(email: string, password: string, countryId: string, provinceId: string, cityId:string, isStudent:boolean){
     this.email = email;
     this.password = password;

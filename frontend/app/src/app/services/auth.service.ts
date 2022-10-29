@@ -15,6 +15,7 @@ export class AuthService{
   private loggedIn =  new BehaviorSubject<boolean>(false);
   private student =  new BehaviorSubject<boolean>(false);
   private userName= new BehaviorSubject<string>('');
+  private userId= new BehaviorSubject<number>(0);
 
   get isLoggedIn():Observable<boolean>{
     return this.loggedIn.asObservable();
@@ -24,6 +25,9 @@ export class AuthService{
   }
   get isUserStudent():Observable<boolean>{
     return this.student.asObservable();
+  }
+  get userIdNumber():Observable<number>{
+    return this.userId.asObservable();
   }
 
   httpOptions = {
@@ -42,10 +46,12 @@ export class AuthService{
           this.loggedIn.next(true);
           this.student.next(user.isStudent);
           this.userName.next(user.username);
+          this.userId.next(user.id);
           return user;
         }),
         catchError((err) => this.handlerError(err))
       );
+
   }
   getToken(){
     // this.cookieService.get('auth_token');

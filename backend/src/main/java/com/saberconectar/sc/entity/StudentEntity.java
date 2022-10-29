@@ -17,7 +17,6 @@ import java.util.Set;
 @Where(clause = "deleted=false")
 public class StudentEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
     private String surname;
@@ -28,10 +27,13 @@ public class StudentEntity {
     private LocalDate date;
     //soft-delete
     private Boolean deleted = Boolean.FALSE;
-    //User relationship
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
     private UserEntity userEntity;
+
+
     //Courses relationship
     @ManyToMany(
             cascade = {

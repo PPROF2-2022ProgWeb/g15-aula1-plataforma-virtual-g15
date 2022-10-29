@@ -85,7 +85,7 @@ public class UserAuthStudentController {
         final String username = authRequest.getUsername();
         UserDTO dto = userService.getUserByEmail(username, false, false);
         final String jwt = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent()));
+        return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent(), dto.getId()));
         //TODO usar metodo getReferenceByEmail en entidad Estudiante y Institucion, de acuerdo a en cual de las dos , este email exista, realiza el resto de las funciones de devolucion.
     }
     @GetMapping("/email/{email}")

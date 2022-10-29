@@ -23,8 +23,9 @@ public class UserEntity {
     private String provinceId;
     private String cityId;
     private Boolean isStudent;
+
     /*
-    //TODO se modificaron los tipos de datos para facilitar los tiempos de produccion
+    //TODO se modificaron los tipos de datos de ciudad , provincia y pais para facilitar los tiempos de produccion
     @Column(name="country_id", nullable = false)
     private Long countryId;
     @Column(name="province_id", nullable = false)
@@ -43,11 +44,11 @@ public class UserEntity {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id", insertable = false, updatable = false)
     private CityEntity city; // search info into city datatable
+*/
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private StudentEntity student;
 
-    @OneToOne(mappedBy = "userEntity")
-    private StudentEntity studentEntity;
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private InstitutionEntity institution;
 
-    @OneToOne(mappedBy = "userEntity")
-    private InstitutionEntity institutionEntity;
-     */
 }

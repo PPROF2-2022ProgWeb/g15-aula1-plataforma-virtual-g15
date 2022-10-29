@@ -48,8 +48,8 @@ public class StudentMapper {
             dto.setUserEntity(userEntity);
         }
         if (loadCourses){
-            Set<CourseDTO> dtos = courseMapper.courseEntitySet2DTOSet(entity.getCourses(),false, true);
-            Set<CourseEntity> entities = courseMapper.courseDTOSet2EntitySet(dtos, true);
+            Set<CourseDTO> dtos = courseMapper.courseEntitySet2DTOSet(entity.getCourses(),false, false);
+            Set<CourseEntity> entities = courseMapper.courseDTOSet2EntitySet(dtos, false);
             dto.setCourses(entities);
         }
 

@@ -22,7 +22,7 @@ public class StudentServiceImpl implements StudentService {
         StudentEntity entity = studentMapper.studentDTO2Entity(dto,false);
         StudentEntity entitySaved = studentRepository.save(entity);
         StudentDTO result = studentMapper.studentEntity2DTO(entitySaved,
-                true, false);
+                true, true);
         return result;
     }
     public void delete(Long id) {
