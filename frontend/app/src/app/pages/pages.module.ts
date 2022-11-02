@@ -9,7 +9,7 @@ import { Pagina404Component } from './pagina404/pagina404.component';
 import { LayoutModule } from '../layout/layout.module';
 import { PreciosComponent } from './precios/precios.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SeccionUsuarioComponent } from './seccion-usuario/seccion-usuario.component';
 import { CursosComponent } from './seccion-usuario/cursos/cursos.component';
 import { CarrerasComponent } from './seccion-usuario/carreras/carreras.component';
@@ -17,9 +17,11 @@ import { SeccionInstitucionComponent } from './seccion-institucion/seccion-insti
 import { CursosDeInstitucionComponent } from './seccion-institucion/cursos-de-institucion/cursos-de-institucion.component';
 import { CarrerasDeInstitucionComponent } from './seccion-institucion/carreras-de-institucion/carreras-de-institucion.component';
 
-import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {HttpClientModule, HttpClient, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { CookieService } from 'ngx-cookie-service';
+import { JwtInterceptorInterceptor } from '../interceptor/jwt-interceptor.interceptor';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,6 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     LayoutModule,
     RouterModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -55,11 +58,19 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true
+    },
+  CookieService],
   exports: [
     LoginComponent,
     NosotrosComponent,
     RegistroInstitucionesComponent,
     RegistroAlumnosComponent,
+    //ReactiveFormsModule,
     Pagina404Component,
     PreciosComponent,
     CheckoutComponent

@@ -141,7 +141,7 @@
   "DESCRIPCION" :" Descripcion",
   "FECHAINICIOCURS":"fechaInicioCurso",
   "FECHAFINCURS" :" FechaFinCurso",
-  "MSJHOLA": "Hola {{nombreAlumno}}",
+  "MSJHOLA": "Hola ",
   "TEXTSELECT": "Selecciona una opción",
   "MOSTRARCARR":"mostrarCarreras()",
   "MOSTRARCURS":"mostrarCursos()"

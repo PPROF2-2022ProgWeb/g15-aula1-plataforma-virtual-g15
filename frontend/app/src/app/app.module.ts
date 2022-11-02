@@ -1,9 +1,14 @@
+
 import { PagesModule } from './pages/pages.module';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CookieService } from 'ngx-cookie-service';
+import { HttpClientModule } from '@angular/common/http';
+import { Subject } from 'rxjs';
+import { EstudiantesService } from './services/estudiantes.service';
 
 
 @NgModule({
@@ -15,8 +20,9 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     LayoutModule,
     PagesModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService, EstudiantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

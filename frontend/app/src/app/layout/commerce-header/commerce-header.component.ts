@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-commerce-header',
@@ -9,17 +12,34 @@ export class CommerceHeaderComponent{
 
   @Output() newItemEvent = new EventEmitter<string>();
 
+
   estadoSesion: boolean = false;
 
-  nombreUsuario: string = '#NOMBREUSARIO';
 
-  constructor() { }
+  nombreUsuario?: string;
+
+  constructor(private router: Router, private auth: AuthService) {
+    this.auth.isLoggedIn.subscribe((estado) => {
+      this.estadoSesion = estado;
+    });
+    this.auth.username.subscribe((userName) => {
+      this.nombreUsuario = userName;
+    });
+    // this.nombreUsuario = this.auth.getUsername();
+    // this.estadoSesion = this.estadoSesion;
+   }
+   ngOnInit(): void {
+
+   }
 
   iniciarSesion(){
-    alert("redirecciona al login pero simulamos como quedarian los botones recien presionados");
-    this.estadoSesion = true;
+    this.router.navigate(['/login']);
   }
-  changeLeng(idioma:string):void{
-    this.newItemEvent.emit(idioma);
+  cerrarSesion(){
+    this.auth.logout();
+  }
+
+  changeLeng(palabra:string):void{
+    this.newItemEvent.emit(palabra);
   }
 }

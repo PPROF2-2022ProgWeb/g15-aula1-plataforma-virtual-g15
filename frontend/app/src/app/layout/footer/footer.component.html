@@ -6,16 +6,16 @@
         <div class="col">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">MENU</h6>
-          <p>
+          <p *ngIf="!estadoSesion">
             <a href="/login#contentForm" class="nav-link">{{"LINKS.INICIO" | translate}}</a>
           </p>
           <p>
             <a href="/nosotros#sectionMenu" class="nav-link">{{"LINKS.NOSOTROS" | translate}}</a>
           </p>
-          <p>
+          <p *ngIf="!estadoSesion">
             <a href="/registro-instituciones#contentForm" class="nav-link">{{"LINKS.CREARINSTITUCION" | translate}}</a>
           </p>
-          <p>
+          <p *ngIf="!estadoSesion">
             <a href="/registro-alumnos#contentForm" class="nav-link">{{"LINKS.CREARALUMNO" | translate}}</a>
           </p>
         </div>

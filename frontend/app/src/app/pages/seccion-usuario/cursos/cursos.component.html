@@ -25,7 +25,8 @@
                       <th>{{cursos.descripcion}}</th>
                       <th>{{cursos.fechaInicio}}</th>
                       <th>{{cursos.fechaFin}}</th>
-                    <th><button class="btn btn-success" (click)="inscribirse()">{{"LINKS.INSCRIBIRSE" | translate}}</button></th>
+                    <!-- <th><button class="btn btn-success" (click)="inscribirse(cursos.id)">{{"LINKS.INSCRIBIRSE" | translate}}</button></th> -->
+                    <th><button *ngIf='registrado' class="btn btn-success" (click)="inscribirse(cursos.id)">{{"LINKS.INSCRIBIRSE" | translate}}</button></th>
                   </tr>
                 </tbody>
             </table>

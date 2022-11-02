@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NosotrosComponent implements OnInit {
 
-  constructor() { }
+  estadoSesion = false;
+
+  constructor(private auth: AuthService) {
+    this.auth.isLoggedIn.subscribe((estado) => {
+      this.estadoSesion = estado;
+    });
+  }
 
   ngOnInit(): void {
   }
- 
+
 }

@@ -1,3 +1,5 @@
+import { AuthService } from 'src/app/services/auth.service';
+import { PagesModule } from './../pages/pages.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
@@ -10,6 +12,7 @@ import { CommerceHeaderComponent } from './commerce-header/commerce-header.compo
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { CookieService } from 'ngx-cookie-service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,6 +38,8 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
+  providers: [
+  CookieService],
   exports: [
     HeaderComponent,
     FooterComponent,

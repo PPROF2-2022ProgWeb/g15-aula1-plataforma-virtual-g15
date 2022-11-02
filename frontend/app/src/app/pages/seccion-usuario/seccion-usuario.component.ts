@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-seccion-usuario',
@@ -6,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seccion-usuario.component.css']
 })
 export class SeccionUsuarioComponent implements OnInit {
-  nombreAlumno = "{{NombreAlumno}}";
+  nombreAlumno?:string;
+
   btnCursos = "Ver cursos";
   btnCarreras = "Ver carreras";
   visibilidadCurso:boolean = false;
   visibilidadCarrera:boolean = false;
 
-  constructor() { }
+  constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
+
+    this.auth.username.subscribe((nombre) => {
+      this.nombreAlumno = nombre.slice(0, nombre.indexOf("@"));
+    });
   }
   mostrarCursos():void{
     if(this.visibilidadCurso === false){
