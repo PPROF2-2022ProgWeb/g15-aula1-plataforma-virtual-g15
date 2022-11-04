@@ -7,7 +7,11 @@ import com.saberconectar.sc.mapper.UserMapper;
 import com.saberconectar.sc.repository.UserRepository;
 import com.saberconectar.sc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.tags.Param;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -26,6 +30,17 @@ public class UserServiceImpl implements UserService {
         UserDTO result = userMapper.userEntity2DTO(entity, setStudent, setInstitution);
         return result;
     }
+
+    @Override
+    public UserDTO getUserByEmail(String mama, Boolean setStudent, Boolean setInstitution) {
+        //if (!userRepository.existsByEmail(username)){
+        //    throw new ParamNotFound("Error: El usuario no existe");
+        //}
+        UserEntity entityUsername = userRepository.getReferenceByEmail(mama);
+        UserDTO dto = userMapper.userEntity2DTO(entityUsername, setStudent, setInstitution);
+        return dto;
+    }
+
     public UserDTO update(Long id, UserDTO user, Boolean setStudent, Boolean setInstitution) {
         isCorrect(id);
         UserEntity entityId = userRepository.getReferenceById(id);

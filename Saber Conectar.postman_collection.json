@@ -1,0 +1,2540 @@
+{
+	"info": {
+		"_postman_id": "576dcc1e-ecc0-4fa9-b6cd-7553dab935a4",
+		"name": "Saber Conectar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20891741"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "countries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bolivia\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries"
+							]
+						},
+						"description": "Save Country"
+					},
+					"response": [
+						{
+							"name": "countries",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Perú\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"countries"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:02:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Perú\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "provinces",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Córdoba\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/provinces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinces"
+							]
+						},
+						"description": "Save Province"
+					},
+					"response": [
+						{
+							"name": "provinces",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Córdoba\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/provinces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"provinces"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:07:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"name\": \"Córdoba\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "cities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Córdoba Capital\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						},
+						"description": "Save Province"
+					},
+					"response": [
+						{
+							"name": "cities",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Córdoba Capital\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cities"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:08:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 8,\n    \"name\": \"Córdoba Capital\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/countries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries"
+							]
+						},
+						"description": "Get all countries"
+					},
+					"response": [
+						{
+							"name": "countries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/countries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"countries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:10:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Argentina\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Perú\",\n        \"deleted\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							]
+						},
+						"description": "StartFragment\n\nGet all cities\n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "cities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:13:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 8,\n        \"name\": \"Córdoba Capital\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Noa\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Perfamino\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Cruz del Eje\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Mendiolaza\",\n        \"deleted\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "provinces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/provinces",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinces"
+							]
+						},
+						"description": "StartFragment\n\nGet all provinces\n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "provinces",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/provinces",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"provinces"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:13:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Córdoba\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Buenos Aires\",\n        \"deleted\": false\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Tucumán\",\n        \"deleted\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "countries",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Bolivia\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/countries/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries",
+								"2"
+							]
+						},
+						"description": "Update Country"
+					},
+					"response": [
+						{
+							"name": "countries",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Bolivia\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/countries/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"countries",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:27:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Bolivia\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "provinces",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Salta\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/provinces/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinces",
+								"6"
+							]
+						},
+						"description": "Update Province"
+					},
+					"response": [
+						{
+							"name": "provinces",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Salta\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/provinces/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"provinces",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:28:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"name\": \"Salta\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "cities",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"San Fernando del Valle de Catamarca\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cities/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"9"
+							]
+						},
+						"description": "Update City"
+					},
+					"response": [
+						{
+							"name": "cities",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"San Fernando del Valle de Catamarca\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/cities/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cities",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 20:29:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"name\": \"San Fernando del Valle de Catamarca\",\n    \"deleted\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "countries",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/countries/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countries",
+								"13"
+							]
+						},
+						"description": "Delete Country"
+					},
+					"response": []
+				},
+				{
+					"name": "provinces",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/provinces/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"provinces",
+								"13"
+							]
+						},
+						"description": "Delete Province"
+					},
+					"response": []
+				},
+				{
+					"name": "cities",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								"13"
+							]
+						},
+						"description": "Delete City"
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"mamushcas@hotmail.com\",\r\n    \"password\": \"EntiruqeIV\",\r\n    \"deleted\":false,\r\n    \"countryId\":1,\r\n    \"provinceId\":3,\r\n    \"cityId\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required."
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"mamushcas@hotmail.com\",\r\n    \"password\": \"EntiruqeIV\",\r\n    \"deleted\":false,\r\n    \"countryId\":1,\r\n    \"provinceId\":3,\r\n    \"cityId\":11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 21:53:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"email\": \"mamushcas@hotmail.com\",\n    \"password\": \"EntiruqeIV\",\n    \"deleted\": false,\n    \"countryId\": 1,\n    \"provinceId\": 3,\n    \"cityId\": 11\n}"
+						}
+					]
+				},
+				{
+					"name": "users/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"14"
+							]
+						},
+						"description": "Get by id"
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 21:55:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"email\": \"juanem@hotmail.com\",\n    \"password\": \"bananitaDolca123\",\n    \"deleted\": false,\n    \"countryId\": 1,\n    \"provinceId\": 3,\n    \"cityId\": 11\n}"
+						}
+					]
+				},
+				{
+					"name": "users/email/{username}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/email/IES@cbagov.com.ar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"email",
+								"IES@cbagov.com.ar"
+							]
+						},
+						"description": "Get by id"
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/users/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 21:55:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"email\": \"juanem@hotmail.com\",\n    \"password\": \"bananitaDolca123\",\n    \"deleted\": false,\n    \"countryId\": 1,\n    \"provinceId\": 3,\n    \"cityId\": 11\n}"
+						}
+					]
+				},
+				{
+					"name": "users/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"16"
+							]
+						},
+						"description": "Get by id"
+					},
+					"response": []
+				},
+				{
+					"name": "users/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"JUANEM@hotmail.com\",\r\n    \"password\": \"SADASDASD\",\r\n    \"deleted\":false,\r\n    \"countryId\":1,\r\n    \"provinceId\":3,\r\n    \"cityId\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/36",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"36"
+							]
+						},
+						"description": "Update user.\n\nAll fields are required."
+					},
+					"response": [
+						{
+							"name": "users/id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"peperina12@hotmail.com\",\r\n    \"password\": \"peperina12\",\r\n    \"deleted\":false,\r\n    \"countryId\":1,\r\n    \"provinceId\":3,\r\n    \"cityId\":11\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/users/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"users",
+										"17"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Aug 2022 21:58:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": null,\n    \"email\": \"peperina12@hotmail.com\",\n    \"password\": \"peperina12\",\n    \"deleted\": false,\n    \"countryId\": 1,\n    \"provinceId\": 3,\n    \"cityId\": 11\n}"
+						}
+					]
+				}
+			],
+			"description": "User operations"
+		},
+		{
+			"name": "students",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "students",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"JUAN MANUEL\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"JUANEM@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+							},
+							"response": [
+								{
+									"name": "students",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Yanina Soledad\",\r\n    \"surname\": \"Canova\",\r\n    \"documentNumber\": \"12312323\",\r\n    \"date\": \"1990-12-03\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"diamante.de.luz@hotmail.com\",\r\n            \"password\": \"diamantedeluz\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/students",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"students"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 26 Aug 2022 21:31:04 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"name\": \"Yanina Soledad\",\n    \"surname\": \"Canova\",\n    \"documentNumber\": \"12312323\",\n    \"date\": \"1990-12-03\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": 31,\n        \"email\": \"diamante.de.luz@hotmail.com\",\n        \"password\": \"diamantedeluz\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "students/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"PEPERINA\",\r\n    \"surname\": \"Canova\",\r\n    \"documentNumber\": \"12312323\",\r\n    \"date\": \"1990-12-03\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"EEEEEE@hotmail.com\",\r\n            \"password\": \"AHORA SI\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students/30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"30"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "students/id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"PEPERINA\",\r\n    \"surname\": \"Canova\",\r\n    \"documentNumber\": \"12312323\",\r\n    \"date\": \"1990-12-03\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"EEEEEE@hotmail.com\",\r\n            \"password\": \"AHORA SI\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/students/30",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"students",
+												"30"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 27 Aug 2022 01:06:44 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 30,\n    \"name\": \"PEPERINA\",\n    \"surname\": \"Canova\",\n    \"documentNumber\": \"12312323\",\n    \"date\": \"1990-12-03\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"EEEEEE@hotmail.com\",\n        \"password\": \"AHORA SI\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "students/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/28",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"28"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "students/id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/students/28",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"students",
+												"28"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 26 Aug 2022 21:33:45 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "students/id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwt}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"15"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "students/id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/students/30",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"students",
+												"30"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 26 Aug 2022 23:17:30 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"name\": \"Yanina Soledad\",\n    \"surname\": \"Canova\",\n    \"documentNumber\": \"12312323\",\n    \"date\": \"1990-12-03\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"diamante.de.luz@hotmail.com\",\n        \"password\": \"diamantedeluz\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/students/id/courses/id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/students/15/courses/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"15",
+								"courses",
+								"21"
+							]
+						},
+						"description": "inscribe student in a course"
+					},
+					"response": []
+				},
+				{
+					"name": "students/id/courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/students/30/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"30",
+								"courses"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required."
+					},
+					"response": []
+				},
+				{
+					"name": "/students/id/courses/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/students/30/courses/47",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"students",
+								"30",
+								"courses",
+								"47"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "institutions",
+			"item": [
+				{
+					"name": "CRUD",
+					"item": [
+						{
+							"name": "institutions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ISPC Córdoba\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ispc@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/institutions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+							},
+							"response": [
+								{
+									"name": "institutions",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"ISPC Córdoba\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ispc@cbagov.com.ar\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/institutions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"institutions"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 27 Aug 2022 20:51:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 40,\n    \"name\": \"ISPC Córdoba\",\n    \"cuitNumber\": \"5541548965\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"ispc@cbagov.com.ar\",\n        \"password\": \"SADASDASD\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null,\n        \"institutionEntity\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "institutions/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"IES Siglo 21\",\r\n    \"cuitNumber\": \"12312323\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ies@hotmail.com\",\r\n            \"password\": \"asdasdas\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/institutions/40",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions",
+										"40"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "institutions/id",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"IES Siglo 21\",\r\n    \"cuitNumber\": \"12312323\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ies@hotmail.com\",\r\n            \"password\": \"asdasdas\",\r\n            \"deleted\": false,\r\n            \"countryId\": 1,\r\n            \"provinceId\": 3,\r\n            \"cityId\": 11\r\n        }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/institutions/40",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"institutions",
+												"40"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 27 Aug 2022 20:53:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 40,\n    \"name\": \"IES Siglo 21\",\n    \"cuitNumber\": \"12312323\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"ies@hotmail.com\",\n        \"password\": \"asdasdas\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null,\n        \"institutionEntity\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "institutions/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/institutions/40",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions",
+										"40"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "institutions/id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/institutions/40",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"institutions",
+												"40"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Sat, 27 Aug 2022 20:55:41 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "institutions/id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/institutions/44",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions",
+										"44"
+									]
+								},
+								"description": "Save user.\n\nAll fields are required."
+							},
+							"response": [
+								{
+									"name": "institutions/id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8080/institutions/40",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"institutions",
+												"40"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 27 Aug 2022 20:54:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 40,\n    \"name\": \"IES Siglo 21\",\n    \"cuitNumber\": \"12312323\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"ies@hotmail.com\",\n        \"password\": \"asdasdas\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null,\n        \"institutionEntity\": null\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "institutions/id/courses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Etimologia de la droga\",\r\n    \"description\": \"bla bla bla bla bla bla bla\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/institutions/10/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"institutions",
+								"10",
+								"courses"
+							]
+						},
+						"description": "create course by institution"
+					},
+					"response": []
+				},
+				{
+					"name": "idInstitution/id/courses/idCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/institutions/44/courses/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"institutions",
+								"44",
+								"courses",
+								"42"
+							]
+						},
+						"description": "Add Course already exists."
+					},
+					"response": [
+						{
+							"name": "idInstitution/courses/idCourse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/institutions/44/courses/42",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions",
+										"44",
+										"courses",
+										"42"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Aug 2022 21:14:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "institutions/id/courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/institutions/44/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"institutions",
+								"44",
+								"courses"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required."
+					},
+					"response": [
+						{
+							"name": "institutions/id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/institutions/40",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"institutions",
+										"40"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Aug 2022 20:54:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 40,\n    \"name\": \"IES Siglo 21\",\n    \"cuitNumber\": \"12312323\",\n    \"deleted\": false,\n    \"userEntity\": {\n        \"id\": null,\n        \"email\": \"ies@hotmail.com\",\n        \"password\": \"asdasdas\",\n        \"deleted\": false,\n        \"countryId\": 1,\n        \"provinceId\": 3,\n        \"cityId\": 11,\n        \"country\": null,\n        \"province\": null,\n        \"city\": null,\n        \"studentEntity\": null,\n        \"institutionEntity\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "idInstitution/id/courses/idCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/institutions/44/courses/42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"institutions",
+								"44",
+								"courses",
+								"42"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso Desarrollo Web\",\r\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "courses",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Curso Desarrollo Web\",\r\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Aug 2022 20:47:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 43,\n    \"name\": \"Curso Desarrollo Web\",\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\n    \"beginningDay\": \"2022-12-02\",\n    \"endingDay\": \"2023-03-09\",\n    \"deleted\": false,\n    \"institutions\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "courses/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso DSADASDSADSAD\",\r\n    \"description\": \"EncSADASDS\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses/43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"43"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "courses",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Curso Desarrollo Web\",\r\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/courses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"courses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Aug 2022 20:47:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 43,\n    \"name\": \"Curso Desarrollo Web\",\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\n    \"beginningDay\": \"2022-12-02\",\n    \"endingDay\": \"2023-03-09\",\n    \"deleted\": false,\n    \"institutions\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso Desarrollo Web\",\r\n    \"description\": \"Encontrarás todo el contenido relacionado al desarrollo web y aplicaciones digitales\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"21"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "courses/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Curso DSADASDSADSAD\",\r\n    \"description\": \"EncSADASDS\",\r\n    \"beginningDay\": \"2022-12-02\",\r\n    \"endingDay\": \"2023-03-09\",\r\n    \"deleted\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses/43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"43"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "e-commerce",
+			"item": [
+				{
+					"name": "invoice_type",
+					"item": [
+						{
+							"name": "invoices/types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/invoices/types",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"invoices",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invoices/types",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"C\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/invoices/types",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"invoices",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invoices/types/id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"Z\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/invoices/types/56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"invoices",
+										"types",
+										"56"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "invoices/types/id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":\"Z\",\r\n    \"deleted\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/invoices/types/56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"invoices",
+										"types",
+										"56"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Institution Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"IES Siglo XXI\",\r\n    \"cuitNumber\": \"5541548965\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"ispc@ho.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": false\r\n        },\r\n    \"courses\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/institution/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"institution",
+								"register"
+							]
+						},
+						"description": "Creación se usuario.  \nAl momento de crear el usuario, si el resultado es exitoso, se envía un email a la cuenta de registro con el resultado obtenido."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"JUANEM@hotmail.com\",\r\n    \"password\":\"SADASDASD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Generación de token de acceso."
+					},
+					"response": []
+				},
+				{
+					"name": "check email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/auth/email/jaimito@hotmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"email",
+								"jaimito@hotmail.com"
+							]
+						},
+						"description": "Generación de token de acceso."
+					},
+					"response": []
+				},
+				{
+					"name": "Students Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ASDSADSADSAD\",\r\n    \"surname\": \"LOPEZ\",\r\n    \"documentNumber\": \"1231123323\",\r\n    \"date\": \"1990-12-09\",\r\n    \"deleted\": false,\r\n    \"userEntity\": \r\n        {\r\n            \"email\": \"juanem@hotmail.com\",\r\n            \"password\": \"SADASDASD\",\r\n            \"deleted\": false,\r\n            \"countryId\": \"Argentina\",\r\n            \"provinceId\": \"Buenos Aires\",\r\n            \"cityId\": \"Capital\",\r\n            \"isStudent\": true\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/student/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"student",
+								"register"
+							]
+						},
+						"description": "Save user.\n\nAll fields are required.\n\nStartFragment\n\n\"date\": \"yyy-MM-dd\",\n\nEndFragment"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "jwt",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2Rhc0Bhc2Rhc2QiLCJleHAiOjE2NjY2MTI2NDMsImlhdCI6MTY2NjYwOTA0M30.PjZmZXPraApVGTyif2YOkfh0eRcv2AJIhIiutre2DbI",
+			"type": "string"
+		}
+	]
+}

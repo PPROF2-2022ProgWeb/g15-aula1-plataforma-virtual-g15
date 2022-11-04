@@ -7,13 +7,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController {
     @Autowired
     private UserService userService;
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long id){
         UserDTO user = userService.getUserById(id, false, false);
+        return ResponseEntity.ok().body(user);
+    }
+    @GetMapping("/email/{email}")
+    public ResponseEntity<UserDTO> getUserByUsername(@PathVariable String email){
+        UserDTO user = userService.getUserByEmail(email, false, false);
         return ResponseEntity.ok().body(user);
     }
     @PostMapping

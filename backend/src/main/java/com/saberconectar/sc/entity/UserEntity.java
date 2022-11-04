@@ -19,6 +19,13 @@ public class UserEntity {
     private String password;
     //soft-delete
     private Boolean deleted = Boolean.FALSE;
+    private String countryId;
+    private String provinceId;
+    private String cityId;
+    private Boolean isStudent;
+
+    /*
+    //TODO se modificaron los tipos de datos de ciudad , provincia y pais para facilitar los tiempos de produccion
     @Column(name="country_id", nullable = false)
     private Long countryId;
     @Column(name="province_id", nullable = false)
@@ -26,21 +33,22 @@ public class UserEntity {
     @Column(name="city_id", nullable = false)
     private Long cityId;
     //COUNTRY
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "country_id", insertable = false, updatable = false)
     private CountryEntity country; // search info into country datatable
     //PROVINCE
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "province_id", insertable = false, updatable = false)
     private ProvinceEntity province; // search info into province datatable
     //CITY
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "city_id", insertable = false, updatable = false)
     private CityEntity city; // search info into city datatable
+*/
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private StudentEntity student;
 
-    @OneToOne(mappedBy = "userEntity")
-    private StudentEntity studentEntity;
+    @OneToOne(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private InstitutionEntity institution;
 
-    @OneToOne(mappedBy = "userEntity")
-    private InstitutionEntity institutionEntity;
 }

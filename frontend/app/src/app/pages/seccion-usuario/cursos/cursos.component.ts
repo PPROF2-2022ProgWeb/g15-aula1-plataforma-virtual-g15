@@ -14,8 +14,6 @@ interface Cursos{
   fechaInicio:string;
   fechaFin: string;
 }
-
-
 @Component({
   selector: 'app-cursos-alumnos',
   templateUrl: './cursos.component.html',

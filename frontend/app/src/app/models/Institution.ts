@@ -1,5 +1,4 @@
 import { User } from "./User";
-
 export class Institution {    
     id?: number;
     name: string;

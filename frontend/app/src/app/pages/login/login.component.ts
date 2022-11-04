@@ -6,7 +6,6 @@ import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationRequest } from 'src/app/models/AuthenticationRequest';
 import { environment } from 'src/environments/environment';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -56,5 +55,4 @@ export class LoginComponent implements OnInit {
     console.log("Correcto");
     return this.auth.logout();
   }
-
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("invoices/types")
+@RequestMapping("/invoices/types")
 public class InvoiceTypeController {
     @Autowired
     private InvoiceTypeService invoiceTypeService;

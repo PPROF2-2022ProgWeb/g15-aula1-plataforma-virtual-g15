@@ -3,8 +3,6 @@ package com.saberconectar.sc.mapper;
 import com.saberconectar.sc.entity.SaleEntity;
 import com.saberconectar.sc.dto.SaleDTO;
 import org.springframework.stereotype.Component;
-import java.util.ArrayList;
-import java.util.List;
 @Component
 public class SaleMapper {
     public SaleEntity saleDTO2Entity(SaleDTO dto){
@@ -26,7 +24,6 @@ public class SaleMapper {
     }
     public SaleEntity update(SaleEntity entity, SaleDTO dto){
         entity.setId(dto.getId());
-        entity.setName(dto.getName());
         entity.setProductQuantity(dto.getProductQuantity());
         entity.setTotalPrice(dto.getTotalPrice());
         entity.setDeleted(dto.getDeleted());

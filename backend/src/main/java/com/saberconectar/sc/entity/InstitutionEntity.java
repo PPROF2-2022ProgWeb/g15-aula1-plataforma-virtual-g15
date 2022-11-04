@@ -15,16 +15,21 @@ import java.util.Set;
 @Where(clause = "deleted=false")
 public class InstitutionEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
     private String cuitNumber;
     //soft-delete
     private Boolean deleted = Boolean.FALSE;
+
+
     //User relationship
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
     private UserEntity userEntity;
+
+
+
+
     //Courses relationships
     @ManyToMany(
             cascade = {
@@ -47,5 +52,7 @@ public class InstitutionEntity {
             joinColumns = @JoinColumn(name = "institution_id"),
             inverseJoinColumns = @JoinColumn(name="career_id"))
     private Set<CareerEntity> careers = new HashSet<>();
+
+
 }
 

@@ -4,6 +4,9 @@ import com.saberconectar.sc.entity.InstitutionEntity;
 import com.saberconectar.sc.entity.StudentEntity;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.OneToOne;
+
 @Getter
 @Setter
 public class UserDTO {
@@ -11,9 +14,16 @@ public class UserDTO {
     private String email;
     private String password;
     private Boolean deleted;
+    private String countryId;
+    private String provinceId;
+    private String cityId;
+    private Boolean isStudent;
+    private Long studentId;
+    private Long institutionId;
+    /*
     private Long countryId;
     private Long provinceId;
     private Long cityId;
-    private StudentEntity studentEntity;
-    private InstitutionEntity institutionEntity;
+
+     */
 }
