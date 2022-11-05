@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { UserGuardGuard } from './user-guard.guard';
 
 describe('UserGuardGuard', () => {

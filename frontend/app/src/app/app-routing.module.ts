@@ -12,7 +12,6 @@ import { SeccionUsuarioComponent } from './pages/seccion-usuario/seccion-usuario
 import { SeccionInstitucionComponent } from './pages/seccion-institucion/seccion-institucion.component';
 import { StudentGuardGuard } from './guard/student-guard.guard';
 
-
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent},

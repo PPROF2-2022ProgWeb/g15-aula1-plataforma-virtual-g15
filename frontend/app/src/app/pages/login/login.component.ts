@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
+    
   }
 
   error = '';
@@ -34,10 +35,11 @@ export class LoginComponent implements OnInit {
     if (this.login.invalid) {
        return;
     }
+    
     let usuario = this.login.value.username;
     let password = this.login.value.password;
     const data = new AuthenticationRequest(usuario,password);
-
+ 
     this.auth.login(data).subscribe((data)=>{
       alert("Bienvenido " + data.username);
       environment.idUsuario = data.id;
