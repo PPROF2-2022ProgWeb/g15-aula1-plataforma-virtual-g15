@@ -1,6 +1,5 @@
 import { Institution } from "./Institution";
 import { Student } from "./Student";
-
 export class User {
     id?: number;
     email: string;

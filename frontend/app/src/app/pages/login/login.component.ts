@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationRequest } from 'src/app/models/AuthenticationRequest';
-
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
 
     this.auth.login(data).subscribe((data)=>{
       alert("Bienvenido " + data.username);
+      environment.idUsuario = data.id;
       if(data.isStudent){
         this.router.navigate(['/alumnos']);
       }else{
@@ -54,9 +55,4 @@ export class LoginComponent implements OnInit {
     console.log("Correcto");
     return this.auth.logout();
   }
-
-
-
-
-
 }

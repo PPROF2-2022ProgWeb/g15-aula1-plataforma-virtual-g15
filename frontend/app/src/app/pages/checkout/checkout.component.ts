@@ -6,6 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
+
+
+
+
 export class CheckoutComponent implements OnInit {
 
 
@@ -17,4 +21,5 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
 }

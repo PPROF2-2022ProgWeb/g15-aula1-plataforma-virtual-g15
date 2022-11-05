@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { EstudiantesService } from './services/estudiantes.service';
+
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { Subject } from 'rxjs';
     PagesModule,
     HttpClientModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, EstudiantesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
