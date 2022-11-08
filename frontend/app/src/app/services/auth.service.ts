@@ -38,6 +38,7 @@ export class AuthService{
   constructor(private http: HttpClient, private cookieService:CookieService, private route: Router) {}
 
   login(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
+    localStorage.removeItem('auth_token')
     return this.http
       .post<AuthenticationResponse>('http://localhost:8080/auth/login', usuario, this.httpOptions)
       .pipe(
@@ -51,7 +52,6 @@ export class AuthService{
         }),
         catchError((err) => this.handlerError(err))
       );
-
   }
   getToken(){
     // this.cookieService.get('auth_token');
