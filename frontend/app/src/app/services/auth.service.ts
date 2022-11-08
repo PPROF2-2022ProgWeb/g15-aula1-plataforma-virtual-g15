@@ -52,7 +52,6 @@ export class AuthService{
         }),
         catchError((err) => this.handlerError(err))
       );
-
   }
   getToken(){
     // this.cookieService.get('auth_token');
