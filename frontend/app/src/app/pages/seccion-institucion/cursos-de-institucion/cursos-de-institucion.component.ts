@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../../../models/Course';
+import { Student } from 'src/app/models/Student';
+import { CursoService } from '../../../curso.service';
 
 interface Cursos {
   nombre:string;
@@ -15,18 +18,21 @@ interface Cursos {
   styleUrls: ['./cursos-de-institucion.component.css']
 })
 export class CursosDeInstitucionComponent implements OnInit {
-  
-  ArregloCursos: Cursos[] = [];
+
+  arregloCursos: Course[] = [];
   cInscriptos = 0;
-  constructor() { }
+  constructor(private cursoService:CursoService) { }
 
   ngOnInit(): void {
-    this.ArregloCursos = [
-      {nombre: 'MI CURSO UX', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022', cantidadInscriptos: this.cInscriptos},
-      {nombre: 'MI CURSO UI', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022', cantidadInscriptos: this.cInscriptos},
-      {nombre: 'MI CURSO Testing Manual', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022', cantidadInscriptos: this.cInscriptos}
-    ]
+    this.getCourses();
   }
+
+  private getCourses(){
+    this.cursoService.getListCourses().subscribe(dato=>{
+      this.arregloCursos = dato;
+    })
+  }
+
   eliminar(){
     alert("registro eliminado");
   }
