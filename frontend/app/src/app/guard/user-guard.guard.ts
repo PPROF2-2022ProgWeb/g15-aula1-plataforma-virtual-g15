@@ -17,8 +17,12 @@ export class UserGuardGuard implements CanActivate {
     return this.auth.isLoggedIn.pipe(
       //tomamos el primer valor emitido por el observable
       take(1),
-      map((isLogged:boolean)=>isLogged)
-    );}
+      map((isLogged: boolean) => {
+        if (isLogged) { return true }
+        else { this.router.navigate(["login"]); return false }
+      })
+    );
+    }
 
     canUserStudent(): Observable<boolean>{
 

@@ -15,14 +15,14 @@ export class EstudiantesService {
   //llamado a los metodos
   public getStudent(id:number): Observable<Student>{
     debugger;
-    return this.httpClient.get<Student>(this.API_SERVER + '/');
+    return this.httpClient.get<Student>(this.API_SERVER + '/', {headers:this.headers});
     
   }
   public getStudentCourses(id:number): Observable<Student>{
-    return this.httpClient.get<Student>(this.API_SERVER + '/' + '/courses');
+    return this.httpClient.get<Student>(this.API_SERVER + '/' + '/courses', {headers:this.headers});
   }
   public deleteStudent(id:number): Observable<Student>{
-    return this.httpClient.delete<Student>(this.API_SERVER + '/');
+    return this.httpClient.delete<Student>(this.API_SERVER + '/', {headers:this.headers});
   }
  
   public putStudent(dto: Student): Observable<Student>{
@@ -37,6 +37,6 @@ export class EstudiantesService {
     return this.httpClient.post<Student>(this.API_SERVER + '/' + id + '/courses/' + idCourse,{headers:this.headers});
   }
   public deleteStudentAndCourses(id:number,courses:String, idCourse:number): Observable<Student>{
-    return this.httpClient.delete<Student>(this.API_SERVER + '/' + id +'/courses' + idCourse);
+    return this.httpClient.delete<Student>(this.API_SERVER + '/' + id +'/courses' + idCourse, {headers:this.headers});
   }
 }

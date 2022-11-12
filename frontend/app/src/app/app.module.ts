@@ -1,4 +1,3 @@
-
 import { PagesModule } from './pages/pages.module';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
@@ -9,8 +8,9 @@ import { CookieService } from 'ngx-cookie-service';
 import { HttpClientModule } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { EstudiantesService } from './services/estudiantes.service';
-
-
+import { UserGuardGuard } from './guard/user-guard.guard';
+import { StudentGuardGuard } from './guard/student-guard.guard';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { EstudiantesService } from './services/estudiantes.service';
     PagesModule,
     HttpClientModule
   ],
-  providers: [CookieService, EstudiantesService],
+  providers: [CookieService, EstudiantesService, UserGuardGuard, StudentGuardGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
