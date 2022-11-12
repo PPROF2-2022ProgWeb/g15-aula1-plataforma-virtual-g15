@@ -19,7 +19,7 @@ export class EstudiantesService {
     
   }
   public getStudentCourses(id:number): Observable<Student>{
-    return this.httpClient.get<Student>(this.API_SERVER + '/' + '/courses',{headers:this.headers});
+    return this.httpClient.get<Student>(this.API_SERVER + '/' + '/courses', {headers:this.headers});
   }
   public deleteStudent(id:number): Observable<Student>{
     return this.httpClient.delete<Student>(this.API_SERVER + '/', {headers:this.headers});

@@ -12,7 +12,7 @@ export class SeccionUsuarioComponent implements OnInit {
   btnCursos = "Ver cursos";
  // btnCarreras = "Ver carreras";
   visibilidadCurso:boolean = false;
- // visibilidadCarrera:boolean = false;
+//  visibilidadCarrera:boolean = false;
 
   constructor(private auth:AuthService) { }
 
@@ -40,8 +40,7 @@ export class SeccionUsuarioComponent implements OnInit {
       this.visibilidadCarrera = false;
       this.btnCarreras = "Ver carreras";
     }
-  }*/
-
-
+  }
+*/
 
 }
