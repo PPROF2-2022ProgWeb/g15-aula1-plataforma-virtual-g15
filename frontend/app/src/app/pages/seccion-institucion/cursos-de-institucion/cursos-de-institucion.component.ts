@@ -1,16 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ChangeDetectorRef, Component, OnInit, SimpleChanges } from '@angular/core';
 import { Course } from '../../../models/Course';
-import { Student } from 'src/app/models/Student';
-import { CursoService } from '../../../curso.service';
-
-interface Cursos {
-  nombre:string;
-  descripcion:string;
-  nivel?:string;
-  fechaInicio:string;
-  fechaFin:string;
-  cantidadInscriptos:number;
-}
+import { InstitutionService } from 'src/app/services/institution.service';
 
 @Component({
   selector: 'app-cursos-de-institucion',
@@ -19,17 +10,19 @@ interface Cursos {
 })
 export class CursosDeInstitucionComponent implements OnInit {
 
-  arregloCursos: Course[] = [];
+  listCourse: Course[] = [];
   cInscriptos = 0;
-  constructor(private cursoService:CursoService) { }
+  constructor(private institutionService:InstitutionService) { }
 
   ngOnInit(): void {
-    this.getCourses();
+    this.loadCourses();
   }
 
-  private getCourses(){
-    this.cursoService.getListCourses().subscribe(dato=>{
-      this.arregloCursos = dato;
+  loadCourses(){
+    return this.institutionService.getAllCoursesById().subscribe(data=>{
+      data.forEach((dato)=>{
+        this.listCourse.push(dato);
+      });
     })
   }
 
