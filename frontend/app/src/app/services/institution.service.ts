@@ -35,7 +35,7 @@ export class InstitutionService {
     if(err){
       errorMessage = `Error: code ${err.message}`;
     }
-    window.alert('Ocurrio un error al crear el curso');
+    window.alert('Ocurrio un error.');
     return observableThrowError(errorMessage);
   }
 }
