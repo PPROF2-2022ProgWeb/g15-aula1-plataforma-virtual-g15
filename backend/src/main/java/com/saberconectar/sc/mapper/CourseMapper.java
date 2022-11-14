@@ -65,6 +65,13 @@ public class CourseMapper {
         }
         return dtos;
     }
+    public ArrayList<CourseDTO> courseEntitySet2DTOArray(Set<CourseEntity> entities,boolean loadStudents, boolean loadInstitution){
+        ArrayList<CourseDTO> dtos = new ArrayList<>();
+        for (CourseEntity entity: entities){
+            dtos.add(courseEntity2DTO(entity,loadStudents, loadInstitution));
+        }
+        return dtos;
+    }
     public Set<CourseEntity> courseDTOSet2EntitySet(Collection<CourseDTO> dtos, boolean loadInstitution){
         Set<CourseEntity> entities = new HashSet<>();
         for (CourseDTO dto: dtos){
