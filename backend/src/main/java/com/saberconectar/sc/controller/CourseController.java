@@ -21,6 +21,10 @@ public class CourseController {
     public List<CourseEntity> ListAllCourses(){
         return repository.findAll();
     }
+    @GetMapping("/all/{institutionId}")
+    public ResponseEntity<List<CourseDTO>> ListAllCoursesByInstitutionId(@PathVariable Long institutionId){
+        return ResponseEntity.status(HttpStatus.CREATED).body(courseService.getCourseListByInstitutionId(institutionId));
+    }
     @Autowired
     private CourseService courseService;
     @PostMapping()

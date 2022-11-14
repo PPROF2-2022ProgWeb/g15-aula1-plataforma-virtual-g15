@@ -5,13 +5,22 @@ import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.exception.ParamNotFound;
 import com.saberconectar.sc.mapper.CourseMapper;
 import com.saberconectar.sc.repository.CourseRepository;
+import com.saberconectar.sc.repository.InstitutionRepository;
 import com.saberconectar.sc.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 @Service
 public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseRepository courseRepository;
+    @Autowired
+    private InstitutionRepository institutionRepository;
     @Autowired
     private CourseMapper courseMapper;
     public CourseDTO save(CourseDTO dto) {
@@ -25,6 +34,11 @@ public class CourseServiceImpl implements CourseService {
         CourseEntity entity = courseRepository.getReferenceById(id);
         CourseDTO dto = courseMapper.courseEntity2DTO(entity, true,true);
         return dto;
+    }
+    public List<CourseDTO> getCourseListByInstitutionId(Long id){
+        Set<CourseEntity> setCourses = institutionRepository.getReferenceById(id).getCourses();
+        ArrayList<CourseDTO> lista = courseMapper.courseEntitySet2DTOArray(setCourses,false,false);
+        return lista;
     }
     public CourseDTO update(Long id, CourseDTO dto){
         isCorrect(id, "id");
