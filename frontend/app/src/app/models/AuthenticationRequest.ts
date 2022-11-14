@@ -4,4 +4,3 @@ export class AuthenticationRequest{
       public password:string
       ){}
   }
-  

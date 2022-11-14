@@ -10,9 +10,9 @@ export class SeccionUsuarioComponent implements OnInit {
   nombreAlumno?:string;
 
   btnCursos = "Ver cursos";
-  btnCarreras = "Ver carreras";
+ // btnCarreras = "Ver carreras";
   visibilidadCurso:boolean = false;
-  visibilidadCarrera:boolean = false;
+//  visibilidadCarrera:boolean = false;
 
   constructor(private auth:AuthService) { }
 
@@ -31,6 +31,7 @@ export class SeccionUsuarioComponent implements OnInit {
       this.btnCursos = "Ver cursos";
     }
   }
+  /*
   mostrarCarreras():void{
     if(this.visibilidadCarrera === false){
       this.visibilidadCarrera = true;
@@ -40,6 +41,6 @@ export class SeccionUsuarioComponent implements OnInit {
       this.btnCarreras = "Ver carreras";
     }
   }
-
+*/
 
 }

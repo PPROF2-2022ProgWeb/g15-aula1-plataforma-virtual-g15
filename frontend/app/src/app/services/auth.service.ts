@@ -11,7 +11,6 @@ import { AuthenticationResponse } from '../models/AuthenticationResponse';
 })
 export class AuthService{
 
-
   private loggedIn =  new BehaviorSubject<boolean>(false);
   private student =  new BehaviorSubject<boolean>(false);
   private userName= new BehaviorSubject<string>('');
