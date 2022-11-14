@@ -21,6 +21,7 @@
             <table class="table" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
+                      <th>ID</th>
                       <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
                       <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
                       <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
@@ -30,12 +31,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let cursos of arregloCursos">
-                    <th>{{cursos.name}}</th>
-                    <th>{{cursos.description}}</th>
-                    <th>{{cursos.beginningDay}}</th>
-                    <th>{{cursos.endingDay}}</th>
-                    <th>{{cursos.name}}</th>
+                  <tr *ngFor="let course of listCourse; index as i">
+                    <th>{{course.id}}</th>
+                    <th>{{course.name}}</th>
+                    <th>{{course.description}}</th>
+                    <th>{{course.beginningDay}}</th>
+                    <th>{{course.endingDay}}</th>
+                    <th>{{course.name}}</th>
                     <th>
                       <button class="border-0 bg-white"  data-bs-toggle="modal" data-bs-target="#crearModal"><i class="fas fa-edit mx-1 link-primary"></i></button>
 

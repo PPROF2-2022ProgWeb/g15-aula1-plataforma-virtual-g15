@@ -14,7 +14,9 @@ export class InstitutionService {
     headers: new HttpHeaders({
     }),
   };
+
   id:number = 0;
+  public coursesId: Course[] = [];
 
   constructor(private auth: AuthService,private http: HttpClient) {
     this.auth.userIdNumber.subscribe((number)=>{
@@ -25,6 +27,14 @@ export class InstitutionService {
   createCourse(course: Course): Observable<Course>{
     return this.http
                .post<Course>('http://localhost:8080/institutions/'+ this.id +'/courses', course, this.httpOptions)
+               .pipe(
+                catchError((error) => this.handlerError(error))
+               );
+  }
+
+  getAllCoursesById(): Observable<Course[]>{
+    return this.http
+               .get<Course[]>('http://localhost:8080/course/all/'+this.id, this.httpOptions)
                .pipe(
                 catchError((error) => this.handlerError(error))
                );
