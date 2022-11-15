@@ -1,6 +1,7 @@
 package com.saberconectar.sc.controller;
 
 import com.saberconectar.sc.dto.CourseDTO;
+import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.repository.CourseRepository;
 import com.saberconectar.sc.service.CourseService;
@@ -19,12 +20,12 @@ public class CourseController {
     private CourseRepository repository;
     @Autowired
     private CourseService courseService;
-    @GetMapping("/list")
-    public List<CourseEntity> ListAllCourses(){
-        return repository.findAll();
+    @GetMapping("/all")
+    public ResponseEntity<List<CourseListDTO>> listAllCourses(){
+        return ResponseEntity.status(HttpStatus.CREATED).body(courseService.getAllCourses());
     }
     @GetMapping("/all/{institutionId}")
-    public ResponseEntity<List<CourseDTO>> ListAllCoursesByInstitutionId(@PathVariable Long institutionId){
+    public ResponseEntity<List<CourseDTO>> listAllCoursesByInstitutionId(@PathVariable Long institutionId){
         return ResponseEntity.status(HttpStatus.CREATED).body(courseService.getCourseListByInstitutionId(institutionId));
     }
     @PostMapping()

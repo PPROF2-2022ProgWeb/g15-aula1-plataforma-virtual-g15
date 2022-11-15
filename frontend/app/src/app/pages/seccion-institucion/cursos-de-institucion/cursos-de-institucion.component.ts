@@ -16,8 +16,7 @@ export class CursosDeInstitucionComponent implements OnInit {
   cInscriptos = 0;
   idCourse:number;
 
-  constructor(private institutionService:InstitutionService,
-    private auth: AuthService){}
+  constructor(private institutionService:InstitutionService){}
 
   ngOnInit(): void {
     this.loadCourses();
