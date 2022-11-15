@@ -1,6 +1,7 @@
 package com.saberconectar.sc.service.impl;
 
 import com.saberconectar.sc.dto.CourseDTO;
+import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.exception.ParamNotFound;
 import com.saberconectar.sc.mapper.CourseMapper;
@@ -35,6 +36,11 @@ public class CourseServiceImpl implements CourseService {
         CourseEntity entity = courseRepository.getReferenceById(id);
         CourseDTO dto = courseMapper.courseEntity2DTO(entity, true,true);
         return dto;
+    }
+    public List<CourseListDTO> getAllCourses(){
+        List<CourseEntity> entities = courseRepository.findAll();
+        List<CourseListDTO> dtosMapped = courseMapper.courseEntityList2DTOList(entities,false,true);
+        return dtosMapped;
     }
     public List<CourseDTO> getCourseListByInstitutionId(Long id){
         Set<CourseEntity> setCourses = institutionRepository.getReferenceById(id).getCourses();
