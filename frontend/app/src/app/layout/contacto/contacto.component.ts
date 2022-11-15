@@ -16,45 +16,11 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class ContactoComponent implements OnInit {
 
-  curso!:FormGroup;
-
-  constructor(
-    private comp: CommerceHeaderComponent,
-    private auth: AuthService,
-    private institutionService:InstitutionService
-    ) {
-      this.curso = new FormGroup({
-        name: new FormControl('CURSO NUEVO', Validators.required),
-        description: new FormControl('DETALLE', Validators.required),
-        beginningDay: new FormControl('12/12/2020', Validators.required),
-        endingDay: new FormControl('12/12/2022', Validators.required)
-      });
-  }
+  constructor(private comp: CommerceHeaderComponent){}
 
   ngOnInit(): void {
   }
   traerFuncion(){
     this.comp.estadoSesion = false;
-  }
-  crearCurso(){
-
-    let name = this.curso.value.name;
-    let description = this.curso.value.description;
-    let beginningDay = this.curso.value.beginningDay;
-    let endingDay = this.curso.value.endingDay;
-
-    if (this.curso.invalid)
-      return alert("Oye");
-
-   const data = new Course(name,description,beginningDay,endingDay);
-
-   this.institutionService.createCourse(data).subscribe((data)=>{
-     console.log(data.name)
-     console.log(data.description)
-     console.log(data.beginningDay)
-     console.log(data.endingDay)
-  })
-
-   return alert("CURSO CREADO");
   }
 }

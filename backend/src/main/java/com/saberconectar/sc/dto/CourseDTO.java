@@ -15,7 +15,7 @@ public class CourseDTO {
     private String description;
     private LocalDate beginningDay;
     private LocalDate endingDay;
-    private Boolean deleted;
+    private Boolean deleted=Boolean.FALSE;
     private List<InstitutionEntity> institutions;
     private List<StudentEntity> students;
 }
