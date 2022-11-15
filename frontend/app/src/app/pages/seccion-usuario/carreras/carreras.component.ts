@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import{AuthService} from '../../../services/auth.service';
 import{Institution} from '../../../models/Institution';
-import{InstitucionService} from '../../../services/institucion.service';
 
 interface Carreras{
   nombre:string;
@@ -19,7 +18,7 @@ interface Carreras{
 export class CarrerasComponent implements OnInit {
 
   ArregloCarreras: Carreras[] = [];
-  
+
  //alba: este el codigo para los servicios - hay que pasar en el html la variable del id de la carrera
  //  institution: Institution;
   //constructor(private authService: AuthService, private service:InstitucionService) { }
@@ -33,7 +32,7 @@ constructor(){}
     ]
   }
 
-  
+
   inscribirse(){
     alert("Te inscribiste correctamente al curso!");
   }
@@ -43,5 +42,5 @@ constructor(){}
    this.service.inscribirseStudentAndCourses(idCarreras,environment.idUsuario).subscribe(response =>{console.log(response)});
   }
   */
-  
+
 }
