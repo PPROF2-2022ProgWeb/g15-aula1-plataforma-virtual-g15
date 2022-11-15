@@ -26,7 +26,8 @@ public class CourseServiceImpl implements CourseService {
     public CourseDTO save(CourseDTO dto) {
         CourseEntity entity = courseMapper.courseDTO2Entity(dto, false);
         CourseEntity entitySaved = courseRepository.save(entity);
-        CourseDTO course = courseMapper.courseEntity2DTO(entitySaved,false, false);
+        CourseEntity loadEntitySaved = courseRepository.getReferenceById(entitySaved.getId());
+        CourseDTO course = courseMapper.courseEntity2DTO(loadEntitySaved,false, false);
         return course;
     }
     public CourseDTO getCourseById(Long id) {
