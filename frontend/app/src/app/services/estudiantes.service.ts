@@ -33,10 +33,10 @@ export class EstudiantesService {
   }
 
   //localhost:8080/students/1/courses/2 
-  public inscribirseStudentAndCourses(id:number, idCourse:number): Observable<Student>{
-    return this.httpClient.post<Student>(this.API_SERVER + '/' + id + '/courses/' + idCourse,{headers:this.headers});
+  public inscribirseStudentAndCourses(idStudent:number, idCourse:number): Observable<Student>{
+    return this.httpClient.post<Student>(this.API_SERVER + '/' + idStudent + '/courses/' + idCourse,{headers:this.headers});
   }
-  public deleteStudentAndCourses(id:number,courses:String, idCourse:number): Observable<Student>{
-    return this.httpClient.delete<Student>(this.API_SERVER + '/' + id +'/courses' + idCourse, {headers:this.headers});
+  public deleteStudentAndCourses(idStudent:number, idCourse:number): Observable<Student>{
+    return this.httpClient.delete<Student>(this.API_SERVER + '/' + idStudent +'/courses' + idCourse, {headers:this.headers});
   }
 }

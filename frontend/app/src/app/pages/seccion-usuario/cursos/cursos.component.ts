@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
 import { Subscriber } from 'rxjs';
+import { Course } from 'src/app/models/Course';
 import { Student } from 'src/app/models/Student';
 import { EstudiantesService } from 'src/app/services/estudiantes.service';
 import { environment } from 'src/environments/environment';
@@ -23,32 +24,34 @@ export class CursosComponent implements OnInit {
 
   ArregloCursos: Cursos[] = [];
   
-  //cree las variables - alba
-  registrado:boolean = false;
+  registrado:boolean = true;
   student: Student;
 
-  //alba agregue en el constructor
   constructor(private authService: AuthService, private service: EstudiantesService) { }
+
+  idUsuario = AuthService;
 
   ngOnInit(): void {
     this.ArregloCursos = [
-      {id:1,nombre: 'CURSO UX', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
-      {id:2,nombre: 'CURSO UI', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
-      {id:3,nombre: 'CURSO Testing Manual', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
+      {id:1, nombre: 'CURSO UX', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
+      {id:2, nombre: 'CURSO UI', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
+      {id:3, nombre: 'CURSO Testing Manual', descripcion: 'asdasd', fechaInicio: '20/09/2020', fechaFin: '20/09/2022'},
     ]
   }
-  /*
-  inscribirse(){
-    alert('Inscripcion realizada correctamente!');
-  }
-  */
-
-  //Alba
 
   inscribirse(idCourse:number) {
    console.log(idCourse);
-   this.service.inscribirseStudentAndCourses(idCourse,environment.idUsuario).subscribe(response =>{console.log(response)});
-   this.registrado=true;
+   this.service.inscribirseStudentAndCourses(idCourse,idUsuario).subscribe(response =>{console.log(response)});
+   this.registrado=false;
+   alert('inscripcion exitosa')
   }
-   
+
+  //alba: no funciona
+
+  eliminar(idUsuario, idCourse){
+    
+    this.service.deleteStudentAndCourses(idUsuario, idCourse).subscribe(data=>{
+    this.idCourse= this.ArregloCursos.filter(p=>p!==idCourse);
+    })
+  }
 }
