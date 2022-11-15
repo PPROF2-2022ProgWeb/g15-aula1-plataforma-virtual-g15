@@ -23,7 +23,7 @@ export class SeccionUsuarioComponent implements OnInit {
     });
   }
   mostrarCursos():void{
-    if(this.visibilidadCurso === false){
+    if(!this.visibilidadCurso){
       this.visibilidadCurso = true;
       this.btnCursos = "Ocultar cursos";
     }else{

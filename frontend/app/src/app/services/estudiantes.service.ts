@@ -35,8 +35,8 @@ export class EstudiantesService {
     return this.http.get<Course[]>(this.API_SERVER+'/course/all', this.httpOptions);
   }
 
-  public getStudentCourses(id:number): Observable<Student>{
-    return this.http.get<Student>(this.API_SERVER + '/students/' + '/course', this.httpOptions);
+  public getStudentCourses(): Observable<Course[]>{
+    return this.http.get<Course[]>(this.API_SERVER + '/students/' + this.id + '/courses', this.httpOptions);
   }
 
   public deleteStudent(id:number): Observable<Student>{
@@ -53,11 +53,7 @@ export class EstudiantesService {
   public inscribeStudentCourse(idCourse:number): Observable<any>{
     return this.http.post<any>(this.API_SERVER + '/students/'+ this.id + '/courses/' + idCourse, this.httpOptions);
   }
-  /*
-  public deleteStudentAndCourses(idStudent:number, idCourse:number): Observable<Student>{
-    return this.http.delete<Student>(this.API_SERVER + '/' + idStudent +'/courses' + idCourse, {headers:this.headers});
-  } */
-  public deleteStudentAndCourses(idStudent:number, idCourse:number): Observable<Student>{
-    return this.http.delete<Student>(this.API_SERVER + '/' + idStudent +'/courses' + idCourse, this.httpOptions);
+  public deleteInscription(idCourse:number): Observable<any>{
+     return this.http.delete<any>(this.API_SERVER + '/students/' + this.id +'/courses/' + idCourse, this.httpOptions);
   }
 }
