@@ -17,6 +17,8 @@ import java.util.List;
 public class CourseController {
     @Autowired
     private CourseRepository repository;
+    @Autowired
+    private CourseService courseService;
     @GetMapping("/list")
     public List<CourseEntity> ListAllCourses(){
         return repository.findAll();
@@ -25,8 +27,6 @@ public class CourseController {
     public ResponseEntity<List<CourseDTO>> ListAllCoursesByInstitutionId(@PathVariable Long institutionId){
         return ResponseEntity.status(HttpStatus.CREATED).body(courseService.getCourseListByInstitutionId(institutionId));
     }
-    @Autowired
-    private CourseService courseService;
     @PostMapping()
     public ResponseEntity<CourseDTO> createCourse(@RequestBody CourseDTO dto)
     {
