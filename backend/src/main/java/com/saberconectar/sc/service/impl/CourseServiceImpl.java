@@ -34,7 +34,7 @@ public class CourseServiceImpl implements CourseService {
     public CourseDTO getCourseById(Long id) {
         isCorrect(id, "id");
         CourseEntity entity = courseRepository.getReferenceById(id);
-        CourseDTO dto = courseMapper.courseEntity2DTO(entity, true,true);
+        CourseDTO dto = courseMapper.courseEntity2DTO(entity, false,false);
         return dto;
     }
     public List<CourseListDTO> getAllCourses(){

@@ -8,6 +8,7 @@
     <h6 class="m-0 text-primary">{{ "SECCION.CURSOSDISP" | translate }}</h6>
   </div>
   <div class="card-body">
+    <!-- TABLA DISPONIBLES -->
     <div class="table-responsive">
       <table class="table" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -33,16 +34,44 @@
               >
                 {{ "LINKS.INSCRIBIRSE" | translate }}
               </button>
-
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="card shadow mb-4" *ngIf="existsInscriptions || contadorInscripcion >0">
+  <div class="card-header py-3 d-flex">
+    <h6 class="m-0 text-primary">{{ "SECCION.CURSOSDISP" | translate }}</h6>
+  </div>
+  <div class="card-body">
+    <!-- TABLA INSCRIPTOS -->
+    <div class="table-responsive">
+      <table class="table" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>{{ "SECCION.NOMBCURSO" | translate }}</th>
+            <th>{{ "SECCION.DESCRIPCION" | translate }}</th>
+            <th>{{ "SECCION.FECHAINICIOCURS" | translate }}</th>
+            <th>{{ "SECCION.FECHAFINCURS" | translate }}</th>
+            <th>{{ "SECCION.ACCIONES" | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let inscription of inscripciones, index as i">
+            <td>{{ inscription.name }}</td>
+            <td>{{ inscription.description }}</td>
+            <td>{{ inscription.beginningDay }}</td>
+            <td>{{ inscription.endingDay }}</td>
+            <td>
               <button
-                *ngIf="!registrado"
                 class="border-0 bg-white ml-5"
-                (click)="eliminar(course.id)"
+                (click)="eliminar(inscription.id)"
               >
                 <i class="fas fa-trash-alt mx-1 link-danger"></i>
               </button>
             </td>
-            <!-- <th><button *ngIf='registrado' class="btn btn-success" (click)="inscribirse(cursos.id)">{{"LINKS.INSCRIBIRSE" | translate}}</button></th> -->
           </tr>
         </tbody>
       </table>

@@ -1,15 +1,22 @@
 package com.saberconectar.sc.service.impl;
 
+import com.saberconectar.sc.dto.CourseDTO;
+import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.entity.StudentEntity;
 import com.saberconectar.sc.exception.ParamNotFound;
+import com.saberconectar.sc.mapper.CourseMapper;
 import com.saberconectar.sc.mapper.StudentMapper;
 import com.saberconectar.sc.repository.CourseRepository;
 import com.saberconectar.sc.repository.StudentRepository;
 import com.saberconectar.sc.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
@@ -18,6 +25,9 @@ public class StudentServiceImpl implements StudentService {
     private CourseRepository courseRepository;
     @Autowired
     private StudentMapper studentMapper;
+    @Autowired
+    private CourseMapper courseMapper;
+
     public StudentDTO studentRegister(StudentDTO dto) {
         StudentEntity entity = studentMapper.studentDTO2Entity(dto,false);
         StudentEntity entitySaved = studentRepository.save(entity);
@@ -36,12 +46,11 @@ public class StudentServiceImpl implements StudentService {
                 true ,true);
         return dto;
     }
-    public StudentDTO getStudentANDCoursesById(Long id) {
+    public List<CourseDTO> getStudentANDCoursesById(Long id) {
         isCorrect(id, "id");
         StudentEntity entity = studentRepository.getReferenceById(id);
-        StudentDTO dto = studentMapper.studentEntity2DTO(entity,
-                false, true);
-        return dto;
+        ArrayList<CourseDTO> courses = courseMapper.courseEntitySet2DTOArray(entity.getCourses(),false,false);
+        return courses;
     }
     public StudentDTO update(Long id, StudentDTO student) {
         isCorrect(id, "id");
