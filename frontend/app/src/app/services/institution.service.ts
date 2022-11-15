@@ -56,4 +56,8 @@ export class InstitutionService {
     return this.http.get<Course>(this.API_SERVER + '/course/' + id, this.httpOptions) ;
   }
 
+  public getAllCourses(): Observable<Course[]>{
+    return this.http.get<Course[]>(this.API_SERVER + '/course/list' , this.httpOptions) ;
+  }
+
 }
