@@ -1,5 +1,4 @@
-import { Observable } from 'rxjs';
-import { ChangeDetectorRef, Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import { Course } from '../../../models/Course';
 import { InstitutionService } from 'src/app/services/institution.service';
 
@@ -26,10 +25,12 @@ export class CursosDeInstitucionComponent implements OnInit {
     })
   }
 
-  eliminar(){
-    alert("registro eliminado");
+  eliminar(id:number):void{
+    this.institutionService.deleteCourse(id).subscribe();
+    this.listCourse = this.listCourse.filter(c=>c.id != id);
+    alert("Curso eliminado correctamente!");
   }
-  crear(){
+  editar(id:number){
     alert("curso creado con éxito");
   }
 }
