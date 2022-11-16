@@ -65,7 +65,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         "/v3/api-docs/**",
                         "/swagger-ui/**",
                         "/v2/api-docs/**",
-                        "/swagger-resources/**"
+                        "/swagger-resources/**",
+                        "/configuration/ui",
+                        "/swagger-resources/**",
+                        "/swagger-ui.html",
+                        "/webjars/**",
+                        "/v2/**"
 
                         //TODO aclarar endpoints "GET" sin token
                 )
@@ -98,4 +103,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", cc);
         return source;
     }
+
 }

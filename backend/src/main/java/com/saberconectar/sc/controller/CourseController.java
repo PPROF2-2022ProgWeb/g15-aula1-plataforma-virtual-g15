@@ -2,10 +2,17 @@ package com.saberconectar.sc.controller;
 
 import com.saberconectar.sc.dto.CourseDTO;
 import com.saberconectar.sc.dto.CourseListDTO;
+import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.repository.CourseRepository;
 import com.saberconectar.sc.service.CourseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +25,24 @@ import java.util.List;
 @CrossOrigin(origins = "http://localhost:4200")
 @Api(tags="Cursos")
 public class CourseController {
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private CourseRepository repository;
     @Autowired
     private CourseService courseService;
 
-    @GetMapping("/all")
     @ApiOperation("Listar todos  los cursos")
+    @GetMapping("/all")
+
+    @ApiResponses(value={
+            @ApiResponse(responseCode = "200", description = "Lista de cursos",
+            content = {@Content (mediaType = "application/json",
+            schema = @Schema(implementation = CourseEntity.class))}),
+            @ApiResponse(responseCode = "400", description = "Datos Invalidos",
+            content = @Content),
+            @ApiResponse(responseCode = "404", description = "Datos no encontrados",
+                    content = @Content) })
     public ResponseEntity<List<CourseListDTO>> listAllCourses(){
         return ResponseEntity.status(HttpStatus.CREATED).body(courseService.getAllCourses());
     }
