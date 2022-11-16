@@ -49,6 +49,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
+
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
@@ -60,7 +61,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                         HttpMethod.GET,
                         "/auth/email/{email}",
-                        "/users/email/{username}"
+                        "/users/email/{username}",
+                        "/v3/api-docs/**",
+                        "/swagger-ui/**",
+                        "/v2/api-docs/**",
+                        "/swagger-resources/**"
+
                         //TODO aclarar endpoints "GET" sin token
                 )
                 .permitAll()
