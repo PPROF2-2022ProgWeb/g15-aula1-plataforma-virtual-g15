@@ -1,11 +1,7 @@
 package com.saberconectar.sc.dto;
 
-import com.saberconectar.sc.entity.InstitutionEntity;
-import com.saberconectar.sc.entity.StudentEntity;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.OneToOne;
 
 @Getter
 @Setter
@@ -20,6 +16,7 @@ public class UserDTO {
     private Boolean isStudent;
     private Long studentId;
     private Long institutionId;
+    private Boolean isAdmin;
     /*
     private Long countryId;
     private Long provinceId;

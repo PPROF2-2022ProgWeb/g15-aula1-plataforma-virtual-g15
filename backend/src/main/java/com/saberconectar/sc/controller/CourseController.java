@@ -23,7 +23,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/course")
 @CrossOrigin(origins = "http://localhost:4200")
-@Api(tags="Cursos")
+@Api(tags="Cursos",value = "CourseController")
 public class CourseController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

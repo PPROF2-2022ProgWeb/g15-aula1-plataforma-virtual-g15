@@ -23,6 +23,7 @@ public class UserEntity {
     private String provinceId;
     private String cityId;
     private Boolean isStudent;
+    private Boolean isAdmin = Boolean.FALSE;
 
     /*
     //TODO se modificaron los tipos de datos de ciudad , provincia y pais para facilitar los tiempos de produccion

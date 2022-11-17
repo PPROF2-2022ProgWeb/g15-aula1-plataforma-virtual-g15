@@ -9,4 +9,5 @@ public class AuthenticationResponse {
     private String jwt;
     private Boolean isStudent;
     private Long id;
+    private Boolean isAdmin;
 }

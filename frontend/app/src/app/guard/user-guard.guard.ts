@@ -32,4 +32,12 @@ export class UserGuardGuard implements CanActivate {
         map((isStudent:boolean)=>!isStudent)
       );}
 
+      canUserAdmin(): Observable<boolean>{
+
+        return this.auth.isUserAdmin.pipe(
+          //tomamos el primer valor emitido por el observable
+          take(1),
+          map((isAdmin:boolean)=>!isAdmin)
+        );}
+
 }

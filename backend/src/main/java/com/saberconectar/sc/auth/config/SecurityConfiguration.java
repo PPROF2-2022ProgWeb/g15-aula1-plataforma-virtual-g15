@@ -58,6 +58,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .disable()
                 //.authorizeRequests().antMatchers("/lendings/users/{idUser}/books/{idBook}").permitAll()
                 .authorizeRequests()
+                .antMatchers("static/**").permitAll()
+                .antMatchers("/v2/api-docs/**").permitAll()
+                .antMatchers("/swagger-ui/**").permitAll()
+                .antMatchers("/swagger-resources/**").permitAll()
+                .antMatchers("/swagger-ui.html").permitAll()
+                .antMatchers("/swagger-ui/index.html/**").permitAll()
+                .antMatchers("/webjars/**").permitAll()
                 .antMatchers(
                         HttpMethod.GET,
                         "/auth/email/{email}",

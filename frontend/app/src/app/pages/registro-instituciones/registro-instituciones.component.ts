@@ -8,14 +8,12 @@ import { RegistroService } from 'src/app/services/registro.service';
 @Component({
   selector: 'app-registro-instituciones',
   templateUrl: './registro-instituciones.component.html',
-  styleUrls: ['./registro-instituciones.component.css']
+  styleUrls: ['./registro-instituciones.component.css'],
 })
 export class RegistroInstitucionesComponent implements OnInit {
+  constructor(private reg: RegistroService, private router: Router) {}
 
-  constructor(private reg: RegistroService, private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   registrado = false;
 
@@ -28,7 +26,7 @@ export class RegistroInstitucionesComponent implements OnInit {
     countryId: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
     repassword: new FormControl('', Validators.required),
-    check: new FormControl('',Validators.required)
+    check: new FormControl('', Validators.required),
   });
 
   onSubmit() {
@@ -38,6 +36,7 @@ export class RegistroInstitucionesComponent implements OnInit {
       this.datos.value['countryId'] as string,
       this.datos.value['provinceId'] as string,
       this.datos.value['cityId'] as string,
+      false,
       false
     );
     const institution = new Institution(
@@ -46,19 +45,29 @@ export class RegistroInstitucionesComponent implements OnInit {
       userI
     );
 
-    if(!this.datos.value['cityId'] || !this.datos.value['provinceId'] || !this.datos.value['countryId'] || !this.datos.value['username'] || !this.datos.value['password'] || !this.datos.value['repassword'] || !this.datos.value['name'] || !this.datos.value['cuitNumber'] || !this.datos.value['check']){
-      return alert("Debes completar todos los campos y aceptar nuestros términos.");
-    }else{
-      if(this.datos.value['password'] != this.datos.value['repassword']){
-        return alert("Las contraseñas no coinciden");
-      }else{
-        return this.reg
-                   .institutionRegister(institution)
-                   .subscribe(() => {
-                     this.registrado = true;
-                     this.router.navigate(['/login']);
-                     alert("Registro exitoso");
-                   })
+    if (
+      !this.datos.value['cityId'] ||
+      !this.datos.value['provinceId'] ||
+      !this.datos.value['countryId'] ||
+      !this.datos.value['username'] ||
+      !this.datos.value['password'] ||
+      !this.datos.value['repassword'] ||
+      !this.datos.value['name'] ||
+      !this.datos.value['cuitNumber'] ||
+      !this.datos.value['check']
+    ) {
+      return alert(
+        'Debes completar todos los campos y aceptar nuestros términos.'
+      );
+    } else {
+      if (this.datos.value['password'] != this.datos.value['repassword']) {
+        return alert('Las contraseñas no coinciden');
+      } else {
+        return this.reg.institutionRegister(institution).subscribe(() => {
+          this.registrado = true;
+          this.router.navigate(['/login']);
+          alert('Registro exitoso');
+        });
       }
     }
   }

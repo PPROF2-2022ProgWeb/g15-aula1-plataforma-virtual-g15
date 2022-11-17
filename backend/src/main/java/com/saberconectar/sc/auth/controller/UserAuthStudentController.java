@@ -15,7 +15,6 @@ import com.saberconectar.sc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -85,7 +84,7 @@ public class UserAuthStudentController {
         final String username = authRequest.getUsername();
         UserDTO dto = userService.getUserByEmail(username, false, false);
         final String jwt = jwtTokenUtil.generateToken(userDetails);
-        return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent(), dto.getId()));
+        return ResponseEntity.ok(new AuthenticationResponse(username,jwt,dto.getIsStudent(),dto.getId(),dto.getIsAdmin()));
         //TODO usar metodo getReferenceByEmail en entidad Estudiante y Institucion, de acuerdo a en cual de las dos , este email exista, realiza el resto de las funciones de devolucion.
     }
     @GetMapping("/email/{email}")

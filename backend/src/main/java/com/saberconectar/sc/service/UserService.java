@@ -8,4 +8,5 @@ public interface UserService {
     UserDTO update(Long id, UserDTO user, Boolean setStudent, Boolean setInstitution);
     void delete (Long id);
     void isCorrect(Long id);
+    void isAdmin(Long id);
 }

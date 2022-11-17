@@ -11,6 +11,7 @@ import { AuthenticationResponse } from '../models/AuthenticationResponse';
 })
 export class AuthService{
 
+  private admin =  new BehaviorSubject<boolean>(false);
   private loggedIn =  new BehaviorSubject<boolean>(false);
   private student =  new BehaviorSubject<boolean>(false);
   private userName= new BehaviorSubject<string>('');
@@ -24,6 +25,9 @@ export class AuthService{
   }
   get isUserStudent():Observable<boolean>{
     return this.student.asObservable();
+  }
+  get isUserAdmin():Observable<boolean>{
+    return this.admin.asObservable();
   }
   get userIdNumber():Observable<number>{
     return this.userId.asObservable();

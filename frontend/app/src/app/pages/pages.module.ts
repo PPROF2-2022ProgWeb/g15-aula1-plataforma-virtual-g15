@@ -16,7 +16,7 @@ import { CarrerasComponent } from './seccion-usuario/carreras/carreras.component
 import { SeccionInstitucionComponent } from './seccion-institucion/seccion-institucion.component';
 import { CursosDeInstitucionComponent } from './seccion-institucion/cursos-de-institucion/cursos-de-institucion.component';
 import { CarrerasDeInstitucionComponent } from './seccion-institucion/carreras-de-institucion/carreras-de-institucion.component';
-
+import { AdminComponent } from './admin/admin.component';
 import {HttpClientModule, HttpClient, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -41,7 +41,8 @@ export function createTranslateLoader(http: HttpClient) {
     CarrerasComponent,
     SeccionInstitucionComponent,
     CursosDeInstitucionComponent,
-    CarrerasDeInstitucionComponent
+    CarrerasDeInstitucionComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,

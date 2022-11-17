@@ -14,6 +14,7 @@ public class UserMapper {
         entity.setProvinceId(dto.getProvinceId());
         entity.setCityId(dto.getCityId());
         entity.setIsStudent(dto.getIsStudent());
+        entity.setIsAdmin(entity.getIsAdmin());
         return entity;
     }
     public UserDTO userEntity2DTO(UserEntity entity, Boolean setStudent, Boolean setInstitution){
@@ -26,6 +27,7 @@ public class UserMapper {
         dto.setProvinceId(entity.getProvinceId());
         dto.setCityId(entity.getCityId());
         dto.setIsStudent(entity.getIsStudent());
+        dto.setIsAdmin(entity.getIsAdmin());
         /*if(setStudent){
             dto.setStudentEntity(entity.getStudentEntity());
         }

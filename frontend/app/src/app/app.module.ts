@@ -12,9 +12,10 @@ import { UserGuardGuard } from './guard/user-guard.guard';
 import { StudentGuardGuard } from './guard/student-guard.guard';
 import { AuthService } from './services/auth.service';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,

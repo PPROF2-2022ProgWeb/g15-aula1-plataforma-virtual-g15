@@ -10,10 +10,11 @@ export class User {
     provinceId: string;
     cityId: string;
     isStudent: boolean;
+    isAdmin: boolean;
     //
     studentEntity?: Student;
     institutionEntity?: Institution;
-    constructor(email: string, password: string, countryId: string, provinceId: string, cityId:string, isStudent:boolean){
+    constructor(email: string, password: string, countryId: string, provinceId: string, cityId:string, isStudent:boolean, isAdmin:boolean){
     this.email = email;
     this.password = password;
     this.deleted;
@@ -21,5 +22,6 @@ export class User {
     this.provinceId = provinceId;
     this.cityId = cityId;
     this.isStudent=isStudent;
+    this.isAdmin=isAdmin;
     }
 }

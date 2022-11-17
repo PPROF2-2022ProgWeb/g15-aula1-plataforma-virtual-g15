@@ -40,12 +40,18 @@ export class LoginComponent implements OnInit {
     const data = new AuthenticationRequest(usuario,password);
  
     this.auth.login(data).subscribe((data)=>{
-      alert("Bienvenido " + data.username);
-      environment.idUsuario = data.id;
-      if(data.isStudent){
-        this.router.navigate(['/alumnos']);
+      if(data.isAdmin){
+        alert("Bienvenido Administrador"+ " " + data.username);
+        environment.idUsuario = data.id;
+        this.router.navigate(['/nosotros']);
       }else{
-        this.router.navigate(['/instituciones']);
+        alert("Bienvenido"+" " + data.username);
+        environment.idUsuario = data.id;
+        if(data.isStudent){
+          this.router.navigate(['/alumnos']);
+        }else{
+          this.router.navigate(['/instituciones']);
+        }
       }
     }, (e)=>{
       this.login.reset();
