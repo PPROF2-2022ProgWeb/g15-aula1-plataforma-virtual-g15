@@ -37,11 +37,6 @@ public class StudentController {
         StudentDTO dtoUpdated = studentService.update(id, dto);
         return ResponseEntity.ok().body(dtoUpdated);
     }
-    @PostMapping
-    public ResponseEntity<StudentDTO> studentRegister(@RequestBody StudentDTO dto){
-        StudentDTO studentSaved = studentService.studentRegister(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(studentSaved);
-    }
     //Add student-course relationship
     @PostMapping("/{idStudent}/courses/{idCourse}")
     public ResponseEntity<Set<StudentEntity>>

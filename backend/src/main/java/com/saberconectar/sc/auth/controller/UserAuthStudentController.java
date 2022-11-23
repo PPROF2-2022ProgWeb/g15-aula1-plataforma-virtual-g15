@@ -24,8 +24,11 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+@Validated
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/auth")
@@ -64,13 +67,8 @@ public class UserAuthStudentController {
         }
     }
     @PostMapping("/student/register")
-    public ResponseEntity<StudentDTO> signUp(@RequestBody StudentDTO user) throws Exception{
-        if(!existsByEmail(user.getUserEntity().getEmail())){
-            StudentDTO studentRegistered = studentService.studentRegister(user);
-            return ResponseEntity.status(HttpStatus.CREATED).body(studentRegistered);
-        }else{
-            throw new ParamNotFound("Email existente");
-        }
+    public ResponseEntity<StudentDTO> signUp(@Valid @RequestBody StudentDTO user) throws Exception{
+        return ResponseEntity.status(HttpStatus.CREATED).body(studentService.studentRegister(user));
     }
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> singIn(@RequestBody AuthenticationRequest authRequest) throws Exception{

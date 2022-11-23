@@ -4,7 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+import org.hibernate.validator.constraints.Length;
 import javax.persistence.*;
+import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 @Entity
 @Table(name = "user")
 @Getter
@@ -13,15 +19,32 @@ import javax.persistence.*;
 @Where(clause = "deleted=false")
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Email
+    @NotNull(message = "{user.email.null}")
     private String email;
+
+    @Length(min = 8, message = "{user.password.length}")
+    @NotNull(message = "{user.password.null}")
     private String password;
+
     //soft-delete
+    @AssertFalse(message = "{user.deleted.boolean}")
     private Boolean deleted = Boolean.FALSE;
+
+    @NotNull(message = "{user.country.null}")
     private String countryId;
+
+    @NotNull(message = "{user.province.null}")
     private String provinceId;
+
+    @NotNull(message = "{user.city.null}")
     private String cityId;
+
+    //@NotNull(message = "Insert true if you are a student.")
+    @NotNull(message = "{user.isStudent.null}")
     private Boolean isStudent;
 
     /*
