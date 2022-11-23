@@ -21,6 +21,7 @@
             <table class="table" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
+                      <th>ID</th>
                       <th>{{ "SECCION.NOMBCURSO" | translate}}</th>
                       <th>{{ "SECCION.DESCRIPCURS" | translate}}</th>
                       <th>{{ "SECCION.FECHAINICIOCURS" | translate}}</th>
@@ -30,21 +31,154 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let cursos of ArregloCursos">
-                    <th>{{cursos.nombre}}</th>
-                    <th>{{cursos.descripcion}}</th>
-                    <th>{{cursos.fechaInicio}}</th>
-                    <th>{{cursos.fechaFin}}</th>
-                    <th>{{cursos.cantidadInscriptos}}</th>
+                  <tr *ngFor="let course of listCourse; index as i">
+                    <th>{{course.id}}</th>
+                    <th>{{course.name}}</th>
+                    <th>{{course.description}}</th>
+                    <th>{{course.beginningDay}}</th>
+                    <th>{{course.endingDay}}</th>
+                    <th>{{course.name}}</th>
                     <th>
-                      <button class="border-0 bg-white"  data-bs-toggle="modal" data-bs-target="#crearModal"><i class="fas fa-edit mx-1 link-primary"></i></button>
-                      
+                      <button class="border-0 bg-white"  data-bs-toggle="modal" data-bs-target="#editarModal" (click)="editar(course.id)"><i class="fas fa-edit mx-1 link-primary"></i></button>
 
-                      <button class="border-0 bg-white" (click)="eliminar()"><i class="fas fa-trash-alt mx-1 link-danger"></i></button>
+
+                      <button class="border-0 bg-white" (click)="eliminar(course.id)"><i class="fas fa-trash-alt mx-1 link-danger"></i></button>
                     </th>
                   </tr>
                 </tbody>
             </table>
         </div>
     </div>
+</div>
+
+
+<!-- Crear curso Modal -->
+
+<div class="modal fade" id="crearModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog rounded">
+      <div class="modal-content px-3">
+          <div class="modal-header">
+              <div class="p-4">
+                  <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
+              </div>
+              <a type="button" data-bs-dismiss="modal" aria-label="Close">
+                  <i class="fas fa-angle-up"></i>
+              </a>
+          </div>
+          <div class="modal-body">
+              <h4 class="modal-title pt-3" id="staticBackdrop">{{"SECCION.COMPLETALOSCAMPOS" | translate}}</h4>
+              <p class="statusMsg"></p>
+
+              <!-- FORMULARIO -->
+
+              <form [formGroup]="curso" (ngSubmit)="crearCurso()">
+                  <!-- NOMBRE -->
+                  <div class="mb-4">
+                      <label for="nombre" class="form-label">{{"INPUTS.NOMBRECURSO" | translate}}</label>
+                      <input type="text" class="form-control" formControlName="name" data-sb-validations="required" #nombreCurso>
+                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">{{"SECCION.FALTANOMBRE" | translate}}</div>
+                  </div>
+                  <!-- DESCRIPCION -->
+                  <div class="mb-4">
+                      <label for="descripcion" class="form-label">{{"SECCION.DESCRIPCION" | translate}} <sup>{{"SECCION.MAXCARACTERES" | translate }}</sup></label>
+                      <textarea class="form-control" formControlName="description" rows="2" maxlength="180"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">{{"SECCION.FALTADESCRIPCION" | translate}}</div>
+                  </div>
+
+                  <div class="row mb-4">
+
+                    <!-- FECHA INICIO -->
+
+                      <div class="col">
+                          <label for="fechaInicio" class="form-label d-flex">{{"INPUTS.FECHAINICIO" | translate}}</label>
+                          <input type="date" class="form-control" formControlName="beginningDay">
+                      </div>
+
+                      <!-- FECHA FIN -->
+
+                      <div class="col">
+                          <label for="fechaFin" class="form-label d-flex">{{"INPUTS.FECHAFIN" | translate}}</label>
+                          <input type="date" class="form-control" formControlName="endingDay">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+
+                      <!-- CANCELAR -->
+
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">{{"LINKS.CANCELAR" | translate}}</button>
+
+                      <!-- CREAR -->
+
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">{{"LINKS.CREAR" | translate}}</button>
+                      <div id="respuesta"></div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Editar curso Modal -->
+
+<div class="modal fade" id="editarModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
+  <div class="modal-dialog rounded">
+      <div class="modal-content px-3">
+          <div class="modal-header">
+              <div class="p-4">
+                  <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
+              </div>
+              <a type="button" data-bs-dismiss="modal" aria-label="Close">
+                  <i class="fas fa-angle-up"></i>
+              </a>
+          </div>
+          <div class="modal-body">
+              <h4 class="modal-title pt-3" id="staticBackdrop">{{"SECCION.COMPLETALOSCAMPOS" | translate}}</h4>
+              <p class="statusMsg"></p>
+
+              <!-- FORMULARIO -->
+
+              <form [formGroup]="curso" (ngSubmit)="editarCurso()">
+                  <!-- NOMBRE -->
+                  <div class="mb-4">
+                      <label for="nombre" class="form-label">{{"INPUTS.NOMBRECURSO" | translate}}</label>
+                      <input type="text" class="form-control" formControlName="name" data-sb-validations="required" #nombreCurso>
+                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">{{"SECCION.FALTANOMBRE" | translate}}</div>
+                  </div>
+                  <!-- DESCRIPCION -->
+                  <div class="mb-4">
+                      <label for="descripcion" class="form-label">{{"SECCION.DESCRIPCION" | translate}} <sup>{{"SECCION.MAXCARACTERES" | translate }}</sup></label>
+                      <textarea class="form-control" formControlName="description" rows="2" maxlength="180"></textarea>
+                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">{{"SECCION.FALTADESCRIPCION" | translate}}</div>
+                  </div>
+
+                  <div class="row mb-4">
+
+                    <!-- FECHA INICIO -->
+
+                      <div class="col">
+                          <label for="fechaInicio" class="form-label d-flex">{{"INPUTS.FECHAINICIO" | translate}}</label>
+                          <input type="date" class="form-control" formControlName="beginningDay">
+                      </div>
+
+                      <!-- FECHA FIN -->
+
+                      <div class="col">
+                          <label for="fechaFin" class="form-label d-flex">{{"INPUTS.FECHAFIN" | translate}}</label>
+                          <input type="date" class="form-control" formControlName="endingDay">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+
+                      <!-- CANCELAR -->
+
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">{{"LINKS.CANCELAR" | translate}}</button>
+
+                      <!-- CREAR -->
+
+                      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">{{"LINKS.CREAR" | translate}}</button>
+                      <div id="respuesta"></div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>

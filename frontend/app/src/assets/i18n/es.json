@@ -68,7 +68,7 @@
   },
 
   "SECCION":{
-
+    "CURSOINSCRIPTO": "Inscripciones",
     "FALTAEMAIL": "Ingresa un email válido",
     "INGRESAAPELLIDO": "Ingresa tu apellido",
     "TERMINOS": "Términos y condiciones",

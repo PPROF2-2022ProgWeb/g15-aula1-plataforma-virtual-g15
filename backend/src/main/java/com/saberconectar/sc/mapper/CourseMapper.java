@@ -1,6 +1,7 @@
 package com.saberconectar.sc.mapper;
 
 import com.saberconectar.sc.dto.CourseDTO;
+import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.dto.InstitutionDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.entity.CourseEntity;
@@ -48,6 +49,24 @@ public class CourseMapper {
         }
         return dto;
     }
+    public CourseListDTO courseEntity2DTOList(CourseEntity entity, Boolean loadStudents, Boolean loadInstitutions){
+        CourseListDTO dto = new CourseListDTO();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setDescription(entity.getDescription());
+        dto.setBeginningDay(entity.getBeginningDay());
+        dto.setEndingDay(entity.getEndingDay());
+        dto.setDeleted(entity.getDeleted());
+        if(loadInstitutions){
+            List<InstitutionDTO> dtos = institutionMapper.institutionEntityList2DTOList(entity.getInstitutions(),false, false);
+            dto.setInstitutions(dtos);
+        }
+        if(loadStudents){
+            List<StudentDTO> dtos = studentMapper.studentEntityList2DTOList(entity.getStudents(),false, false);
+            dto.setStudents(dtos);
+        }
+        return dto;
+    }
     public CourseEntity update(CourseEntity entity, CourseDTO dto){
         entity.getId();
         entity.setName(dto.getName());
@@ -60,6 +79,20 @@ public class CourseMapper {
     }
     public Set<CourseDTO> courseEntitySet2DTOSet(Collection<CourseEntity> entities,boolean loadStudents, boolean loadInstitution){
         Set<CourseDTO> dtos = new HashSet<>();
+        for (CourseEntity entity: entities){
+            dtos.add(courseEntity2DTO(entity,loadStudents, loadInstitution));
+        }
+        return dtos;
+    }
+    public List<CourseListDTO> courseEntityList2DTOList(List<CourseEntity> entities,boolean loadStudents, boolean loadInstitution){
+        List<CourseListDTO> dtos = new ArrayList<>();
+        for (CourseEntity entity: entities){
+            dtos.add(courseEntity2DTOList(entity,loadStudents, loadInstitution));
+        }
+        return dtos;
+    }
+    public ArrayList<CourseDTO> courseEntitySet2DTOArray(Set<CourseEntity> entities,boolean loadStudents, boolean loadInstitution){
+        ArrayList<CourseDTO> dtos = new ArrayList<>();
         for (CourseEntity entity: entities){
             dtos.add(courseEntity2DTO(entity,loadStudents, loadInstitution));
         }

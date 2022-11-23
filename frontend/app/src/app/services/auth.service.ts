@@ -11,11 +11,10 @@ import { AuthenticationResponse } from '../models/AuthenticationResponse';
 })
 export class AuthService{
 
-
   private loggedIn =  new BehaviorSubject<boolean>(false);
   private student =  new BehaviorSubject<boolean>(false);
   private userName= new BehaviorSubject<string>('');
-  private userId= new BehaviorSubject<number>(0);
+  public userId= new BehaviorSubject<number>(0);
 
   get isLoggedIn():Observable<boolean>{
     return this.loggedIn.asObservable();
@@ -35,9 +34,10 @@ export class AuthService{
     }),
   };
 
-  constructor(private http: HttpClient, private cookieService:CookieService, private route: Router) {}
+  constructor(private http: HttpClient, private route: Router) {}
 
   login(usuario: AuthenticationRequest): Observable<AuthenticationResponse> {
+    localStorage.removeItem('auth_token')
     return this.http
       .post<AuthenticationResponse>('http://localhost:8080/auth/login', usuario, this.httpOptions)
       .pipe(
@@ -47,6 +47,7 @@ export class AuthService{
           this.student.next(user.isStudent);
           this.userName.next(user.username);
           this.userId.next(user.id);
+
           return user;
         }),
         catchError((err) => this.handlerError(err))
@@ -57,6 +58,7 @@ export class AuthService{
     // this.cookieService.get('auth_token');
     localStorage.getItem('auth_token');
   }
+
   setToken(token: string){
     // this.cookieService.set('auth_token', token);
     localStorage.setItem('auth_token', token);

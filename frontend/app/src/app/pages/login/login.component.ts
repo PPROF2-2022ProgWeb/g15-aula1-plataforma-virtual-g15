@@ -4,7 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationRequest } from 'src/app/models/AuthenticationRequest';
-
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router,
-    private cookieService : CookieService
+    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -26,6 +25,7 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
     });
+    
   }
 
   error = '';
@@ -34,12 +34,14 @@ export class LoginComponent implements OnInit {
     if (this.login.invalid) {
        return;
     }
+    
     let usuario = this.login.value.username;
     let password = this.login.value.password;
     const data = new AuthenticationRequest(usuario,password);
-
+ 
     this.auth.login(data).subscribe((data)=>{
       alert("Bienvenido " + data.username);
+      environment.idUsuario = data.id;
       if(data.isStudent){
         this.router.navigate(['/alumnos']);
       }else{
@@ -54,9 +56,4 @@ export class LoginComponent implements OnInit {
     console.log("Correcto");
     return this.auth.logout();
   }
-
-
-
-
-
 }

@@ -1,5 +1,7 @@
 package com.saberconectar.sc.controller;
 
+import com.saberconectar.sc.dto.CourseDTO;
+import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.entity.StudentEntity;
 import com.saberconectar.sc.service.StudentService;
@@ -7,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Set;
 @RestController
 @RequestMapping("/students")
@@ -19,9 +23,9 @@ public class StudentController {
         return ResponseEntity.ok().body(student);
     }
     @GetMapping("/{id}/courses")
-    public ResponseEntity<StudentDTO> getStudentANDCoursesById(@PathVariable Long id){
-        StudentDTO student = studentService.getStudentANDCoursesById(id);
-        return ResponseEntity.ok().body(student);
+    public ResponseEntity<List<CourseDTO>> getStudentANDCoursesById(@PathVariable Long id){
+        List<CourseDTO> courses = studentService.getStudentANDCoursesById(id);
+        return ResponseEntity.ok().body(courses);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> studentDelete(@PathVariable Long id){

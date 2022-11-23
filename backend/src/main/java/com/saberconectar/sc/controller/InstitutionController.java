@@ -27,11 +27,12 @@ public class InstitutionController {
         InstitutionDTO institution = institutionService.getInstitutionById(id);
         return ResponseEntity.ok().body(institution);
     }
+    /*
     @GetMapping("/{id}/courses")
     public ResponseEntity<InstitutionDTO> getInstitutionCoursesById(@PathVariable Long id){
         InstitutionDTO institution = institutionService.getInstitutionCoursesById(id);
         return ResponseEntity.ok().body(institution);
-    }
+    }*/
     @PostMapping
     public ResponseEntity<InstitutionDTO> institutionRegister(@RequestBody InstitutionDTO dto)
     {

@@ -404,66 +404,7 @@
   </div>
 </div>
 
-<!-- Crear curso Modal -->
 
-<div class="modal fade" id="crearModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop" aria-hidden="true">
-  <div class="modal-dialog rounded">
-      <div class="modal-content px-3">
-          <div class="modal-header">
-              <div class="p-4">
-                  <img src="../../../assets/logotipo.png" class="text-center" width="100" alt="logotipo">
-              </div>
-              <a type="button" data-bs-dismiss="modal" aria-label="Close">
-                  <i class="fas fa-angle-up"></i>
-              </a>
-          </div>
-          <div class="modal-body">
-              <h4 class="modal-title pt-3" id="staticBackdrop">{{"SECCION.COMPLETALOSCAMPOS" | translate}}</h4>
-              <p class="statusMsg"></p>
-              <form action="#" method="get" id="formulario">
-                  <!-- NOMBRE -->
-                  <div class="mb-4">
-                      <label for="nombre" class="form-label">{{"INPUTS.NOMBRECURSO" | translate}}</label>
-                      <input type="text" class="form-control" name="nombre" data-sb-validations="required" #nombreCurso>
-                      <div class="invalid-feedback" data-sb-feedback="Nombre:requerido">{{"SECCION.FALTANOMBRE" | translate}}</div>
-                  </div>
-                  <!-- DESCRIPCION -->
-                  <div class="mb-4">
-                      <label for="descripcion" class="form-label">{{"SECCION.DESCRIPCION" | translate}} <sup>{{"SECCION.MAXCARACTERES" | translate }}</sup></label>
-                      <textarea class="form-control" name="descripcion" rows="2" maxlength="180"></textarea>
-                      <div class="invalid-feedback" data-sb-feedback="Descripcion:requerida">{{"SECCION.FALTADESCRIPCION" | translate}}</div>
-                  </div>
-
-                  <div class="mb-4">
-                      <label for="select" class="form-label">{{ "INPUTS.SELECCIONARNIVEL" | translate}}</label>
-                      <select class="form-select ml-3" aria-label="Default select example" name="select">
-                          <option selected>{{"INPUTS.SELECCIONAR" | translate}}</option>
-                          <option value="1">{{"INPUTS.PRINCIPIANTE" | translate}}</option>
-                          <option value="2">{{"INPUTS.MEDIO" | translate}}</option>
-                          <option value="3">{{"INPUTS.AVANZADO" | translate}}</option>
-                      </select>
-                  </div>
-
-                  <div class="row mb-4">
-                      <div class="col">
-                          <label for="fechaInicio" class="form-label d-flex">{{"INPUTS.FECHAINICIO" | translate}}</label>
-                          <input type="date" class="form-control" name="fechaInicio">
-                      </div>
-                      <div class="col">
-                          <label for="fechaFin" class="form-label d-flex">{{"INPUTS.FECHAFIN" | translate}}</label>
-                          <input type="date" class="form-control" name="fechaFin">
-                      </div>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">{{"LINKS.CANCELAR" | translate}}</button>
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="crearCurso(nombreCurso.value)">{{"LINKS.CREAR" | translate}}</button>
-                      <div id="respuesta"></div>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </div>
-</div>
 
 <!-- Modal Recuperar pw -->
 <div class="modal fade" id="recModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

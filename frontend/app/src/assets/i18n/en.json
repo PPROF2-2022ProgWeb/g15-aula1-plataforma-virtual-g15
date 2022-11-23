@@ -69,6 +69,7 @@
   },
 
   "SECCION":{
+    "CURSOINSCRIPTO": "Inscriptions",
     "FALTAEMAIL": "Enter a valid email",
     "INGRESAAPELLIDO": "Enter your lastname",
     "TERMINOS": "Terms and conditions",
