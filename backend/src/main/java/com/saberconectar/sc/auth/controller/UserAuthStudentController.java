@@ -12,18 +12,19 @@ import com.saberconectar.sc.repository.UserRepository;
 import com.saberconectar.sc.service.InstitutionService;
 import com.saberconectar.sc.service.StudentService;
 import com.saberconectar.sc.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.json.GsonBuilderUtils;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -54,7 +55,7 @@ public class UserAuthStudentController {
         this.userRepository = userRepository;
     }
     @PostMapping("/institution/register")
-    public ResponseEntity<InstitutionDTO> signUp(@Valid @RequestBody InstitutionDTO user) throws Exception{
+    public ResponseEntity<InstitutionDTO> signUp(@RequestBody InstitutionDTO user) throws Exception{
         if(!existsByEmail(user.getUserEntity().getEmail())) {
             InstitutionDTO institutionSaved = institutionService.institutionRegister(user);
             return ResponseEntity.status(HttpStatus.CREATED).body(institutionSaved);
@@ -63,7 +64,7 @@ public class UserAuthStudentController {
         }
     }
     @PostMapping("/student/register")
-    public ResponseEntity<StudentDTO> signUp(@Valid @RequestBody StudentDTO user) throws Exception{
+    public ResponseEntity<StudentDTO> signUp(@RequestBody StudentDTO user) throws Exception{
         if(!existsByEmail(user.getUserEntity().getEmail())){
             StudentDTO studentRegistered = studentService.studentRegister(user);
             return ResponseEntity.status(HttpStatus.CREATED).body(studentRegistered);

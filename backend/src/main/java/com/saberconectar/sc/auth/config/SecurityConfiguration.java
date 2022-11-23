@@ -38,7 +38,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsCustomService);
     }
-
     @Bean //este componente  permite no encodear la password, solo para practicar
     public PasswordEncoder passwordEncoder(){
         return NoOpPasswordEncoder.getInstance();
@@ -49,7 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
@@ -61,12 +59,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                         HttpMethod.GET,
                         "/auth/email/{email}",
-                        "/users/email/{username}",
-                        "/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/v2/api-docs/**",
-                        "/swagger-resources/**"
-
+                        "/users/email/{username}"
                         //TODO aclarar endpoints "GET" sin token
                 )
                 .permitAll()
