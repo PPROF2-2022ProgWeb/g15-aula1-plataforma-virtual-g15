@@ -22,7 +22,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleParamNotFound(RuntimeException ex, WebRequest request){
         ApiErrorDTO errorDTO = new ApiErrorDTO(
                 HttpStatus.NOT_FOUND,
-                Arrays.asList("Param Not Found")
+                //ex.getMessage(),
+                Arrays.asList(ex.getLocalizedMessage())
         );
         return handleExceptionInternal(ex, errorDTO, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
     }
@@ -30,6 +31,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleBadRequestException(RuntimeException ex, WebRequest request){
         ApiErrorDTO errorDTO = new ApiErrorDTO(
                 HttpStatus.BAD_REQUEST,
+                //ex.getMessage(),
                 Arrays.asList(ex.getLocalizedMessage())
         );
         return handleExceptionInternal(ex, errorDTO, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
@@ -47,7 +49,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         for(ObjectError error : ex.getBindingResult().getGlobalErrors()){
             errors.add(error.getObjectName() + ": " + error.getDefaultMessage());
         }
-        ApiErrorDTO apiError = new ApiErrorDTO(HttpStatus.BAD_REQUEST, errors);
+        ApiErrorDTO apiError = new ApiErrorDTO(HttpStatus.BAD_REQUEST/*, ex.getLocalizedMessage()*/, errors);
         return handleExceptionInternal(
                 ex,apiError,headers,apiError.getStatus(),request);
     }
