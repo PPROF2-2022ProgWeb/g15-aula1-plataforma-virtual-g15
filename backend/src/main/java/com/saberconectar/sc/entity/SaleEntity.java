@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Where(clause = "deleted=false")
 public class SaleEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer productQuantity;
     private Double totalPrice;

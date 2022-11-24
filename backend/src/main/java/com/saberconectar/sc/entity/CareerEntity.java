@@ -17,7 +17,7 @@ import java.util.List;
 @Where(clause = "deleted=false")
 public class CareerEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;

@@ -8,16 +8,22 @@ import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.entity.InstitutionEntity;
 import com.saberconectar.sc.entity.StudentEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import java.util.*;
 
 
 @Component
 public class CourseMapper {
+    
+    @Lazy
     @Autowired
     private InstitutionMapper institutionMapper;
+    
+    @Lazy
     @Autowired
     private StudentMapper studentMapper;
+    
     public CourseEntity courseDTO2Entity(CourseDTO dto, boolean loadInstitutions){
         CourseEntity entity = new CourseEntity();
         entity.setName(dto.getName());

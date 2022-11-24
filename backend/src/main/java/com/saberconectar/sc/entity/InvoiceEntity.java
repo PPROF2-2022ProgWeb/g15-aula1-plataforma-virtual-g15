@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Where(clause = "deleted=false")
 public class InvoiceEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate date;
     //soft-delete
