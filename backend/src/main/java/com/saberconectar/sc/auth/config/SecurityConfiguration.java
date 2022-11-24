@@ -16,6 +16,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.header.writers.frameoptions.WhiteListedAllowFromStrategy;
+import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -53,6 +55,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
+                .headers().frameOptions().disable();
+        httpSecurity
                 .cors(withDefaults())
                 .csrf()
                 .disable()
@@ -60,12 +64,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(
                     HttpMethod.GET,
                     "/auth/email/{email}",
+                    "/h2-console/**",
                     "/users/email/{username}"
                 )
                 .permitAll()
                 .antMatchers(
                     HttpMethod.POST,
-                    "/auth/**"
+                    "/auth/**",
+                        "/h2-console/**"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling()
