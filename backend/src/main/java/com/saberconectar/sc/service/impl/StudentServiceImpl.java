@@ -1,10 +1,10 @@
 package com.saberconectar.sc.service.impl;
 
 import com.saberconectar.sc.dto.CourseDTO;
-import com.saberconectar.sc.dto.CourseListDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.entity.CourseEntity;
 import com.saberconectar.sc.entity.StudentEntity;
+import com.saberconectar.sc.exception.BadRequestException;
 import com.saberconectar.sc.exception.ParamNotFound;
 import com.saberconectar.sc.mapper.CourseMapper;
 import com.saberconectar.sc.mapper.StudentMapper;
@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.validation.ValidationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,15 +35,14 @@ public class StudentServiceImpl implements StudentService {
 
     public StudentDTO studentRegister(StudentDTO dto) throws Exception {
 
-        if(!existsUserByEmail(dto.getUserEntity().getEmail())) {
-            StudentEntity entity = studentMapper.studentDTO2Entity(dto, false);
-            StudentEntity entitySaved = studentRepository.save(entity);
-            StudentDTO result = studentMapper.studentEntity2DTO(entitySaved,
-                    true, true);
-            return result;
-        }else{
-            throw new ParamNotFound("User Exists");
-        }
+        if(existsUserByEmail(dto.getUserEntity().getEmail()))
+            throw new BadRequestException("User Exists");
+
+        StudentEntity entity = studentMapper.studentDTO2Entity(dto, false);
+        StudentEntity entitySaved = studentRepository.save(entity);
+        StudentDTO result = studentMapper.studentEntity2DTO(entitySaved,
+                true, true);
+        return result;
     }
     public void delete(Long id) {
         isCorrect(id, "id");
