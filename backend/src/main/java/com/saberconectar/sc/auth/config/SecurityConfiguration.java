@@ -5,6 +5,7 @@ import com.saberconectar.sc.auth.service.UserDetailsCustomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -31,6 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsCustomService userDetailsCustomService;
 
+    @Lazy
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
 
@@ -38,43 +40,32 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsCustomService);
     }
-
     @Bean //este componente  permite no encodear la password, solo para practicar
     public PasswordEncoder passwordEncoder(){
         return NoOpPasswordEncoder.getInstance();
     }
 
     @Override
-    @Bean//va a manejar la autenticacion el mismo metodo q provee WebSecurity
+    @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .cors(withDefaults())
                 .csrf()
                 .disable()
-                //.authorizeRequests().antMatchers("/lendings/users/{idUser}/books/{idBook}").permitAll()
                 .authorizeRequests()
                 .antMatchers(
-                        HttpMethod.GET,
-                        "/auth/email/{email}",
-                        "/users/email/{username}",
-                        "/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/v2/api-docs/**",
-                        "/swagger-resources/**"
-
-                        //TODO aclarar endpoints "GET" sin token
+                    HttpMethod.GET,
+                    "/auth/email/{email}",
+                    "/users/email/{username}"
                 )
                 .permitAll()
                 .antMatchers(
-                        HttpMethod.POST,
-                        //"/auth/**", "/institutions","/cities","/provinces","/countries"
-                        "/auth/**"
-                        //TODO aclarar endpoints "POST" sin token
+                    HttpMethod.POST,
+                    "/auth/**"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling()

@@ -4,8 +4,14 @@ import com.saberconectar.sc.entity.InstitutionEntity;
 import com.saberconectar.sc.entity.StudentEntity;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.OneToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.AssertFalse;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter

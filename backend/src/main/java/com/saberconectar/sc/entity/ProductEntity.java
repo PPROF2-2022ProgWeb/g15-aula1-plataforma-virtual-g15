@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Where(clause = "deleted=false")
 public class ProductEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double price;

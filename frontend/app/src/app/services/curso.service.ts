@@ -11,7 +11,7 @@ export class CursoService {
 
   private baseURL = "http://localhost:8080/course/list";
 
-  constructor(private httpClient:HttpClient, auth:AuthService) { }
+  constructor(private httpClient:HttpClient) { }
 
   //Obtener cursos
   getListCourses():Observable<Course[]>{
@@ -28,5 +28,5 @@ export class CursoService {
   return this.httpClient.delete(`${this.baseURL}`, id)
   }
 
-  
+
 }

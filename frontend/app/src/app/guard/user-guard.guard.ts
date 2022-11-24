@@ -19,7 +19,7 @@ export class UserGuardGuard implements CanActivate {
       take(1),
       map((isLogged: boolean) => {
         if (isLogged) { return true }
-        else { this.router.navigate(["login"]); return false }
+        else { this.router.navigate(["login"]);alert("Debes iniciar sesión"); return false }
       })
     );
     }

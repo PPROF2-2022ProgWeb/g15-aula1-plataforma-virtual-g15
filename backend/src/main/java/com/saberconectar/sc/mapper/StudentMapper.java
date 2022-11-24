@@ -1,15 +1,12 @@
 package com.saberconectar.sc.mapper;
 
 import com.saberconectar.sc.dto.CourseDTO;
-import com.saberconectar.sc.dto.InstitutionDTO;
 import com.saberconectar.sc.dto.StudentDTO;
 import com.saberconectar.sc.dto.UserDTO;
 import com.saberconectar.sc.entity.CourseEntity;
-import com.saberconectar.sc.entity.InstitutionEntity;
 import com.saberconectar.sc.entity.StudentEntity;
 import com.saberconectar.sc.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +21,7 @@ public class StudentMapper {
     public StudentEntity studentDTO2Entity(StudentDTO dto, Boolean loadCourses){
         StudentEntity entity = new StudentEntity();
         entity.setName(dto.getName());
-        entity.setSurname(dto.getSurname());
+        entity.setLastname(dto.getLastname());
         entity.setDocumentNumber(dto.getDocumentNumber());
         entity.setDate(dto.getDate());
         entity.setDeleted(dto.getDeleted());
@@ -38,7 +35,7 @@ public class StudentMapper {
         StudentDTO dto = new StudentDTO();
         dto.setId(entity.getId());
         dto.setName(entity.getName());
-        dto.setSurname(entity.getSurname());
+        dto.setLastname(entity.getLastname());
         dto.setDocumentNumber(entity.getDocumentNumber());
         dto.setDate(entity.getDate());
         dto.setDeleted(entity.getDeleted());
@@ -58,7 +55,7 @@ public class StudentMapper {
     public StudentEntity update(StudentEntity entity, StudentDTO dto){
         entity.getId();
         entity.setName(dto.getName());
-        entity.setSurname(dto.getSurname());
+        entity.setLastname(dto.getLastname());
         entity.setDocumentNumber(dto.getDocumentNumber());
         entity.setDate(dto.getDate());
         entity.setDeleted(dto.getDeleted());
