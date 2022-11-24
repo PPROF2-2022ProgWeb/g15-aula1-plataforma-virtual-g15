@@ -46,7 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    @Bean//va a manejar la autenticacion el mismo metodo q provee WebSecurity
+    @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
@@ -56,20 +56,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .cors(withDefaults())
                 .csrf()
                 .disable()
-                //.authorizeRequests().antMatchers("/lendings/users/{idUser}/books/{idBook}").permitAll()
                 .authorizeRequests()
                 .antMatchers(
-                        HttpMethod.GET,
-                        "/auth/email/{email}",
-                        "/users/email/{username}"
-                        //TODO aclarar endpoints "GET" sin token
+                    HttpMethod.GET,
+                    "/auth/email/{email}",
+                    "/users/email/{username}"
                 )
                 .permitAll()
                 .antMatchers(
-                        HttpMethod.POST,
-                        //"/auth/**", "/institutions","/cities","/provinces","/countries"
-                        "/auth/**"
-                        //TODO aclarar endpoints "POST" sin token
+                    HttpMethod.POST,
+                    "/auth/**"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling()

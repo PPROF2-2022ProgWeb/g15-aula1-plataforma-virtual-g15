@@ -7,13 +7,13 @@ import com.saberconectar.sc.mapper.UserMapper;
 import com.saberconectar.sc.repository.UserRepository;
 import com.saberconectar.sc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.tags.Param;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService, UserDetailsService {
     @Autowired
     private UserMapper userMapper;
     @Autowired
@@ -32,11 +32,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDTO getUserByEmail(String mama, Boolean setStudent, Boolean setInstitution) {
+    public UserDTO getUserByEmail(String email, Boolean setStudent, Boolean setInstitution) {
         //if (!userRepository.existsByEmail(username)){
         //    throw new ParamNotFound("Error: El usuario no existe");
         //}
-        UserEntity entityUsername = userRepository.getReferenceByEmail(mama);
+        UserEntity entityUsername = userRepository.getReferenceByEmail(email);
         UserDTO dto = userMapper.userEntity2DTO(entityUsername, setStudent, setInstitution);
         return dto;
     }
@@ -57,5 +57,9 @@ public class UserServiceImpl implements UserService {
         if(!userRepository.existsById(id)){
             throw new ParamNotFound("Invalid id");
         }
+    }
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByEmail(username);
     }
 }
